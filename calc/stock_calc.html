@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="autocomplete" content="off">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<link href="./resources/css/common.css" media="screen" rel="stylesheet">
+<title>주식투자노트</title>
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header" data-ui-fixed="top">
+        <button type="button" class="btn-back"><i>이전페이지</i></button>
+        <h1 class="page-tit"><a href="#">주식투자노트</a></h1>
+        <button type="button" class="btn-menu-open"><i>메뉴열기</i></button>
+        <nav class="ly-menu-wrap">
+            <div class="info">
+                <!-- 로그인 안했을때 -->
+                <!-- <a href="#" class="txt-login"><u>로그인을 해주세요</u></a> -->
+                <span class="my-info"><code>010 - <span>****</span> - 1235</code>님</span>
+                <button type="button" class="btn-menu-close"><i>메뉴닫기</i></button>
+            </div>
+            <ul class="gnb">
+                <li class="item01"><a href="#">주식정보보기</a></li>
+                <li class="item02"><a href="#">주요증시일정</a></li>
+                <li class="item03"><a href="#">투자계산기</a></li>
+            </ul>
+            <div class="banner_wrap">
+                <a href="#"><img src="./resources/images/temp/banner.png" alt=""></a>
+            </div>
+        </nav> 
+    </header>
+    <!-- //header -->
+    <!-- container -->
+    <div id="container">
+        <section class="content sub-stock">
+            <div class="heading-wrap">
+                <h2 class="tit">투자계산기</h2>
+            </div>
+            <div class="tab" data-ref="tab">
+                <!-- tab button -->
+                <ul class="tab__button">
+                    <li><button class="on">수익률 계산</button></li>
+                    <li><button>평단가 계산</button></li>
+                </ul>
+                <!-- //tab button -->
+
+                <!-- tab contents -->
+
+                <!-- 수익률 계산 -->
+                <div class="tab--contents on" data-stock="revenue">
+                    <div class="input__area">
+                        <p class="input__tit">매수단가</p>
+                        <div class="input__box price">
+                            <input maxlength="10" type="text" onkeyup="keyUpFn();" data-stock="buyPrice"/>
+                            <span class="input__unit">원</span>
+                        </div>
+                    </div>
+                    <div class="input__area">
+                        <p class="input__tit">매도수량</p>
+                        <div class="input__box price">
+                            <input maxlength="10" type="text" onkeyup="keyUpFn();" data-stock="saleLeng"/>
+                            <span class="input__unit">주</span>
+                        </div>
+                    </div>
+                    <div class="input__area">
+                        <p class="input__tit">매도단가</p>
+                        <div class="input__box price">
+                            <input maxlength="10" type="text" onkeyup="keyUpFn();" data-stock="salePrice"/>
+                            <span class="input__unit">원</span>
+                        </div>
+                    </div>
+                    <div class="input__area">
+                        <p class="input__tit">증권사 수수료</p>
+                        <div class="input__box price">
+                            <input maxlength="10" type="text" onkeyup="keyUpFn();" data-stock="charge" placeholder="0.015"/>
+                            <span class="input__unit">%</span>
+                        </div>
+                    </div>
+                    <p class="caution">*모든 값 입력 시, 수익률이 자동 계산됩니다.</p>
+
+                    <div class="result__box result">
+                        <ul> 
+                            <li class="hl__text medium">
+                                <p class="result__name">손익</p>
+                                <p class="result__data return--data">0</p>
+                                <span class="result__unit">원</span>
+                            </li>
+                            <li class="hl__text medium">
+                                <p class="result__name">수익률</p>
+                                <p class="result__data return--data">0</p>
+                                <span class="result__unit">%</span>
+                            </li>
+                            <li>
+                                <p class="result-name">매수금액</p>
+                                <p class="result__data return--data">0</p>
+                                <span class="result__unit">원</span>
+                            </li>
+                            <li>
+                                <p class="result-name">매도금액</p>
+                                <p class="result__data return--data">0</p>
+                                <span class="result__unit">원</span>
+                            </li>
+                            <li>
+                                <p class="result-name">수수료</p>
+                                <p class="result__data return--data">0</p>
+                                <span class="result__unit">원</span>
+                            </li>
+                            <li>
+                                <p class="result-name">거래세</p>
+                                <p class="result__data return--data">0</p>
+                                <span class="result__unit">원</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //수익률 계산 -->
+
+                <!-- 평단가계산 -->
+                <div class="tab--contents cost" data-stock="averageCost">
+                    <div class="input__area">
+                        <p class="input__tit">현재가</p>
+                        <div class="input__box price">
+                            <input maxlength="10" type="text" onkeyup="keyUpFn();" data-stock="buyPrice"/>
+                            <span class="input__unit">원</span>
+                        </div>
+                    </div>
+                    <div class="input__area">
+                        <p class="input__tit bold">기존보유</p>
+
+                        <div class="type_flex">
+                            <div class="input__area">
+                                <p class="input__tit">단가</p>
+                                <div class="input__box price">
+                                    <input maxlength="10" type="text" onkeyup="keyUpFn();" data-stock="saleLeng"/>
+                                    <span class="input__unit">원</span>
+                                </div>
+                            </div>
+                            <div class="input__area">
+                                <p class="input__tit">수량</p>
+                                <div class="input__box price">
+                                    <input maxlength="10" type="text" onkeyup="keyUpFn();" data-stock="saleLeng"/>
+                                    <span class="input__unit">주</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input__area">
+                        <p class="input__tit bold">추가매수</p>
+
+                        <div class="type_flex">
+                            <div class="input__area">
+                                <p class="input__tit">단가</p>
+                                <div class="input__box price">
+                                    <input maxlength="10" type="text" onkeyup="keyUpFn();" data-stock="saleLeng"/>
+                                    <span class="input__unit">원</span>
+                                </div>
+                            </div>
+                            <div class="input__area">
+                                <p class="input__tit">수량</p>
+                                <div class="input__box price">
+                                    <input maxlength="10" type="text" onkeyup="keyUpFn();" data-stock="saleLeng"/>
+                                    <span class="input__unit">주</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <p class="caution">*모든 값 입력 시, 평단가가 자동 계산됩니다.</p>
+
+                    <div class="result__box result">
+                        <ul>
+                            <li class="medium">
+                                <p class="result__name">평단가</p>
+                                <p class="result__data return--data">0</p>
+                                <span class="result__unit">원</span>
+                            </li>
+                            <li>
+                                <p class="result__name">총 보유 수량</p>
+                                <p class="result__data return--data">0</p>
+                                <span class="result__unit">주</span>
+                            </li>
+                            <li>
+                                <p class="result-name">총 매입 금액</p>
+                                <p class="result__data return--data">0</p>
+                                <span class="result__unit">원</span>
+                            </li>
+                            <li class="hl__text">
+                                <p class="result-name">손익</p>
+                                <p class="result__data return--data">0</p>
+                                <span class="result__unit">원</span>
+                            </li>
+                            <li class="hl__text">
+                                <p class="result-name">수익률</p>
+                                <p class="result__data return--data">0</p>
+                                <span class="result__unit">%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //평단가계산 -->
+                <!-- tab contents -->
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+    <!-- footer -->
+    <footer id="footer">
+        <a href="#" class="link01">(주)헥토이노베이션 사업자 정보</a>
+        <div class="link02-wrap">
+            <a href="#">회사소개</a>
+            <a href="#">이용약관</a>
+            <a href="#" class="point">개인정보취급방침</a>
+        </div>
+        <p class="txt">㈜ 헥토이노베이션 대표이사 : 이현철 사업자등록번호 : 214-88-39117<br>
+            통신판매업신고 : 제2015 –서울강남 – 00012호 서울시 강남구 테헤란로 34길<br>
+            태광타워 12층, 13층<br>
+            TEL : 1599-7416 FAX : 02)929-4424 Email : minwise.help@minwise.co.kr<br>
+            Copyright © Minwise Co.,Ltd. All right reserved.</p>
+        <span class="txt"><img src="./resources/images/img_footer.png" alt=""></span>
+        <div class="tel-wrap">
+            <span class="num">고객센터<code>1599-7416</code></span>
+            <span class="txt">평일 09:00~18:00(주말, 공휴일 휴무)</span>
+        </div>
+        <button type="button" class="btn-top"><span>상단으로 바로가기</span></button>
+    </footer>
+    <!-- //footer -->
+</div>
+<!-- //wrap -->
+
+<script src="./resources/js/jquery-1.12.4.min.js"></script>
+<script src="./resources/js/swiper.min.js"></script>
+<script src="./resources/js/design.js"></script>
+<script src="./resources/js/calc.js"></script>
+</body>
+</html>
