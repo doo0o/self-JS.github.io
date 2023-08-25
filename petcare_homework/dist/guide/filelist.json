@@ -1,0 +1,937 @@
+{
+  "_comment" : {
+    "dep1": "뎁1",
+    "dep2": "뎁2",
+    "dep3": "뎁3",
+    "url" : "url",
+    "status" : "완료일",
+    "update" : [
+      {
+        "date" : "수정 날짜",
+        "txt" : "내용"
+      },
+      {
+        "date" : "수정 날짜",
+        "txt" : "내용"
+      }
+    ],
+    "etc" : ["비고", "비고"]
+  },
+  "items" : [
+    {
+      "title" : "ETC",
+      "list" : [
+        {
+          "dep1" : "Splash",
+          "url" : "./html/etc/splash.html",
+          "status" : "230525"
+        },
+        {
+          "dep2" : "무료가입용",
+          "url" : "./html/etc/splash2.html",
+          "status" : "230525"
+        },
+        {
+          "dep1" : "에러페이지",
+          "dep2" : "서비스 이용에 불편을 드려 죄송합니다",
+          "url" : "./html/etc/error.html",
+          "status" : "230525"
+        },
+        {
+          "dep2" : "자동 로그아웃 되었습니다.",
+          "url" : "./html/etc/error2.html",
+          "status" : "230616"
+        },
+        {
+          "dep1" : "에러페이지[하나카드]",
+          "dep2" : "서비스 이용에 불편을 드려 죄송합니다",
+          "url" : "./html/etc/error_hana.html",
+          "status" : "230616"
+        },
+        {
+          "dep2" : "자동 로그아웃 되었습니다.",
+          "url" : "./html/etc/error2_hana.html",
+          "status" : "230616"
+        },
+        {
+          "dep1" : "로딩",
+          "url" : "./html/etc/splash.html?loading=true",
+          "status" : "230525",
+          "etc": ["로딩 스크립트 확인 바랍니다."]
+        }
+      ]
+    },
+    {
+      "title" : "약관",
+      "list" : [
+        {
+          "dep1": "하나카드",
+          "dep2": "개인정보 수집 이용",
+          "url" : "./html/terms/[하나카드]개인정보_수집_이용.html",
+          "status" : "230720"
+        },
+        {
+          "dep1": "하나카드",
+          "dep2": "서비스 이용약관",
+          "url" : "./html/terms/[하나카드]서비스_이용약관.html",
+          "status" : "230720"
+        },
+        {
+          "dep1": "하나카드",
+          "dep2": "필수적 개인정보 제 3자 제공 이용",
+          "url" : "./html/terms/[하나카드]필수적_개인정보_제3자_제공이용.html",
+          "status" : "230720"
+        },
+        {
+          "dep1": "KT PASS",
+          "dep2":"무료 서비스 이용약관",
+          "url" : "./html/terms/[KTPASS]무료_서비스_이용약관.html",
+          "status" : "230822"
+        },
+        {
+          "dep1": "KT PASS",
+          "dep2":"유료 서비스 이용약관",
+          "url" : "./html/terms/[KTPASS]유료_서비스_이용약관.html",
+          "status" : "230822"
+        },
+        {
+          "dep1": "KT PASS",
+          "dep2":"KT개인정보_제3자_제공",
+          "url" : "./html/terms/[KTPASS]KT개인정보_제3자_제공.html",
+          "status" : "230822"
+        },
+        {
+          "dep1": "KT PASS",
+          "dep2":"개인정보_제3자_제공",
+          "url" : "./html/terms/[KTPASS]개인정보_제3자_제공.html",
+          "status" : "230822"
+        },
+        {
+          "dep1": "KT PASS",
+          "dep2":"개인정보_수집_이용",
+          "url" : "./html/terms/[KTPASS]개인정보_수집_이용.html",
+          "status" : "230822"
+        },
+        {
+          "dep1": "KT PASS",
+          "dep2":"마케팅수신동의(선택)",
+          "url" : "./html/terms/[KTPASS]마케팅수신동의.html",
+          "status" : "230822"
+        },
+        {
+          "dep1": "KT PASS",
+          "dep2":"마케팅활용동의(선택)",
+          "url" : "./html/terms/[KTPASS]마케팅활용동의.html",
+          "status" : "230822"
+        }
+        
+      ]
+    },
+    {
+      "title" : "서비스 소개",
+      "list" : [
+        {
+          "dep1" : "서비스 소개",
+          "dep2" : "PC",
+          "url" : "./html/homepage/web.html"
+        },
+        {
+          "dep1" : "서비스 해지",
+          "dep2" : "PC",
+          "url" : "./html/homepage/web_cancle.html?onCancle=true"
+        },
+        {
+          "dep1" : "공지사항",
+          "dep2" : "PC",
+          "url" : "./html/homepage/web_notice.html?onNotice=true"
+        }
+      ]
+    },
+    {
+      "title" : "메인",
+      "list" : [
+        {
+          "dep1": "메인",
+          "url" : "./html/main/index.html",
+          "status" : "230427"
+        },
+        {
+          "dep2": "메시지 - 관리 선택",
+          "url" : "./html/main/index.html?pop=msg1",
+          "status" : "230427"
+        },
+        {
+          "dep2": "메시지 - 등록",
+          "url" : "./html/main/index.html?pop=msg2",
+          "status" : "230427"
+        },
+        {
+          "dep2": "메시지 - 등록 방법",
+          "url" : "./html/main/index.html?pop=msg3",
+          "status" : "230427"
+        },
+        {
+          "dep2": "메시지 - 등록번호",
+          "url" : "./html/main/index.html?pop=msg4",
+          "status" : "230525"
+        },
+        {
+          "dep2": "메시지 - 펫변경완료",
+          "url" : "./html/main/index.html?pop=msg5",
+          "status" : "230613"
+        },
+        {
+          "dep1": "하나카드",
+          "dep2": "PC",
+          "url" : "./html/main/index_hana_pc.html",
+          "status": "230523"
+        },
+        {
+          "dep2": "메인",
+          "url" : "./html/main/index_hana.html",
+          "status": "230523",
+          "update" : [{
+            "date" : "230616",
+            "txt" : "홈 메뉴 카테고리 추가"
+          }]
+        },
+        {
+          "dep3": "메시지 - 강아지만 가능",
+          "url" : "./html/main/index_hana.html?pop=msg1",
+          "status": "230608"
+        },
+        {
+          "dep3": "메시지 - 최대 등록 펫",
+          "url" : "./html/main/index_hana.html?pop=msg2",
+          "status": "230608"
+        },
+        {
+          "dep2": "본인인증",
+          "url" : "./html/main/certifyAgree_hana.html",
+          "status": "230523",
+          "update" : [
+            {
+              "date" : "230613",
+              "txt" : "햄버거 메뉴 삭제"
+            }
+          ]
+        },
+        {
+          "dep3": "메시지 - 약관동의",
+          "url" : "./html/main/certifyAgree_hana.html?pop=msg1",
+          "status": "230523"
+        },
+        {
+          "dep3": "메시지 - 가입하지 않은 회원",
+          "url" : "./html/main/certifyAgree_hana.html?pop=msg2",
+          "status": "230523"
+        },
+        {
+          "dep3": "메시지 - 보인인증 실패[하나크카드",
+          "url" : "./html/main/certifyAgree_hana.html?pop=msg3",
+          "status": "230608"
+        },
+        {
+          "dep2" : "펫등록",
+          "__url" : "페이지 삭제",
+          "url" : "./html/register/registerMyPet_hana.html",
+          "status" : "230607",
+          "etc" : ["팝업에서 페이지로 변경"],
+          "update" : [
+            {
+              "date" : "230616",
+              "txt" : "프로세스 변경으로 페이지 사용 x"
+            }
+          ]
+        },
+        {
+          "coment" : "하나카드 전용일지 아닐지 모름",
+          "__dep3": "에러 - 서비스 이용 불가",
+          "__url" : "./html/etc/error_hana.html",
+          "__status": "230616"
+        },
+        {
+          "coment" : "하나카드 전용일지 아닐지 모름",
+          "__dep3": "에러 - 자동 로그아웃",
+          "__url" : "./html/etc/error_hana2.html",
+          "__status": "230616"
+        },
+
+        {
+          "dep1": "U+",
+          "url" : "./html/main/index_uplus.html?type=isUplus",
+          "status" : "230605",
+          "etc" : ["html 클래스 isUplus 추가"]
+        },
+        {
+          "dep2": "header - 뒤로가기, 닫기",
+          "url" : "./html/main/uplus_header.html?type=isUplus",
+          "status" : "230615"
+        },
+        {
+          "dep2": "header - 설정",
+          "url" : "./html/main/uplus_header2.html?type=isUplus",
+          "status" : "230615"
+        }
+      ]
+    },
+    {
+      "title": "펫등록",
+      "list" : [
+        
+        {
+          "dep3": "메시지 - 생년월일 확인",
+          "url" : "페이지 삭제",
+          "__url" : "./html/register/registerMyPet.html?pop=msg1",
+          "status": "230608",
+          "update" : [
+            {
+              "date" : "230616",
+              "txt" : "프로세스 변경으로 페이지 사용 x"
+            },
+            {
+              "date" : "230616",
+              "txt" : "프로세스 변경으로 페이지 사용 x"
+            }
+          ]
+        },
+        {
+          "dep2" : "수정",
+          "url" : "./html/register/registerMyPet_mod.html",
+          "status" : "230607",
+          "etc" : ["팝업에서 페이지로 변경"]
+        },
+        {
+          "dep3": "메시지 - 삭제",
+          "url" : "./html/register/registerMyPet_mod.html?pop=msg2",
+          "status": "230613"
+        },
+        {
+          "dep3": "메시지 - 수정",
+          "url" : "./html/register/registerMyPet_mod.html?pop=msg3",
+          "status": "230613"
+        },
+        {
+          "dep1" : "동물 등록번호",
+          "url" : "./html/register/registerMyPetNumber.html",
+          "status" : "230607",
+          "etc" : ["팝업에서 페이지로 변경"]
+        }
+      ]
+    },
+    {
+      "title" : "회원",
+      "list" : [
+        {
+          "dep1": "휴대폰 입력", 
+          "url" : "./html/join/inputEntryNumber.html",
+          "status" : "230427",
+          "update" : [
+            {
+              "date" : "230616",
+              "txt" : "통신사 선택 : kt disabled 삭제(활성화)"
+            }
+          ]
+        },
+        {
+          "dep2": "팝업 - 약관동의",
+          "url" : "./html/join/inputEntryNumber.html?pop=layerServiceAgree",
+          "status" : "230427"
+        },
+        {
+          "dep1": "인증번호 입력",
+          "url" : "./html/join/inputCertifyNumber.html",
+          "status" : "230427"
+        },
+        {
+          "dep2": "팝업 - 메시지",
+          "url" : "./html/join/inputCertifyNumber.html?pop=msg",
+          "status" : "230427"
+        },
+        {
+          "dep1": "보안숫자 입력",
+          "url" : "./html/join/inputCaptchaNumber.html",
+          "status" : "230427"
+        },
+        {
+          "dep2": "팝업 - 메시지",
+          "url" : "./html/join/inputCaptchaNumber.html?pop=msg",
+          "status" : "230427"
+        },
+        {
+          "dep1": "핀번호 등록",
+          "url" : "./html/join/inputPinNumberSet.html",
+          "status" : "230508",
+          "etc": ["핀번호 입력 후 재입력 확인 가능"]
+        },
+        {
+          "dep1": "핀번호 입력",
+          "url" : "./html/join/inputPinNumber.html",
+          "status" : "230508",
+          "etc": ["샘플 핀번호와 5회 틀리면 에러 메시지 확인 가능"]
+        },
+        {
+          "dep1": "유료가입",
+          "url" : "./html/join/joinIntro.html",
+          "status" : "230427"
+        },
+        {
+          "dep2": "팝업 - 약관동의",
+          "url" : "./html/join/joinIntro.html?pop=layerServiceAgree",
+          "status" : "230427"
+        },
+        {
+          "dep2": "핀번호 입력",
+          "url" : "./html/join/inputPinNumber2.html",
+          "status" : "230508",
+          "etc": ["샘플 핀번호와 5회 틀리면 에러 메시지 확인 가능"]
+        }
+      ]
+    },
+    {
+      "title" : "동물 등록번호",
+      "list" : [
+        {
+          "dep1": "등록번호 입력",
+          "url" : "./html/register/inputCustomerInfo.html",
+          "status" : "230525",
+          "update" : [
+            {
+              "date" : "230616",
+              "txt" : "헤더 텍스트 삭제"
+            }
+          ]
+        },
+        {
+          "dep1": "pass인증 알림 / 페이지 삭제",
+          "url" : "페이지 삭제",
+          "__url" : "./html/register/passAlarm.html",
+          "status" : "230525",
+          "update" : [
+            {
+              "date" : "230615",
+              "txt" : "페이지 사용하지 않음. (페이지 삭제)"
+            }
+          ]
+        },
+        {
+          "dep2": "메시지 - 인증완료",
+          "url" : "페이지 삭제",
+          "__url" : "./html/register/passAlarm.html?pop=msg1",
+          "status" : "230525",
+          "update" : [
+            {
+              "date" : "230615",
+              "txt" : "페이지 사용하지 않음. (페이지 삭제)"
+            }
+          ]
+        },
+        {
+          "dep2": "메시지 - 인증실패",
+          "url" : "페이지 삭제",
+          "__url" : "./html/register/passAlarm.html?pop=msg2",
+          "status" : "230525",
+          "update" : [
+            {
+              "date" : "230615",
+              "txt" : "페이지 사용하지 않음. (페이지 삭제)"
+            }
+          ]
+        },
+        {
+          "dep1": "pass인증",
+          "url" : "./html/register/passCertify.html",
+          "status" : "230525"
+        },
+        {
+          "dep2": "메시지 - 조회완료",
+          "url" : "./html/register/passCertify.html?pop=msg1",
+          "status" : "230525"
+        },
+        {
+          "dep2": "메시지 - 인증실패",
+          "url" : "./html/register/passCertify.html?pop=msg2",
+          "status" : "230525"
+        }
+      ]
+    },
+    {
+      "title" : "실종신고 리스트",
+      "list" : [
+        {
+          "dep1": "구조동물",
+          "url" : "./html/missingList/index.html",
+          "status" : "230502"
+        },
+        {
+          "dep2": "상세조회",
+          "url" : "./html/missingList/index.html?pop=missingFilter",
+          "status" : "230502",
+          "update" : [
+            {
+              "date" : "230616",
+              "txt" : "날짜 이동 버튼 disabled style 추가"
+            }
+          ]
+        },
+        {
+          "dep1": "상세",
+          "url" : "./html/missingList/index.html?pop=missingDetail",
+          "status" : "230502",
+          "update" : [
+            {
+              "date" : "230616",
+              "txt" : "헤더 btn-close => btn-back (레이어 팝업 내 btn-back style 추가)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title" : "기록",
+      "list" : [
+        {
+          "dep1" : "기록",
+          "url" : "./html/record/index.html",
+          "status" : "230607"
+        },
+        {
+          "dep2" : "새로 기록하기",
+          "url" : "./html/record/writeNewRecord.html",
+          "status" : "230607"
+        },
+        {
+          "dep2" : "기록 수정하기",
+          "dep3" : "식사",
+          "url" : "./html/record/modRecord1.html",
+          "status" : "230607"
+        },
+        {
+          "dep3" : "산책",
+          "url" : "./html/record/modRecord2.html",
+          "status" : "230607"
+        },
+        {
+          "dep3" : "산책 기록 수정",
+          "url" : "./html/record/modRecord2.html?pop=msg1",
+          "status" : "230616"
+        },
+        {
+          "dep3" : "배변",
+          "url" : "./html/record/modRecord3.html",
+          "status" : "230607"
+        },
+        {
+          "dep3" : "기타",
+          "url" : "./html/record/modRecord4.html",
+          "status" : "230607"
+        }
+      ]
+    },
+    {
+      "title" : "사료/간식 분석",
+      "list" : [
+        {
+          "dep1": "목록",
+          "url" : "./html/food/index.html",
+          "status" : "230503",
+          "etc": ["검색어 입력 포커스 시 검색 결과 확인 가능"]
+        },
+        {
+          "dep1": "상세",
+          "url" : "./html/food/detail.html",
+          "status" : "230504",
+          "update" : [
+            {
+              "date" : "230616",
+              "txt" : "기대효과 하단 text 추가"
+            }
+          ]
+        },
+        {
+          "dep2": "펫선택",
+          "url" : "./html/food/detail.html?pop=myPetSelect",
+          "status" : "230504"
+        },
+        {
+          "dep2": "성분 자세히보기",
+          "url" : "./html/food/detail.html?pop=ingredientsDetail",
+          "status" : "230504"
+        },
+        {
+          "dep2": "미국기준",
+          "url" : "./html/food/detail.html?pop=standardInfo",
+          "status" : "230504"
+        }
+      ]
+    },
+    {
+      "title" : "건강분석",
+      "list" : [
+        {
+          "dep1": "설문",
+          "url" : "./html/analysis/index.html",
+          "status" : "230509"
+        },
+        {
+          "dep2": "하나카드",
+          "url" : "./html/analysis/index_hana.html",
+          "status" : "230609"
+        },
+        {
+          "dep1": "결과",
+          "url" : "./html/analysis/result.html",
+          "status" : "230511",
+          "update" :[
+            {
+              "date" : "230616",
+              "txt" : "오탈자 수정"
+            }
+          ]
+        },
+        {
+          "dep1": "상세",
+          "url" : "./html/analysis/detail.html",
+          "status" : "230510"
+        },
+        {
+          "dep2": "품종상세",
+          "url" : "./html/analysis/detail2.html",
+          "status" : "230510"
+        }
+      ]
+    },
+    {
+      "title" : "슬개골 탈구 검사",
+      "list" : [
+        {
+          "dep1": "슬개골 탈구 검사",
+          "url" : "./html/checkup/index.html",
+          "status" : "230516"
+        },
+        {
+          "dep1": "가이드",
+          "url" : "./html/checkup/guide.html",
+          "status" : "230516"
+        },
+        {
+          "dep2": "메시지 - 접근 권한 허용",
+          "url" : "./html/checkup/guide.html?pop=msg1",
+          "status" : "230608"
+        },
+        {
+          "dep2": "메시지 - 가이드",
+          "url" : "./html/checkup/guide.html?pop=msg2",
+          "status" : "230608"
+        },
+        {
+          "dep1": "검사결과",
+          "url" : "./html/checkup/result.html",
+          "status" : "230516"
+        }
+      ]
+    },
+    {
+      "title" : "쿠폰",
+      "list" : [
+        {
+          "dep1": "목록",
+          "url" : "./html/coupon/index.html",
+          "status" : "230515"
+        },
+        {
+          "dep1": "안내",
+          "url" : "./html/coupon/info.html",
+          "status" : "230515"
+        },
+        {
+          "dep1": "상세",
+          "url" : "./html/coupon/detail.html",
+          "status" : "230515"
+        },
+        {
+          "dep1": "하나카드",
+          "dep2": "목록",
+          "url" : "./html/coupon/index_hana.html",
+          "status" : "230515"
+        },
+        {
+          "dep3": "메시지 - 익월 1월 발급 가능",
+          "url" : "./html/coupon/index_hana.html?pop=msg1",
+          "status" : "230608"
+        },
+        {
+          "dep2": "안내",
+          "url" : "./html/coupon/info_hana.html",
+          "status" : "230515"
+        },
+        {
+          "dep2": "상세(홈플러스 쿠폰)",
+          "url" : "./html/coupon/detail_hana.html",
+          "status" : "230515"
+        },
+        {
+          "dep3": "쿠폰 사용 완료",
+          "url" : "./html/coupon/detail_done_hana.html",
+          "status" : "230628"
+        }
+      ]
+    },
+    {
+      "title" : "매거진",
+      "list" : [
+        {
+          "dep1": "목록",
+          "url" : "./html/magazine/index.html",
+          "status" : "230515",
+          "update" : [
+            {
+              "date" : "230613",
+              "txt" : "하단 더보기 버튼 추가"
+            }
+          ]
+        },
+        {
+          "dep1": "상세",
+          "url" : "./html/magazine/detail.html",
+          "status" : "230515"
+        }
+      ]
+    },
+    {
+      "title" : "플레이스",
+      "list" : [
+        {
+          "url" : "./html/place/index.html",
+          "status": "230523"
+        },
+        {
+          "dep2" : "상세",
+          "url" : "./html/place/detail.html",
+          "status": "230523"
+        },
+        {
+          "dep2" : "병원별",
+          "url" : "./html/place/hospital.html",
+          "status": "230523"
+        },
+        {
+          "dep2" : "진료별",
+          "url" : "./html/place/medicalExamination.html",
+          "status": "230523"
+        }
+      ]
+    },
+    {
+      "title" : "보험",
+      "list" : [
+        {
+          "url" : "./html/insurance/index.html",
+          "status": "230523"
+        },
+        {
+          "dep2" : "메시지 - 보상신청",
+          "url" : "./html/insurance/index.html?pop=msg1",
+          "status": "230608"
+        }
+      ]
+    },
+    {
+      "title": "설정",
+      "list" : [
+        {
+          "dep1" : "공지사항",
+          "url" : "./html/setting/notice.html",
+          "status" : "230602"
+        },
+        {
+          "dep2" : "상세",
+          "url" : "./html/setting/noticeDetail.html",
+          "status" : "230602"
+        },
+        {
+          "dep1" : "고객센터",
+          "url" : "./html/setting/customer.html",
+          "status" : "230602"
+        },
+        {
+          "dep2" : "인증번호 입력",
+          "url" : "./html/setting/inputCertifyNumber.html",
+          "status" : "230602"
+        },
+        {
+          "dep2" : "서비스 해지 완료",
+          "url" : "./html/setting/customer.html?pop=msg",
+          "status" : "230602"
+        },
+        {
+          "dep1" : "라이센스",
+          "url" : "./html/setting/license.html",
+          "status" : "230602"
+        },
+        {
+          "dep1" : "버전",
+          "url" : "./html/setting/version.html",
+          "status" : "230602"
+        },
+        {
+          "dep1" : "사업자정보",
+          "url" : "./html/setting/businessInfo.html",
+          "status" : "230616"
+        }
+      ]
+    },
+    {
+      "title" : "KT PASS",
+      "list" : [
+        {
+          "dep1" : "Main",
+          "dep3" : "default(for Android)",
+          "url" : "./html/main/index_kt.html",
+          "status" : "230713"
+        },
+        {
+          "dep2": "메시지 - 관리 선택",
+          "dep3" : "default(for Android)",
+          "url" : "./html/main/index_kt.html?pop=msg1",
+          "status" : "230720"
+        },
+        {
+          "dep2": "메시지 - 등록",
+          "dep3" : "default(for Android)",
+          "url" : "./html/main/index_kt.html?pop=msg2",
+          "status" : "230720"
+        },
+        {
+          "dep2": "메시지 - 등록 방법",
+          "dep3" : "default(for Android)",
+          "url" : "./html/main/index_kt.html?pop=msg3",
+          "status" : "230720"
+        },
+        {
+          "dep2": "메시지 - 등록번호",
+          "dep3" : "default(for Android)",
+          "url" : "./html/main/index_kt.html?pop=msg4",
+          "status" : "230720"
+        },
+        {
+          "dep2": "메시지 - 펫변경완료",
+          "dep3" : "default(for Android)",
+          "url" : "./html/main/index_kt.html?pop=msg5",
+          "status" : "230713"
+        },
+        {
+          "dep2" : "사업자 정보",
+          "dep3" : "default(for Android)",
+          "url" : "./html/main/index_kt.html?pop=businessInfo",
+          "status" : "230713"
+        },
+        {
+          "dep1" : "유료가입",
+          "dep3" : "default(for Android)",
+          "url" : "./html/join/joinIntro_kt.html",
+          "status" : "230713"
+        },
+        {
+          "dep2" : "유료가입 - 제한 알럿",
+          "dep3" : "default(for Android)",
+          "url" : "./html/join/joinIntro_kt.html?&pop=msg1",
+          "status" : "230713"
+        },
+        {
+          "dep1": "동물등록번호 조회",
+          "dep2": "pass인증 알림",
+          "dep3" : "default(for Android)",
+          "url" : "./html/register/passAlarm_kt.html",
+          "status" : "230713"
+        },
+        {
+          "dep2" : "동물등록번호 입력",
+          "dep3" : "default(for Android)",
+          "url" : "./html/register/inputCustomerInfo_kt.html",
+          "status" : "230810"
+        },
+        {
+          "dep2" : "동물 등록번호",
+          "dep3" : "default(for Android)",
+          "url" : "./html/register/registerMyPetNumber_kt.html",
+          "status" : "230810"
+        },
+        {
+          "dep2": "pass인증",
+          "dep3" : "default(for Android)",
+          "url" : "./html/register/passCertify_kt.html",
+          "status" : "230713"
+        },
+        {
+          "dep2": "pass인증 - PASS 인증서 미발급",
+          "dep3" : "default(for Android)",
+          "url" : "./html/register/passCertify_kt.html?&pop=msg1",
+          "status" : "230713"
+        },
+        {
+          "dep1": "슬개골 탈구",
+          "dep2": "메시지 - 접근 권한 허용",
+          "dep3" : "default(for Android)",
+          "url" : "./html/checkup/guide_kt.html?pop=msg1",
+          "status" : "230713"
+        },
+        {
+          "dep1": "기록",
+          "dep3" : "default(for Android)",
+          "url" : "./html/record/index_kt.html",
+          "status" : "230713"
+        },
+        {
+          "dep1": "보험",
+          "dep3" : "default(for Android)",
+          "url" : "./html/insurance/index_kt.html",
+          "status" : "230713"
+        },
+        {
+          "dep1": "IOS",
+          "dep2": "ios 디바이스 확인용 (head ios.css)",
+          "dep3" : "for IOS",
+          "url" : "./html/ios/index_kt.html",
+          "status" : "230720"
+        },
+        {
+          "dep2": "메시지 - 관리 선택",
+          "dep3" : "for IOS",
+          "url" : "./html/ios/index_kt.html?pop=msg1",
+          "status" : "230720"
+        },
+        {
+          "dep2": "메시지 - 등록",
+          "dep3" : "for IOS",
+          "url" : "./html/ios/index_kt.html?pop=msg2",
+          "status" : "230720"
+        },
+        {
+          "dep2": "메시지 - 등록 방법",
+          "dep3" : "for IOS",
+          "url" : "./html/ios/index_kt.html?pop=msg3",
+          "status" : "230720"
+        },
+        {
+          "dep2": "메시지 - 등록번호",
+          "dep3" : "for IOS",
+          "url" : "./html/ios/index_kt.html?pop=msg4",
+          "status" : "230720"
+        },
+        {
+          "dep2": "메시지 - 펫변경완료",
+          "dep3" : "for IOS",
+          "url" : "./html/ios/index_kt.html?pop=msg5",
+          "status" : "230713"
+        },
+        {
+          "dep2" : "사업자 정보",
+          "dep3" : "for IOS",
+          "url" : "./html/ios/index_kt.html?pop=businessInfo",
+          "status" : "230713"
+        }
+      ]
+    }
+  ]
+}

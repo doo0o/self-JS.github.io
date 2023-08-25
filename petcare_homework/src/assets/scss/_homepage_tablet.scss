@@ -1,0 +1,319 @@
+
+//  Tablet
+@media (max-width: 1599px) {
+    /* z각 item x,y 값 (x : right, y : top, width & height) */
+    $--item_01 : (
+        x : 150px,
+        y : -8px,
+        width : 62px,
+        height : 85px
+    );
+    $--item_02 : (
+        x : 110px,
+        y : -80px,
+        width : 72px,
+        height : 67px
+    );
+    $--item_03 : (
+        x : 210px,
+        y : -100px,
+        width : 93px,
+        height : 93px
+    );
+    $--item_04 : (
+        x : 50px,
+        y : -200px,
+        width : 97px,
+        height : 67px
+    );
+    $--item_05 : (
+        x : 175px,
+        y : -220px,
+        width : 79px,
+        height : 79px
+    );
+    $--item_06 : (
+        x : 167px,
+        y : -330px,
+        width : 119px,
+        height : 128px
+    );
+    @keyframes move01{
+        0% {
+            top : map-get($--item_01, y) - 80px;
+            right: map-get($--item_01, x) - 100px;
+            transform: scale(1.4);
+        }
+        100%{
+            top : map-get($--item_01, y);
+            right: map-get($--item_01, x);
+            transform: scale(1);
+        }
+    }
+    @keyframes move02{
+        0% {
+            top : map-get($--item_02, y) - 80px;
+            right: map-get($--item_02, x) - 100px;
+            transform: scale(1.4);
+        }
+        100%{
+            top : map-get($--item_02, y);
+            right: map-get($--item_02, x);
+            transform: scale(1);
+        }
+    }
+    @keyframes move03{
+        0% {
+            top : map-get($--item_03, y) - 80px;
+            right: map-get($--item_03, x) + 60px;
+            transform: scale(1.4);
+        }
+        100%{
+            top : map-get($--item_03, y);
+            right: map-get($--item_03, x);
+            transform: scale(1);
+        }
+    }
+    @keyframes move04{
+        0% {
+            top : map-get($--item_04, y) - 80px;
+            transform: scale(1.4);
+        }
+        100%{
+            top : map-get($--item_04, y);
+            transform: scale(1);
+        }
+    }
+    @keyframes move05{
+        0% {
+            top : map-get($--item_05, y) - 80px;
+            transform: scale(1.4)
+        }
+        100%{
+            top : map-get($--item_05, y);
+            transform: scale(1)
+        }
+    }
+    @keyframes move06{
+        0% {
+            top : map-get($--item_06, y) - 80px;
+            transform: scale(1.4)
+        }
+        100%{
+            top : map-get($--item_06, y);
+            transform: scale(1)
+        }
+    }
+    .container{
+        min-width: var(--Tablet-container);
+    }
+    .visual{
+        background-size: 2170px;
+        background-position: center -270px;
+        &--contents{
+            width: var(--Tablet-contents);
+        }
+        &--text{
+            @include font(42px,700)
+        }
+        &--title{
+            @include font(67px,700)
+        }
+        &--sub{
+            @include font(20px, 500)
+        }
+        &--img{
+            .mobile_img{
+                width: 485px;
+            }
+        }
+
+        &--item{
+            &_01{
+                width: map-get($--item_01, width );
+                height: map-get($--item_01, height );
+                right: map-get($--item_01, x);
+                top: map-get($--item_01, y);
+                animation-name: move01, show; 
+            }
+            &_02{
+                width: map-get($--item_02, width );
+                height: map-get($--item_02, height );
+                right: map-get($--item_02, x);
+                top: map-get($--item_02, y);
+                animation-name: move02, show; 
+            }
+            &_03{
+                width: map-get($--item_03, width );
+                height: map-get($--item_03, height );
+                right: map-get($--item_03, x);
+                top: map-get($--item_03, y);
+                animation-name: move03, show; 
+            }
+            &_04{
+                width: map-get($--item_04, width );
+                height: map-get($--item_04, height );
+                right: map-get($--item_04, x);
+                top: map-get($--item_04, y);
+                animation-name: move04, show; 
+            }
+            &_05{
+                width: map-get($--item_05, width );
+                height: map-get($--item_05, height );
+                right: map-get($--item_05, x);
+                top: map-get($--item_05, y);
+                animation-name: move05, show; 
+            }
+            &_06{
+                width: map-get($--item_06, width );
+                height: map-get($--item_06, height );
+                right: map-get($--item_06, x);
+                top: map-get($--item_06, y);
+                animation-name: move06, show; 
+            }
+        }
+    }
+    .app{
+        &--button{
+            button{
+                width: 196px;
+                height: 48px;
+                @include font(16px,700);
+                &::before{
+                    content: "";
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            .pass__box &{
+                @debug &;
+                button{
+                    &::before{
+                        width: 52px;
+                        height: 52px;
+                    }
+                }
+                &.type-colums{
+                    button{
+                        height: 68px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section{
+        padding: 128px 0;
+        &__inner{
+            width: var(--Tablet-contents) ;
+        }
+        &__title{
+            @include font(36px,700)
+        }
+        &__sub{
+            margin-top: 16px;
+            @include font(16px,400);
+        }
+        &__head{
+            & ~ *{
+                margin-top: 36px;
+            }
+        }
+        &__body{
+            &.app_join{
+                margin: 36px auto 0;
+            }
+        }
+        [class^="section__icon-"]{
+            &.section__icon-04{
+                height: 50px;
+            }
+            width: 40px;
+            height: 40px;
+            padding-bottom: 0;
+            background-size: 305px;
+        }
+        &__icon{
+            &-01{
+                background-position: 0 0;
+            }
+            &-02{
+                background-position: -40px 0;
+            }
+            &-03{
+                background-position: -80px 0;
+            }
+            &-04{
+                background-position: -120px 0;
+            }
+            &-05{
+                background-position: -166px 0;
+            }
+            &-notice{
+                background-position: -206px 0;
+            }
+        }
+        &__04{
+            padding-bottom: 0;
+        }
+        &__swiper01{
+            width: var(--Tablet-contents) ;
+            .swiper-slide{
+                width: 300px;
+            }
+        }
+        [class^="swiper-button-"]{
+            margin-top:60px;
+        }
+    }
+    .hashtag{
+        margin-top: 24px;
+        & > li{
+            @include font(16px,700)
+        }
+    }
+    .footer{
+        &-inner{
+            width: var(--Tablet-contents);
+        }
+    }
+    .style_box{
+        &01{
+            padding: 60px 75px;
+        }
+        &02{
+            width: 295px;
+            padding: 40px 30px;
+        }
+    }
+
+    .pass{
+        &_inquiry{
+            margin-top: 36px;
+            width: 295px;
+        }
+        &_service{
+            span{
+                @include font(24px);
+            }
+        }
+        &__list{
+            .swiper-slide{
+                width: 295px !important;
+            }
+        }
+    }
+
+    .form{
+        &__box{
+            padding-left: 0;
+        }
+    }
+    
+    .notice-view{
+        a{
+            width: var(--Tablet-contents);
+        }
+    }
+}

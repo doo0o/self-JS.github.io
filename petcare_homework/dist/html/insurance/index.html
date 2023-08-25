@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="page-title">펫케어</h1>
+        <button class="btn-menu" onclick="document.querySelector('.header').classList.toggle('isMenuShow');"><span>메뉴보기</span></button>
+        <button class="btn-back" onclick="history.back()">뒤로가기</button>
+        
+        
+
+      </div>
+
+      <!-- menu -->
+      <div class="header-menu">
+        <nav class="header-menu__wrap">
+          <div class="header-menu__util">
+            <a href="#" class="header-menu--login">로그인</a>
+          </div>
+          <ul class="header-menu__list">
+            <li><a href="../main/" class="header-menu--item">홈</a></li>
+            <li><a href="../insurance/" class="header-menu--item">펫보험</a></li>
+            <li><a href="../analysis/" class="header-menu--item">비대면 건강분석</a></li>
+            <li><a href="../checkup/" class="header-menu--item">AI슬개골 탈구 검사</a></li>
+            <li><a href="../magazine/" class="header-menu--item">펫매거진</a></li>
+            <li><a href="../coupon/index_hana.html" class="header-menu--item">쿠폰</a></li>
+          </ul>
+        </nav>
+      </div>
+<!-- //menu -->
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+      
+      <div class="base-tab tab-type3" data-ref="insuranceTabContents">
+        <ul class="tab__list" role="tablist">
+          <li class="tab__item">
+            <button
+              role="tab"
+              aria-selected="true"
+              aria-controls="insuranceTabContentsCont2"
+            >배상책임 보험</button>
+          </li>
+          <li class="tab__item">
+            <button
+              role="tab"
+              aria-selected="false"
+              aria-controls="insuranceTabContentsCont1"
+            >장례비 보장보험</button>
+          </li>
+        </ul>
+      </div>
+
+      <div id="insuranceTabContentsCont1" class="tab__content">
+        <div class="insurance__box">
+          <h3 class="insurance__title">보장증명서</h3>
+          <table class="insurance__table">
+            <colgroup>
+              <col style="width: 80px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row"><span>이름</span></th>
+                <td>김펫케어</td>
+              </tr>
+              <tr>
+                <th scope="row"><span>가입일시</span></th>
+                <td>2023.06.23</td>
+              </tr>
+              <tr>
+                <th scope="row"><span>보상내용</span></th>
+                <td><span>반려동물 사망사고 발생시 장례비용 보장</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span>보상한도</span></th>
+                <td>1사망사고당 30만원</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="btn-wrap">
+          <button class="base-btn type1-m"
+            onclick="layerMsg({
+              msg: '보상 신청을 위해<br>상담원과 통화하시겠습니까?',
+              type: 'confirm',
+              btn: {cancel:'아니오'}
+            })"
+          >보상 문의하기</button>
+        </div>
+      </div>
+
+      <div id="insuranceTabContentsCont2" class="tab__content">
+
+        <div class="insurance__box">
+          <h3 class="insurance__title">보장증명서</h3>
+          <table class="insurance__table">
+            <colgroup>
+              <col style="width: 80px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row"><span>이름</span></th>
+                <td>김펫케어</td>
+              </tr>
+              <tr>
+                <th scope="row"><span>가입일시</span></th>
+                <td>2023.06.23</td>
+              </tr>
+              <tr>
+                <th scope="row"><span>보상내용</span></th>
+                <td>반려동물 물림사고 견주배상 책임</td>
+              </tr>
+              <tr>
+                <th scope="row"><span>보상한도</span></th>
+                <td>최대 100만원</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="btn-wrap">
+          <button class="base-btn type1-m"
+            onclick="layerMsg({
+              msg: '보상 신청을 위해<br>상담원과 통화하시겠습니까?',
+              type: 'confirm',
+              btn: {cancel:'아니오'}
+            })"
+          >보상 문의하기</button>
+        </div>
+      </div>
+
+      <script>
+        const insuranceTabContents = new TabContents({target: 'insuranceTabContents'});
+      </script>
+
+    </div>
+    <!-- //container -->
+    
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-inner">   
+        <nav class="footer-nav">
+          <a href="#" class="footer-nav--link">서비스 이용약관</a>
+          <a href="#" class="footer-nav--link">개인정보처리방침</a>
+          <a href="#" class="footer-nav--link">
+            제3자 제공/이용
+            
+          </a>
+        </nav>
+        <p class="footer-corp">(주)헥토이노베이션</p>
+        <div class="footer-info">
+          <p class="footer-info--txt">서울특별시 강남구 테헤란로 34길 6 태광타워 12,13층</p>
+          <p class="footer-info--txt">사업자등록번호 214-88-39117</p>
+        </div>
+        <small class="footer-copy">Copyright(C) Hecto Innovation Co., Ltd. All rights reserved.</small>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    const pop = {
+      "msg1" : ()=>{
+        layerMsg({
+          msg: '보상 신청을 하시려면<br>펫케어 고객센터로 연락해주세요.<br><br><a href="tel:15224958" style="font-size: 20px;">1522-4958</a>',
+        });
+      },
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

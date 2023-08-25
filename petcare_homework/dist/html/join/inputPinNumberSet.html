@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap" data-ref="pinNumberWrap">
+
+    <!-- container -->
+    <div class="container">
+
+      <p class="pin-number__text" data-ref="pinNumberText">비밀번호로 사용하실<br>6자리 숫자를 입력해주세요</p>
+
+      <div class="pin-number__password" data-ref="pinNumberPassword">
+        <div class="number-box" data-ref="pinNumberBox">
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
+        <p class="msg">비밀번호가 일치하지 않습니다.</p>
+      </div>
+
+    </div>
+
+    <div class="pin-number__keypad" data-ref="pinNumberKeypad">
+    </div>
+
+  </div>
+  <!-- //container -->
+
+  <script src="../../assets/js/pinNumber.js"></script>
+  <script>
+    const pinNumber = new InputPinNumber({wrap: 'pinNumberWrap'});
+
+    // 퍼블 확인 용
+    let samplePass = null;
+    pinNumber.onConfirm(_this=>{
+      if(samplePass === null) {
+        samplePass = _this.password;
+        document.querySelector('[data-ref="pinNumberText"]').innerHTML = `입력하신 6자리 숫자를<br> 다시 입력해주세요`;
+        _this.reset();
+      } else {
+        if(samplePass.every((value, idx) => value === _this.password[idx])) {
+          alert('확인');
+        } else {
+          _this.reset();
+          _this.passwordWrap.classList.add('isError');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

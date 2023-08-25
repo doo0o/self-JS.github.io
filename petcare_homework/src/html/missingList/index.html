@@ -1,0 +1,347 @@
+@@include('./head.html', {
+  title: "구조 동물",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "구조 동물", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="missing-list__header">
+        <div class="base-tab tab-type1" data-ref="tab">
+          <ul class="tab__list" role="tablist">
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="true"
+              >공고중</button></li>
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="false"
+              >보호중</button></li>
+          </ul>
+        </div>
+        <script>
+          const tab = new TabContents({target: 'tab'});
+        </script>
+        <button class="btn-filter" onclick="missingFilter.show();">상세조회</button>
+      </div>
+
+      <div class="missing-list__body">
+        <ul>
+
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type dog">강아지</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type cat">고양이</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type dog">강아지</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type cat">고양이</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type dog">강아지</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type cat">고양이</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type dog">강아지</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type cat">고양이</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type dog">강아지</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type cat">고양이</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    @@include('./botNav.html', {active: '1'})
+
+  </div>
+
+  @@include('../html/missingList/filter.html')
+  @@include('../html/missingList/detail.html')
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    const pop = {
+      "missingFilter" : ()=>{
+        missingFilter.show();
+      },
+      "missingDetail" : ()=>{
+        missingDetail.show();
+      }
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

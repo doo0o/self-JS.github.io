@@ -1,0 +1,180 @@
+@@include('./head.html', {
+  title: "플레이스",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "플레이스", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="place-list__header">
+
+        <div class="base-tab tab-type1" data-ref="tab">
+          <ul class="tab__list" role="tablist">
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="false"
+              >병원별</button></li>
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="true"
+              >진료별</button></li>
+          </ul>
+        </div>
+        <script>
+          const tab = new TabContents({target: 'tab'});
+        </script>
+
+        <div class="input-box search__input-box">
+          <input
+            type="text"
+            class="input-txt"
+            placeholder="진료명을 입력해주세요"
+            onfocus="event.target.closest('.place-list__header').classList.add('isSearch');"
+            oninput="
+              (event.target.value.length)
+              ? event.target.closest('.search__input-box').classList.add('isValue')
+              : event.target.closest('.search__input-box').classList.remove('isValue');
+            "
+            onkeydown="
+              if(event.keyCode == 13) {
+                event.target.blur();
+                layerMsg({
+                  msg: '검색하실 진료명을<br>입력해주세요.',
+                  onConfirm: ()=>{
+                    event.target.focus();
+                  }
+                });
+              }
+            "
+          >
+          <button type="button" class="btn-del"
+            onmouseenter="
+              event.target.closest('.search__input-box').classList.remove('isValue');
+              event.target.closest('.search__input-box').querySelector('.input-txt').value = null;
+            "
+           >삭제</button>
+        </div>
+
+        <!-- 검색 결과 -->
+        <div class="search__result">
+          <p class="search__result--txt">진료명</p>
+          <ul>
+            <li class="place-list__box2">
+              <span class="key">건강검진_기본</span>
+              <span class="option isBtnShow">
+                <button class="base-btn type1-s" onclick="event.target.closest('.option').classList.remove('isBtnShow')">평균가 확인</button>
+                <strong class="val">
+                  <span class="num">100,000,000</span>
+                  <span class="unit">원</span>
+                </strong>
+              </span>
+            </li>
+  
+            <li class="place-list__box2">
+              <span class="key">건강검진</span>
+              <span class="option isBtnShow">
+                <button class="base-btn type1-s" onclick="event.target.closest('.option').classList.remove('isBtnShow')">평균가 확인</button>
+                <strong class="val">
+                  <span class="num">100,000,000</span>
+                  <span class="unit">원</span>
+                </strong>
+              </span>
+            </li>
+  
+            <li class="place-list__box2">
+              <span class="key">건강검진_기본</span>
+              <span class="option isBtnShow">
+                <button class="base-btn type1-s" onclick="event.target.closest('.option').classList.remove('isBtnShow')">평균가 확인</button>
+                <strong class="val">
+                  <span class="num">100,000,000</span>
+                  <span class="unit">원</span>
+                </strong>
+              </span>
+            </li>
+          </ul>
+
+          <!-- 검색 결과 없음 -->
+          <p class="no-data type-search">검색 결과가 없습니다.</p>
+          <!-- //검색 결과 없음 -->
+
+        </div>
+        <!-- //검색 결과 -->
+
+        <div class="base-tab tab-type4" data-ref="tab2">
+          <ul class="tab__list" role="tablist">
+            <li class="tab__item">
+              <button role="tab" aria-selected="true">검진,접종</button>
+            </li>
+            <li class="tab__item">
+              <button role="tab" aria-selected="false">수술</button>
+            </li>
+            <li class="tab__item">
+              <button role="tab" aria-selected="false">치료</button>
+            </li>
+          </ul>
+        </div>
+        <script>
+          const tab2 = new TabContents({target: 'tab2'});
+        </script>
+
+      </div>
+
+      <div class="place-list__body">
+
+        <p class="place-list--noti">진료별 평균가 확인을 위해 <span class="base-btn type1-xs">평균가 확인</span> 버튼을 선택해주세요</p>
+
+        <ul class="place-list__items">
+          <li class="place-list__box2">
+            <span class="key">건강검진_기본</span>
+            <span class="option isBtnShow">
+              <button class="base-btn type1-s" onclick="event.target.closest('.option').classList.remove('isBtnShow')">평균가 확인</button>
+              <strong class="val">
+                <span class="num">100,000,000</span>
+                <span class="unit">원</span>
+              </strong>
+            </span>
+          </li>
+
+          <li class="place-list__box2">
+            <span class="key">건강검진_기본건강검진_기본건강검진_기본건강검진_기본</span>
+            <span class="option isBtnShow">
+              <button class="base-btn type1-s" onclick="event.target.closest('.option').classList.remove('isBtnShow')">평균가 확인</button>
+              <strong class="val">
+                <span class="num">100,000,000</span>
+                <span class="unit">원</span>
+              </strong>
+            </span>
+          </li>
+
+          <li class="place-list__box2">
+            <span class="key">건강검진_기본</span>
+            <span class="option isBtnShow">
+              <button class="base-btn type1-s" onclick="event.target.closest('.option').classList.remove('isBtnShow')">평균가 확인</button>
+              <strong class="val">
+                <span class="num">100,000,000</span>
+                <span class="unit">원</span>
+              </strong>
+            </span>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    @@include('./botNav.html', {active: '5'})
+
+  </div>
+
+</body>
+</html>

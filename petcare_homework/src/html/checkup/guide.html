@@ -1,0 +1,76 @@
+@@include('./head.html', {
+  title: "슬개골 탈구 검사",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "슬개골 탈구 검사", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="health-checkup__guide">
+        <h2 class="content-header__title3">정확한 검사를 위해<br>촬영 가이드를 읽어주세요!</h2>
+
+        <ol class="bul-num__list">
+          <li class="bul-num__img">
+            <img src="../../assets/images/contents/health_checkup_guide1.png" alt="">
+          </li>
+          <li class="bul-num__item">
+            <span class="num">1</span>
+            <strong>양쪽 뒷발이 대칭</strong>이 되도록 나란히 정렬시켜주세요.
+          </li>
+          <li class="bul-num__img">
+            <img src="../../assets/images/contents/health_checkup_guide2.png" alt="">
+          </li>
+          <li class="bul-num__item">
+            <span class="num">2</span>
+            <strong>카메라 화면의 수평</strong>을 맞춘 후 뒷모습을 촬영해주세요.
+          </li>
+        </ol>
+        <ul class="bul-chk__list">
+          <li class="bul-chk__item">아이와 비슷한 높이에서 세로로 촬영해주세요.</li>
+          <li class="bul-chk__item">꼬리가 몸을 가리지 않는 뒷모습으로 촬영해주세요.</li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type1-xl"
+        onclick="
+        layerMsg({
+          msg: '카메라 접근 권한 팝업',
+          type: 'confirm',
+          btn: {confirm: '허용함', cancel: '허용안함'}
+        })
+        "
+      >탈구 검사하기</button>
+    </div>
+
+  </div>
+  
+  <!-- 퍼블 검수 용 -->
+  <script>
+    const pop = {
+      "msg1" : ()=>{
+        layerMsg({
+          msg: '핸드폰 설정 메뉴에서<br>카메라 접근 권한을 허용해주세요.'
+        });
+      },
+      "msg2" : ()=>{
+        layerMsg({
+          msg: '가이드에 맞춰 다시<br>촬영해주세요.'
+        });
+      }
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+@@include('./head.html', {
+  title: "펫케어",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "펫케어", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <p class="join-info__title">세상에 없던 펫 종합 서비스</p>
+      <p class="join-info__desc">우리아이 조회, 실종 예방은 물론​<br>사료/건강분석과 병원정보 등 다양한 꿀팁까지</p>
+      <div class="join-info__visual">
+        <img src="../../assets/images/join/visual.png" alt="">
+      </div>
+      <div class="join-info__list">
+        <ul class="care-info__list">
+          <li class="care-info__item care-info__item1">
+            <strong class="tit">사료/간식 분석</strong>
+            <span class="txt">우리아이 맞춤 사료/ 간식을 추천해요.</span>
+          </li>
+          <li class="care-info__item care-info__item2">
+            <strong class="tit">건강 분석</strong>
+            <span class="txt">비대면 건강 분석과 AI가 분석해주는<br> 슬개골 탈구​</span>
+          </li>
+          <li class="care-info__item care-info__item3">
+            <strong class="tit">병원 정보</strong>
+            <span class="txt">병원 정보는 물론 미용샵,<br>동반 가능 핫플레이스를 알려드려요.</span>
+          </li>
+          <li class="care-info__item care-info__item4">
+            <strong class="tit">펫 매거진​</strong>
+            <span class="txt">우리아이 관리 꿀팁! 여기 다 있어요.</span>
+          </li>
+          <li class="care-info__item care-info__item5">
+            <strong class="tit">쇼핑몰 쿠폰​​</strong>
+            <span class="txt">매월 쿠폰받아 우리 아이에게 선물하세요.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type1-l">월 3,300원으로 우리아이 관리하기</button>
+    </div>
+
+  </div>
+  <!-- //container -->
+  
+  <!-- 서비스 이용 동의 팝업 -->
+  <div class="layer-popup type-bot" data-ref="layerServiceAgree">
+    <section class="popup__container">
+      <div class="popup__header">
+        <h3 class="popup__title">서비스 이용을 위해 약관에 동의해주세요.</h3>
+      </div>
+      <div class="popup__contents">
+
+        <div class="agree-chk__box">
+          <div class="agree-chk__head">
+            <label class="input-chk">
+              <input type="checkbox">
+              <span>유료 서비스 가입 약관</span>
+            </label>
+          </div>
+          <ul class="agree-chk__chk-list">
+            <li class="agree-chk__item">
+              <label class="input-chk">
+                <input type="checkbox">
+                <span>서비스 이용약관(필수)</span>
+              </label>
+              <button class="agree-chk--btn">상세보기</button>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="btn-wrap">
+        <button class="base-btn type1-xl" disabled>확인</button>
+      </div>
+    </section>
+  </div>
+  <script>
+    const layerServiceAgree = new LayerPopup({target: "layerServiceAgree"});
+  </script>
+  <!-- //서비스 이용 동의 팝업 -->
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    if(Util.getUrlParams().pop === 'layerServiceAgree') {
+      layerServiceAgree.show();
+    }
+  </script>
+  <!-- //퍼블 검수 용 -->
+  
+</body>
+</html>

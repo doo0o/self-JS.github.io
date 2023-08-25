@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/homeStyle.css">
+  <script>
+    if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+      window.location = 'microsoft-edge:' + window.location;
+      setTimeout(function() {
+        window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+      }, 1);
+    }
+
+    // main
+    let mainUrl = "./web.html";
+  </script>
+  <script src="../../assets/js/ui.js"></script>
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="container isSub isCancle">
+        <header class="header">
+    <div class="logo"><a href="./web.html"><img src="../../assets/images/pc/pc_logo.png" alt="펫케어 소개페이지로 이동"></a></div>
+    <nav class="scroll-nav">
+        <ul class="scroll-nav__list">
+            <li class="nav__btn type--btn"><button role="button" data-target-class="section__01" onclick="">서비스 소개</button></li>
+            <li class="nav__btn type--btn"><button role="button" data-target-class="section__03" onclick="">서비스 가입</button></li>
+            <li class="nav__btn type--btn"><button role="button" data-target-class="section__04" onclick="">서비스 이용/해지</button></li>
+            <li class="nav__btn type--link"><a data-target-class="section__05" href="./web_notice.html?onNotice=true">공지사항</a></li>
+        </ul>
+    </nav>
+    <button class="btn-menu" onclick="document.querySelector('.header').classList.toggle('isMenuShow');"><span>메뉴보기</span></button>
+
+    <!-- menu -->
+    <div class="header-menu">
+        <nav class="header-menu__wrap">
+            <div class="header-menu__util">
+            </div>
+            <ul class="header-menu__list">
+                <li class="nav__btn type--btn"><button data-target-class="section__01" class="header-menu--item">서비스 소개</button></li>
+                <li class="nav__btn type--btn"><button data-target-class="section__03" class="header-menu--item">서비스 가입</button></li>
+                <li class="nav__btn type--btn"><button data-target-class="section__04" class="header-menu--item">서비스 이용/해지</button></li>
+                <li class="nav__btn type--link"><a href="./web_notice.html?onNotice=true" class="header-menu--item">공지사항</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- //menu -->
+</header>
+
+
+ 
+        <div class="bg_wrap_01">
+            <section class="section section__05">
+                <div class="section__inner">
+                    <div class="section__head">
+                        <h2 class="section__title">서비스 해지 <span class="section__icon-05"></span></h2>
+                        <p class="section__sub">휴대폰 번호를 입력 후 인증번호를 입력하세요</p>
+                    </div>
+                    <div class="form style_box01">
+                        <div class="form__box">
+                            <p class="form__title">통신사선택</p>
+                            <div class="inner">
+                                <label class="base-chk">
+                                <input type="radio" name="telSel">
+                                <span class="base-btn type1-l">SKT</span>
+                                </label>
+                                <label class="base-chk">
+                                <input type="radio" name="telSel">
+                                <span class="base-btn type1-l">KT</span>
+                                </label>
+                                <label class="base-chk">
+                                <input type="radio" name="telSel">
+                                <span class="base-btn type1-l">U+</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__box">
+                            <p class="form__title">휴대폰번호</p>
+                            <!-- 휴대폰 인증 -->
+                            <div class="inner">
+                                <div class="input-box type-phone">
+                                    <span class="mobile_number">010</span>
+                                    <input type="number" class="input-txt" placeholder="휴대폰 번호">
+                                </div>
+                                <button class="base-btn type1-l complete static-size_200" onclick="btn_disable()">인증요청</button>
+                                <!-- <button class="base-btn type1-l complete static-size_200" disabled>인증요청</button> -->
+                            </div>
+                        </div>
+                        
+
+                        <!-- 휴대폰 번호 인증 요청 후 -->
+                        <div class="form__box">
+                            <p class="form__title">인증번호</p>
+                            <!-- 인증번호 -->
+                            <div class="inner">
+                                <div class="input-box">
+                                    <input type="number" class="input-txt" placeholder="인증번호 6자리">
+                                </div>
+                                <button class="base-btn type1-l complete static-size_200" onclick="btn_disable()">재전송</button>
+                                <!-- <button class="base-btn type1-l complete static-size_200" disabled>재전송</button> -->
+                            </div>
+                        </div>
+        
+
+                        <div class="form__box">
+                            <div class="inner">
+                                <div class="btn-wrap type-colums">
+                                    <button class="base-btn type3-l">서비스해지</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-line">
+            <p class="footer-corp">(주)헥토이노베이션</p>
+            <nav class="footer-nav">
+                <a href="#" class="footer-nav--link">이용약관</a>
+                <a href="#" class="footer-nav--link">개인정보처리방침</a>
+            </nav>
+        </div>  
+        <div class="footer-info">
+            <p class="footer-info--txt">주소 <span>서울특별시 강남구 테헤란로 34길 6 태광타워 12, 13층</span></p>
+            <p class="footer-info--txt">사업자등록번호 <span>214-88-39117</span></p>
+        </div>
+        <small class="footer-copy">Copyright ⓒ Hecto Innovation Co.,Ltd. All rights reserved.</small>
+        </div>
+  </footer>
+  <!-- //footer -->
+</body>
+
+<script type="text/javascript" src="../../assets/js/homepage.js"></script>
+<script>
+    // 버튼 비활성화 시 사용함수
+    function btn_disable(){
+        event.target.setAttribute('disabled','');
+    }
+    let url_cancle = new URL(window.location.href)
+    if(url_cancle.searchParams.get('onCancle')){
+        navLi.forEach(element => {
+            if(element.querySelector('*').dataset.targetClass == 'section__04'){
+                element.classList.add('on')
+            }
+            
+        });
+    }
+</script>
+</html>

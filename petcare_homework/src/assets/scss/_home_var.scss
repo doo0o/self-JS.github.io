@@ -1,0 +1,67 @@
+:root{
+
+    /* color */
+
+    /* primary */
+    --color-primary : #57CD78;
+
+    /* swiper item theme color */
+    --item-theme_orange_01 : #FF6725; 
+
+    --item-theme_yellow_01 : #ECB54A;
+    --item-theme_yellow_02 : #FFA800;
+
+    --item-theme_blue_01 : #21CCE3;
+    --item-theme_blue_02 : #4AADFF;
+    --item-theme_blue_03 : #708EFF;
+
+    --item-theme_purple_01 : #D56AFF;
+    --item-theme_purple_02 : #9C5AFF;
+
+    --header_line : #E6E8EB;
+
+        /*  basic color */
+    --black : #000000;
+    --white : #ffffff;
+    /*  gray color */
+    --gray : #808892;
+    --gray2 : #BDBDC6;
+    --gray3 : #D6DBE1;
+    --gray4 : #EBEFF5;
+    --gray5 : #E5E8EC;
+    --gray6 : #F7F8FA;
+    --gray7 : #ECF0F4;
+    --gray8 : #CFD4D9;
+    --gray9 : #F5FBF7;
+    --gray10 : #F6FAF6;
+    --gray11 : #F4F5FA;
+    --gray12 : #F2F3F5;
+    --gray13 : #3B3B3B;
+    --gray14 : #E7EBF0;
+
+    --color-font: var(--black);
+    --color-font2: #565C63;
+    --color-font3: var(--gray);
+    --color-font4: var(--gray2);
+    --color-font5: var(--gray3);
+    
+    --section_bg_01 : var(--gray11);
+    --red : #D61111;
+
+    --footer-hight : 188px;
+
+
+    /* size */
+
+    --header : 78px;
+
+    --PC-container : 1600px;
+    --PC-contents : 1231px;
+    --PC-section : 1125px;
+
+    --Tablet-container : 1025px;
+    --Tablet-contents : 925px;
+
+    --Mobile-container : 1024px;
+    --Mobile-contents : 360px;
+}

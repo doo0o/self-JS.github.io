@@ -1,0 +1,131 @@
+<!-- 상세조회 -->
+<div class="layer-popup type-bot" data-ref="missingFilter">
+  <section class="popup__container">
+    <div class="popup__header">
+      <button class="btn-close" onclick="missingFilter.hide();">닫기</button>
+      <h3 class="popup__title">상세조회</h3>
+    </div>
+    <div class="popup__contents">
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">기간</p>
+        </div>
+        <div class="form-box__inner">
+          <div class="input-calendar-period">
+            <button type="button" class="input-calendar"
+              data-calendar='{
+                "name": "missingFilterCalendarPeriod1",
+                "end" : "missingFilterCalendarPeriod2",
+                "title" : "기간",
+                "minDate" : "beforeOneMonth",
+                "maxDate" : "todayDate",
+                "__coment" : "beforeOneMonth  = 현재 날짜에 1개월 전, todayDate = 현재날짜"
+              }'
+            >선택</button>
+            <span class="simbol">~</span>
+            <button type="button" class="input-calendar"
+              data-calendar='{
+                "name": "missingFilterCalendarPeriod2",
+                "start" : "missingFilterCalendarPeriod1",
+                "title" : "기간",
+                "minDate" : "beforeOneMonth",
+                "maxDate" : "todayDate",
+                "__coment" : "beforeOneMonth  = 현재 날짜에 1개월 전, todayDate = 현재날짜"
+              }'
+            >선택</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box__row">
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">시도</p>
+          </div>
+          <div class="form-box__inner">
+            <div class="select-box">
+              <button type="button" class="select"
+                data-select='{
+                  "name": "areaMainSelect",
+                  "title" : "시도 선택",
+                  "option": [
+                    {"전체": "all"},
+                    {"서울특별시": "val2"},
+                    {"인천광역시": "val3"}
+                  ],
+                  "value" : ""
+                }'
+              >전체</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">시군구</p>
+          </div>
+          <div class="form-box__inner">
+            <div class="select-box">
+              <button type="button" class="select"
+                data-select='{
+                  "name": "areaSubSelect",
+                  "title" : "시군구 선택",
+                  "option": [
+                    {"전체": "all"},
+                    {"종로구": "val2"},
+                    {"중구": "val3"}
+                  ],
+                  "value" : "all"
+                }'
+              >전체</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">펫 종류</p>
+        </div>
+        <div class="form-box__inner">
+          <label class="base-chk">
+            <input type="radio" name="typePet" checked>
+            <span class="base-btn type2-l">
+              강아지
+            </span>
+          </label>
+          <label class="base-chk">
+            <input type="radio" name="typePet">
+            <span class="base-btn type2-l">
+              고양이
+            </span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+    <div class="btn-wrap">
+      <button class="base-btn type1-xl">검색하기</button>
+    </div>
+  </section>
+</div>
+<script>
+  const missingFilter = new LayerPopup({target: "missingFilter"});
+
+  // ***샘플****
+  // 디자인 요청 사항으로 기간, 시도 선택 시 필터 레이어가 숨겨지게 처리 되어있음
+  // globalObjSetFunc 함수가 DOMContentLoaded 후 실행하게 처리 되어 있어 셋타임을 걸어놓은 상태
+  missingFilter.onShow((_this)=>{
+    setTimeout(()=>{
+      globalSelectObj.areaMainSelect.onShow(()=>_this.wrap.style.display = "none");
+      globalSelectObj.areaMainSelect.onHide(()=>_this.wrap.style.display = '');
+      globalSelectObj.areaSubSelect.onShow(()=>_this.wrap.style.display = "none");
+      globalSelectObj.areaSubSelect.onHide(()=>_this.wrap.style.display = '');
+      globalCalendarObj.missingFilterCalendarPeriod1.onShow(()=>_this.wrap.style.display = "none");
+      globalCalendarObj.missingFilterCalendarPeriod1.onHide(()=>_this.wrap.style.display = '');
+      globalCalendarObj.missingFilterCalendarPeriod2.onShow(()=>_this.wrap.style.display = "none");
+      globalCalendarObj.missingFilterCalendarPeriod2.onHide(()=>_this.wrap.style.display = '');
+    },1)
+  });
+</script>
+<!-- //상세조회 -->

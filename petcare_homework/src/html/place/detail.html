@@ -1,0 +1,130 @@
+@@include('./head.html', {
+  title: "플레이스",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "플레이스", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="place-detail__header">
+        <h3 class="content-header__title5">헥토 동물병원</h3>
+        <div class="place__info">
+          <span class="place__info--item item1">주차가능</span>
+          <span class="place__info--item item2">24시</span>
+          <span class="place__info--item item3">1차병원</span>
+        </div>
+      </div>
+
+      <div class="place-detail__map">
+        <img src="../../assets/images/temp/map.png" alt="">
+      </div>
+
+      <section class="place-detail__section">
+        <div class="content-header type-header3">
+          <h4 class="content-header__title6">기본 정보</h4>
+        </div>
+        <div class="place-detail__content__type1">
+          <table>
+            <colgroup>
+              <col style="width:102px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row" class="item item1">주소</th>
+                <td>서울 강남구 테헤란로34길 6, 12층 1204호</td>
+              </tr>
+              <tr>
+                <th scope="row" class="item item2">연락처</th>
+                <td>02-1234-5678</td>
+              </tr>
+              <tr>
+                <th scope="row" class="item item3">영업시간</th>
+                <td>월~일 10:00~19:00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="place-detail__section">
+        <div class="content-header type-header3">
+          <h4 class="content-header__title6">병원 소개</h4>
+        </div>
+        <div class="place-detail__content__type2" data-ref="toggleCont1">
+          <div class="cont" data-ref="toggleTarget">
+            <div class="box" data-ref="toggleTargetBox">
+              병원병원 소개입니다. 병원 소개입니다. 병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다. 병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다. 병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다. 병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다. 병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다. 병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다. 병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다. 병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다. 병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다. 소개입니다. 병원 소개입니다. 병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다. 병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다. 병원 소개입니다. 병원 소개입니다.병원 소개입니다. 병원 소개입니다.
+            </div>
+          </div>
+          <button class="btn-toggle" data-ref="toggleBtn">
+            <span class="toggle-txt1">펼쳐보기</span>
+            <span class="toggle-txt2">접기</span>
+          </button>
+        </div>
+        <script>
+          ellipsisToggle({wrap: 'toggleCont1', line: 5});
+        </script>
+      </section>
+
+      <section class="place-detail__section">
+        <div class="content-header type-header3">
+          <h4 class="content-header__title6">미용샵 소개</h4>
+        </div>
+        <div class="place-detail__content__type2" data-ref="toggleCont2">
+          <div class="cont" data-ref="toggleTarget">
+            <div class="box" data-ref="toggleTargetBox">
+              5줄이하5줄이하 5줄이하5줄이하 5줄이하5줄이하 5줄이하5줄이하 5줄이하5줄이하 5줄이하5줄이하 5줄이하5줄이하 5줄이하5줄이하 5줄이하5줄이하 5줄이하 5줄이하
+            </div>
+          </div>
+          <button class="btn-toggle" data-ref="toggleBtn">
+            <span class="toggle-txt1">펼쳐보기</span>
+            <span class="toggle-txt2">접기</span>
+          </button>
+        </div>
+        <script>
+          ellipsisToggle({wrap: 'toggleCont2', line: 5});
+        </script>
+      </section>
+
+      <section class="place-detail__section">
+        <div class="content-header type-header3">
+          <h4 class="content-header__title6">진료 정보</h4>
+        </div>
+        <div class="place-detail__content__type1">
+          <table>
+            <colgroup>
+              <col style="width:92px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">전문 분야</th>
+                <td>내과, 심장, 외과, 치과</td>
+              </tr>
+              <tr>
+                <th scope="row">부가 서비스</th>
+                <td>미용 호텔 용품</td>
+              </tr>
+              <tr>
+                <th scope="row">수의사수</th>
+                <td>2명</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+    <!-- //container -->
+
+  </div>
+
+</body>
+</html>

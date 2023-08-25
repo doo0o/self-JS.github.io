@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>펫케어</title>
+  <style>
+    @font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:local('Pretendard Bold'),url('../../assets/fonts/Pretendard-Bold.subset.woff2') format('woff2');}@font-face{font-family:'Pretendard';font-weight:500;font-display:swap;src:local('Pretendard Medium'),url('../../assets/fonts/Pretendard-Medium.subset.woff2') format('woff2');}@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:local('Pretendard Regular'), url('../../assets/fonts/Pretendard-Regular.subset.woff2') format('woff2');}*{margin:0;padding:0;}body{font-family: 'Pretendard';}.wrap{position:fixed;top:0;right:0;bottom:0;left:0;display:flex;justify-content:center;background:#F5F5F5;}.cont{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;width:440px;height:100%;min-width:440px;min-height:800px;margin:0 120px 0 40px;}.logo{position:absolute;top:40px;left:0;width: 120px;height: 30px;}.logo img{width: 100%;}.txt{margin-top:-55px;padding:68px 0 0;font-size:50px;line-height:60px;font-weight:400;color:#000;background:url('../../assets/images/pc/pc_main.png') no-repeat}.txt strong{display:block;font-size:80px;line-height:96px;font-weight:700;color:#57CD78;}.txt2{margin-top:48px;font-size:24px;line-height:28.8px;font-weight:400;color:#000;}.benefit{display:flex;flex-wrap:wrap;margin-top:24px;}.benefit li{list-style:none;margin:0 12px 12px 0;padding:9px 16px;background:#fff;border:1px solid #D6DBE1;border-radius:40px;color:#57CD78;font-size:16px;line-height:22px;font-weight:500;}.frame{position:relative;z-index:2;height:100%;background:#fff;}.frame iframe{width:360px;height:100%;}.bubble{position:fixed;border-radius:50%;}.bubble1{bottom:50%;right:50%;margin:0 93px 314px 0;width:1451px;height:1451px;background:linear-gradient(180deg, #C5F8D6 0%, rgba(141, 255, 179, 0.1) 100%);}.bubble2{top:50%;left:50%;margin:-49px 0 0 22px;width:1122px;height:1122px;background:linear-gradient(0, #BEECFF 0%, rgba(141, 255, 179, 0.1) 100%);}.bubble3{top:50%;right:50%;margin:-131px 377px 0 0;width:466px;height:466px;background:linear-gradient(0, #F9EDEC 0%, rgba(249, 237, 236, 0.5) 100%);}.bubble4{bottom:50%;left:50%;margin:0 0 186px 436px;width:436px;height:436px;background:linear-gradient(180deg, #BEECFF 0%, rgba(141, 255, 179, 0.2) 100%);}.bubble5{top:50%;right:50%;margin:226px 804px 0 0;width:225px;height:225px;background:linear-gradient(0, rgba(253, 243, 203, 0.5) 0%, #FCF1C2 100%);}@media screen and (max-width: 1000px){.cont {display: none;}}
+  </style>
+  <script>
+    if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+      window.location = 'microsoft-edge:' + window.location;
+      setTimeout(function() {
+        window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+      }, 1);
+    }
+  </script>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="cont">
+      <h1 class="logo"><img src="../../assets/images/pc/pc_logo.png" alt="펫케어"></h1>
+      <p class="txt">
+        반려동물 종합 서비스
+        <strong>펫케어</strong>
+      </p>
+      <p class="txt2">펫케어에서만 누릴 수 있는 혜택</p>
+      <ul class="benefit">
+        <li>대형마트 할인 쿠폰</li>
+        <li>펫쇼핑몰 할인 쿠폰</li>
+        <li>사료기호성 검사 키트 할인 쿠폰</li>
+        <li>펫 보험 제공</li>
+        <li>반려동물 건강 분석</li>
+        <li>반려동물 슬개골 탈구 분석</li>
+        <li>반려동물 매거진</li>
+      </ul>
+    </div>
+    <div class="frame">
+      <iframe src="index_hana.html" frameborder="0"></iframe>
+    </div>
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+    <div class="bubble bubble4"></div>
+    <div class="bubble bubble5"></div>
+    <div class="bubble bubble6"></div>
+  </div>
+
+</body>
+</html>

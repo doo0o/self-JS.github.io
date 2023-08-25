@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>건강 분석</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="page-title">건강 분석</h1>
+        
+        <button class="btn-back" onclick="history.back()">뒤로가기</button>
+        
+        
+
+      </div>
+
+      
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="base-tab tab-type2" data-ref="healthAnalysisResultTab">
+        <ul class="tab__list" role="tablist">
+          <li class="tab__item">
+            <button role="tab" aria-selected="true">피부</button>
+          </li>
+          <li class="tab__item">
+            <button role="tab" aria-selected="false">치아</button>
+          </li>
+          <li class="tab__item">
+            <button role="tab" aria-selected="false">관절</button>
+          </li>
+          <li class="tab__item">
+            <button role="tab" aria-selected="false">행동</button>
+          </li>
+          <li class="tab__item">
+            <button role="tab" aria-selected="false">눈</button>
+          </li>
+          <li class="tab__item">
+            <button role="tab" aria-selected="false">면역력</button>
+          </li>
+          <li class="tab__item">
+            <button role="tab" aria-selected="false">심장</button>
+          </li>
+          <li class="tab__item">
+            <button role="tab" aria-selected="false">신장</button>
+          </li>
+          <li class="tab__item">
+            <button role="tab" aria-selected="false">위장</button>
+          </li>
+          <li class="tab__item">
+            <button role="tab" aria-selected="false">간</button>
+          </li>
+        </ul>
+      </div>
+      <script>
+        const healthAnalysisResultTab = new TabContents({target: 'healthAnalysisResultTab', type: 'slider'});
+      </script>
+
+      <div class="result-detail__contents">
+        <div class="health-info type-single">
+          <div class="health-info__item health-info__item9">
+            <span class="key">위장</span>
+            <strong class="state state3">양호</strong>
+          </div>
+        </div>
+
+        <section>
+          <div class="content-header type-header2">
+            <h3 class="content-header__title">이런 증상이 있었나요?</h3>
+          </div>
+          <div class="result-detail__content__type3">
+            <p class="txt">설사나 구토 등의 소화기 증상들은 상대적으로 자주 발생하기 때문에 가볍게 생각하기 쉽습니다. 소화기 증상은 과식이나 식이 변화에 의해 나타나는 일시적인 현상인지, 실제로 질병에 의해 장기에 문제가 생긴 것인지 구분하기 어려운 경우가 많습니다. 집에서 확인할 수 있는 가장 중요한 포인트는 증상의 반복성입니다. 만약 구토나 설사 등의 소화기 증상이 한번 발생한 이후 다시 평소처럼 건강하게 생활한다면 조금 더 지켜봐도 괜찮습니다. 하지만 이러한 증상들이 지속적으로 반복되면 병원에서 정밀한 검사를 받아 볼 필요가 있습니다.</p>
+          </div>
+        </section>
+
+        <section>
+          <div class="content-header type-header2">
+            <h3 class="content-header__title">주요 질병과 증상이예요.</h3>
+          </div>
+          <div class="result-detail__content__type4">
+            <ul>
+              <li class="item">
+                <strong class="key">위염</strong>
+                <span class="val">위 점막에 염증 혹은 궤양이 발생한 상태</span>
+                <span class="desc">원인 : 이물 섭취, 과식</span>
+                <span class="desc">증상 : 구토, 침 흘림, 식욕 부진</span>
+              </li>
+              <li class="item">
+                <strong class="key">장염</strong>
+                <span class="val">장벽에 염증이 발생하여 장 운동성과 소화 기능이 저하된 상태</span>
+                <span class="desc">원인 : 감염(세균, 바이러스), 이물 섭취, 과식</span>
+                <span class="desc">증상 : 구토, 설사, 혈변, 식욕 부진</span>
+              </li>
+              <li class="item">
+                <strong class="key">췌장염</strong>
+                <span class="val">췌장 효소 분비와 소화 기능이 저하된 상태</span>
+                <span class="desc">원인 : 고지방 식이, 노령, 췌장 혈류 감소</span>
+                <span class="desc">증상 : 구토, 설사, 혈변, 식욕 부진</span>
+              </li>
+              <li class="item">
+                <strong class="key">종양</strong>
+                <span class="val">소화기에 종양이 발생하여 물리적 폐색 혹은 기능 저하가 발생한 상태</span>
+                <span class="desc">원인 : 유전적 요인, 원인 불명</span>
+                <span class="desc">증상 : 구토, 설사, 혈변, 식욕 부진, 체중 감소</span>
+              </li>
+              <li class="item">
+                <strong class="key">IBD</strong>
+                <span class="val">장벽에 자가면역성으로 염증이 발생한 상태</span>
+                <span class="desc">원인 : 유전적 요인, 원인 불명</span>
+                <span class="desc">증상 : 구토, 설사, 혈변, 식욕 부진, 체중 감소</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="content-header type-header2">
+            <h3 class="content-header__title">우리아이 건강을 지키기 위한 방법이예요.</h3>
+          </div>
+          <section class="result-detail__content__type5">
+            <h4 class="content__title--info icon-info1">생활습관</h4>
+            <ul class="list">
+              <li class="item">
+                간식은 매일 정해진 양만 급여하세요.<br>
+                과도한 간식은 설사의 원인이 될 수 있어요.
+              </li>
+              <li class="item">
+                사람이 섭취하는 음식은 급여하시면 안 돼요.<br>
+                소화 불량, 설사의 원인이 될 수 있어요.
+              </li>
+              <li class="item">
+                사람이 섭취하는 음식은 급여하시면 안 돼요.<br>
+                소화 불량, 설사의 원인이 될 수 있어요.
+              </li>
+            </ul>
+          </section>
+
+          <section class="result-detail__content__type6" data-ref="NutritionMng">
+            <h4 class="content__title--info icon-info2">영양관리</h4>
+            <div class="list-wrap swiper-container">
+              <ul class="list swiper-wrapper">
+                <li class="item swiper-slide">
+                  <strong class="key">유산균</strong>
+                  <span class="val">
+                    신체 건강에 이로운 작용을 하는 유익균으로, 장 내 유해 세균의 증식을 막고 정상 세균총을 강화하여 소화에 적합한 환경을 조성합니다. 반려동물에서 권장되는 일일 섭취량은 약 2억CFU/kg 입니다.
+                  </span>
+                </li>
+                <li class="item swiper-slide">
+                  <strong class="key">식이섬유</strong>
+                  <span class="val">
+                    난소화성 다당류 성분으로 장 내 유익균의 증식을 돕고 식이성 설사와 변비의 개선에 도움을 줍니다. 곡물과 채소에 주로 함유되어 있으며 반려동물에서 권장되는 일일 섭취량은 0.1g/kg 입니다.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <script>
+              const NutritionMng = slider({target: "NutritionMng", option: {
+                spaceBetween: 10
+              }})
+            </script>
+          </section>
+        </section>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+  </div>
+
+</body>
+</html>

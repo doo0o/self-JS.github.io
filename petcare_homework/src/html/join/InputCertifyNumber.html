@@ -1,0 +1,50 @@
+@@include('./head.html', {
+  title: "펫케어",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+
+    <!-- container -->
+    <div class="container">
+
+      <p class="join__title">인증번호 6자리를 입력해주세요.</p>
+
+      <!-- 번호 입력 -->
+      <div class="join__form">
+        <p class="join__form__title">인증번호</p>
+        
+        <div class="form-box isError"> <!-- 에러 일 경우 isError -->
+          <div class="form-box__inner">
+            <div class="input-box">
+              <span class="timer">3:00</span>
+              <input type="number" class="input-txt" placeholder="인증번호">
+            </div>
+            <button class="base-btn type2-l">재전송</button>
+          </div>
+          <p class="form-box--validate">인증번호가 틀렸습니다. 다시 입력해주세요.</p>
+        </div>
+      </div>
+      <!-- //번호 입력 -->
+
+    </div>
+    <!-- //container -->
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type1-xl" disabled>다음</button>
+    </div>
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    if(Util.getUrlParams().pop === 'msg') {
+      layerMsg({msg: '올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.'});
+    }
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

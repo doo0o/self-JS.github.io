@@ -1,0 +1,32 @@
+@@include('./head.html', {
+  title: "펫케어",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "펫케어", type: "close"})
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="error__wrap error--autoLogout">
+        <p class="error--txt">
+          자동 로그아웃 되었습니다.<br>
+          서비스 이용을 위해 로그인을 해주세요.
+        </p>
+        <a href="#" class="base-btn type3-s">로그인 하기</a>
+      </div>
+
+
+    </div>
+    <!-- //container -->
+
+    <p class="error--contact">펫케어 고객센터 : <a href="tel:15224958">1522-4958</a></p>
+
+  </div>
+
+</body>
+</html>

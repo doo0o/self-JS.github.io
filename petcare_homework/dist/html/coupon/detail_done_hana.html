@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="page-title">펫케어</h1>
+        <button class="btn-menu" onclick="document.querySelector('.header').classList.toggle('isMenuShow');"><span>메뉴보기</span></button>
+        <button class="btn-back" onclick="history.back()">뒤로가기</button>
+        
+        
+
+      </div>
+
+      <!-- menu -->
+      <div class="header-menu">
+        <nav class="header-menu__wrap">
+          <div class="header-menu__util">
+            <a href="#" class="header-menu--login">로그인</a>
+          </div>
+          <ul class="header-menu__list">
+            <li><a href="../main/" class="header-menu--item">홈</a></li>
+            <li><a href="../insurance/" class="header-menu--item">펫보험</a></li>
+            <li><a href="../analysis/" class="header-menu--item">비대면 건강분석</a></li>
+            <li><a href="../checkup/" class="header-menu--item">AI슬개골 탈구 검사</a></li>
+            <li><a href="../magazine/" class="header-menu--item">펫매거진</a></li>
+            <li><a href="../coupon/index_hana.html" class="header-menu--item">쿠폰</a></li>
+          </ul>
+        </nav>
+      </div>
+<!-- //menu -->
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="coupon__detail done">
+        <p class="brand"><img src="../../assets/images/icon/brand_homeplus.svg" alt="홈플러스"></p>
+        <p class="name">홈플러스 쿠폰</p>
+        <p class="point">10,000원</p>
+        <div class="barcode">
+          <img src="../../assets/images/temp/barcode249x60.jpg" alt="">
+        </div>
+        <div class="barcode-number">
+          <span>1234 5678 1234 5678 1234</span>
+          <button class="base-btn type1-xs" onclick="
+          navigator.clipboard.writeText('1234 5678 1234 5678 1234').then(
+            () => {
+              dialog({msg: '바코드 번호가 복사되었습니다.'})
+            }
+          );">복사</button>
+        </div>
+        <div class="info">
+          <table>
+            <colgroup>
+              <col style="width: 72px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">유효기간</th>
+                <td>2023년 12월 23일</td>
+              </tr>
+              <tr>
+                <th scope="row">사용처</th>
+                <td>홈플러스</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="coupon__info">
+        <pre class="coupon__info__content">
+          <b>[홈플러스]</b>
+          -홈플러스 및 홈플러스 익스프레스 매장 계산대에서 사용 가능
+          -임대매장, 상품권 구입은 제외
+          -분할 사용 불가, 현금으로 교환 불가
+          * 문의처 : 1666-3009
+        </pre>
+      </div>
+
+    </div>
+    <!-- //container --> 
+
+  </div>
+
+</body>
+</html>

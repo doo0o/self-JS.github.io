@@ -1,0 +1,68 @@
+@@include('./head.html', {
+  title: "펫케어",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "펫케어", type: "menuBack"})
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="coupon__detail">
+        <p class="brand"><img src="../../assets/images/icon/brand_homeplus.svg" alt="홈플러스"></p>
+        <p class="name">홈플러스 쿠폰</p>
+        <p class="point">10,000원</p>
+        <div class="barcode">
+          <img src="../../assets/images/temp/barcode249x60.jpg" alt="">
+        </div>
+        <div class="barcode-number">
+          <span>1234 5678 1234 5678 1234</span>
+          <button class="base-btn type1-xs" onclick="
+          navigator.clipboard.writeText('1234 5678 1234 5678 1234').then(
+            () => {
+              dialog({msg: '바코드 번호가 복사되었습니다.'})
+            }
+          );">복사</button>
+        </div>
+        <div class="info">
+          <table>
+            <colgroup>
+              <col style="width: 72px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">유효기간</th>
+                <td>2023년 12월 23일</td>
+              </tr>
+              <tr>
+                <th scope="row">사용처</th>
+                <td>홈플러스</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="coupon__info">
+        <pre class="coupon__info__content">
+          [홈플러스]​
+​- 전국 홈플러스 고객센터에서 지류상품권으로 교환 가능합니다.​
+- 바코드를 타인에게 전송하거나 캡쳐 후 공유하여 부정 사용하는 경우, 발생하는 모든 문제의 귀책은 고객님께 있으니 유의하시기 바랍니다.​
+- 지류상품권으로 교환 후 환불이 불가합니다. ​
+- 상품권 교환은 교환 가능 금액과 동일한 지류상품권으로만 가능하며, 부분교환은 불가, 전액 교환만 가능합니다.​
+- 현금 영수증은 지류 상품권으로 상품 구매시 발행 가능합니다.
+        </pre>
+      </div>
+
+    </div>
+    <!-- //container --> 
+
+  </div>
+
+</body>
+</html>

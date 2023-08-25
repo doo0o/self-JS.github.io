@@ -1,0 +1,59 @@
+@@include('./head.html', {
+  title: "쿠폰",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "쿠폰", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="coupon__detail">
+        <p class="brand"><img src="../../assets/images/icon/brand_mypet.svg" alt="마이펫플러스"></p>
+        <p class="name">마이펫플러스 동물병원 예약 쿠폰</p>
+        <p class="point">3,000 포인트</p>
+        <div class="barcode">
+          <img src="../../assets/images/temp/barcode249x60.jpg" alt="">
+        </div>
+        <div class="barcode-number">
+          <span>1234 5678 1234 5678 1234</span>
+          <button id="test" class="base-btn type1-xs" onclick="dialog({msg: '바코드 번호가 복사되었습니다.'})">복사</button>
+        </div>
+        <div class="info">
+          <table>
+            <colgroup>
+              <col style="width: 72px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">유효기간</th>
+                <td>2023년 12월 23일</td>
+              </tr>
+              <tr>
+                <th scope="row">사용처</th>
+                <td>마이펫플러스</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="coupon__info">
+        <pre class="coupon__info__content">
+          - 마이펫플러스 사이트에서 동물병원 예약시 사용 가능합니다.
+          - 마이펫플러스 > 회원가입 > 동물병원 선택 후 구매 > 포인트 전환하기 > 쿠폰번호 입력 하여 사용 가능합니다. 
+        </pre>
+      </div>
+
+    </div>
+    <!-- //container --> 
+
+  </div>
+
+</body>
+</html>

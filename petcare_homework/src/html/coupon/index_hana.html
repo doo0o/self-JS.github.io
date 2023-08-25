@@ -1,0 +1,61 @@
+@@include('./head.html', {
+  title: "펫케어",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "펫케어", type: "menuBack"})
+
+    <!-- container -->
+    <div class="container">
+
+      <h2 class="content-header__title3">쿠폰 혜택</h2>
+      <p class="content-header__desc">펫케어 고객님들께 쿠폰을 드려요!</p>
+
+      <ul class="coupon__list">
+        <li>
+          <a href="#" class="coupon__item">
+            <span class="name">사료 기호성 검사 키트 쿠폰</span>
+            <strong class="point">30% 할인</strong>
+            <span class="state state-download"><span>다운로드</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="coupon__item">
+            <span class="name">온라인 펫 쇼핑몰 쿠폰</span>
+            <strong class="point">5,000원</strong>
+            <span class="state state-download"><span>다운로드</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="coupon__item">
+            <span class="name">대형마트 쿠폰</span>
+            <strong class="point">10,000원</strong>
+            <span class="state state-download"><span>다운로드</span></span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <!-- //container --> 
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    const pop = {
+      "msg1" : ()=>{
+        layerMsg({
+          msg: '쿠폰은 가입 이후 익월 1일에<br>발급 가능합니다.'
+        });
+      }
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

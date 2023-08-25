@@ -1,0 +1,58 @@
+@@include('./head.html', {
+  title: "펫케어",
+  pass_name: "kt",
+  device_type: "ios"
+})
+<body>
+
+  <div class="wrap">
+    <!-- container -->
+    <div class="container">
+      <div class="certifying-content">
+        <h2 class="content-header__title3">
+          등록번호 조회를 위해​ 고객님의 <br>이름 입력 후 인증을 진행해주세요!
+        </h2>
+        <p class="content-header__desc">등록번호를 확인하려면 PASS 인증이 필요해요.​</p>
+        <p class="content-etc2">* 동물등록대행기관(동물병원 등)에 방문하여 신청하신 
+          정보만 조회 가능해요.</p>
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">이름</p>
+          </div>
+          <div class="form-box__inner">
+            <div class="input-box">
+              <input type="text" class="input-txt" value="" placeholder="이름을 입력해주세요.">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //container -->
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type1-xl" onclick="pop.msg2()">PASS 인증 요청</button>
+    </div>
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    const pop = {
+      "msg1" : ()=>{
+        layerMsg({
+            msg: '동물등록번호 조회시 PASS 인증서 서명이 필요합니다. PASS 인증서 발급을 진행해주세요.',
+            title: 'PASS 인증서 미발급'
+        });
+      },
+      "msg2" : ()=>{
+        layerMsg({
+            msg: '고객님의 이름을 다시 확인해주세요.',
+        });
+      }
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

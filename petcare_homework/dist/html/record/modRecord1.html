@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="page-title">기록</h1>
+        
+        <button class="btn-back" onclick="history.back()">뒤로가기</button>
+        
+        
+
+      </div>
+
+      
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="content-header type-header4">
+        <h2 class="content-header__title3">기록 수정하기</h2>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">식사 정보</p>
+        </div>
+        <div class="form-box__inner">
+          <label class="base-chk">
+            <input type="radio" name="modFoodSel" checked>
+            <span class="base-btn type2-l">
+              사료
+            </span>
+          </label>
+          <label class="base-chk">
+            <input type="radio" name="modFoodSel">
+            <span class="base-btn type2-l">
+              간식
+            </span>
+          </label>
+        </div>
+        <div class="form-box__inner">
+          <label class="base-chk">
+            <input type="radio" name="modFoodSel">
+            <span class="base-btn type2-l">
+              영양제
+            </span>
+          </label>
+          <label class="base-chk">
+            <input type="radio" name="modFoodSel">
+            <span class="base-btn type2-l">
+              기타
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">메모<span class="form-box__title--opt">(선택)</span></p>
+        </div>
+        <div class="form-box__inner">
+          <div class="input-box">
+            <input type="text" class="input-txt" placeholder="메모를 입력해주세요." value="메모메모메모메모메모메모메모메모메모메모메모메모">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">식사 시간</p>
+        </div>
+        <div class="form-box__inner">
+          <div class="input-box">
+            <button type="button" class="input-time"
+              data-time='{
+                "name" : "modFoodTimePicker",
+                "title" : "시간",
+                "value" : "오전 11:00"
+              }'
+            >시간을 선택해주세요</button>
+          </div>
+        </div>
+        <div class="form-box__option">
+          <label class="input-chk">
+            <input type="checkbox">
+            <span>시간 모름</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- //container -->
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type2-xl">삭제하기</button>
+      <button class="base-btn type1-xl">수정하기</button>
+    </div>
+
+  </div>
+
+</body>
+</html>

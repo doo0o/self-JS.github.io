@@ -1,0 +1,291 @@
+@@include('./head.html', {
+  title: "건강 분석",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap health-analysis__wrap" data-ref="healthAnalysisWrap">
+    
+    @@include('./header.html', {title: "건강 분석", type: "menuBack"})
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="health-analysis__entry">
+        <h2 class="content-header__title3">간단한 질문을 통해<br> 우리 아이 건강상태를 알 수 있어요</h2>
+        <p class="content-header__desc">10개 부위에 대한 건강 레포트와<br> 솔루션을 제공해요.</p>
+      </div>
+
+      <div data-ref="healthAnalysisContainer">
+
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    <div class="btn-wrap type-sticky type-column">
+      <button class="base-btn type1-xl btn-start"
+        data-select='{
+        "name": "myPetSelect",
+        "title" : "검사할 아이를 선택해주세요.",
+        "type" : "petSelect",
+        "option": [
+          {
+            "id" : "petId1",
+            "name" : "구름",
+            "age" : "7",
+            "gender" : "여아",
+            "className": "dog"
+          },
+          {
+            "id" : "petId2",
+            "name" : "후추",
+            "age" : "7",
+            "gender" : "남아",
+            "className": "cat"
+          },
+          {
+            "id" : "petId3",
+            "name" : "후추2",
+            "age" : "7",
+            "gender" : "남아",
+            "className": "cat"
+          }
+        ],
+        "value" : "petId1"
+      }'>건강 분석하기</button>
+      <button class="base-btn type1-xl btn-next" data-ref="btnNext">다음</button>
+    </div>
+
+  </div>
+
+  <script src="../../assets/js/healthAnalysis.js"></script>
+  <script>
+    const healthAnalysis = new HealthAnalysis({
+      wrap: 'healthAnalysisWrap',
+      container: 'healthAnalysisContainer',
+      btnBack: '.header .btn-back',
+      btnNext: 'btnNext',
+      data: [
+        {
+          title: "피부",
+          chk: [
+            {id: "step1_1", txt: "피부에 딱지나 뾰루지, 각질이 생겨요."},
+            {id: "step1_2", txt: "피부를 자주 가려워하는 편이에요."},
+            {id: "step1_3", txt: "귀지가 많은 편이고 귀를 자주 긁어요."},
+            {id: "step1_4", txt: "발 끝을 수시로 핥거나 깨물어요."},
+            {id: "step1_5", txt: "없어요."}
+          ]
+        },
+        {
+          title: "치아",
+          chk: [
+            {id: "step2_1", txt: "양치질을 아파하는 것 같아요."},
+            {id: "step2_2", txt: "이빨 색이 누렇게 보여요."},
+            {id: "step2_3", txt: "갈수록 입냄새가 심해져요."},
+            {id: "step2_4", txt: "사료나 간식을 흘리면서 먹어요."},
+            {id: "step2_5", txt: "없어요."}
+          ]
+        },
+        {
+          title: "뼈/관절",
+          chk: [
+            {id: "step3_1", txt: "다리에서 뚝뚝거리는 느낌을 받은 적 있어요."},
+            {id: "step3_2", txt: "예전처럼 활발하게 뛰어놀지 못해요."},
+            {id: "step3_3", txt: "걷는 모습이 어딘지 모르게 불편해보여요."},
+            {id: "step3_4", txt: "이유없이 아파하거나 몸을 떨 때가 있어요."},
+            {id: "step3_5", txt: "없어요."}
+          ]
+        },
+        {
+          title: "행동",
+          chk: [
+            {id: "step3_1", txt: "집에 혼자 남겨졌을때 불안해보여요."},
+            {id: "step3_2", txt: "낯선 사람이나 동물에 대한 경계가 심해요."},
+            {id: "step3_3", txt: "천둥 소리, 공사 소음 등 주변 큰 소리에 쉽게 놀라요."},
+            {id: "step3_4", txt: "병원에 갈 때 스트레스를 많이 받아요,"},
+            {id: "step3_5", txt: "없어요."}
+          ]
+        },
+        {
+          title: "눈",
+          chk: [
+            {id: "step4_1", txt: "눈이 예전과 달리 혼탁해졌어요."},
+            {id: "step4_2", txt: "눈이 충혈되고 붓는 경우가 있어요."},
+            {id: "step4_3", txt: "눈을 제대로 뜨지 못하는 경우가 있어요."},
+            {id: "step4_4", txt: "눈물을 많이 흘리는 편이에요."},
+            {id: "step4_5", txt: "없어요."}
+          ]
+        },
+        {
+          title: "면역력/호흡기",
+          chk: [
+            {id: "step5_1", txt: "켁켁거리는 기침을 자주 해요."},
+            {id: "step5_2", txt: "재채기를 종종하는 편이에요."},
+            {id: "step5_3", txt: "콧물을 흘리는 경우가 있어요."},
+            {id: "step5_4", txt: "눈곱이 많이 끼는 편이에요."},
+            {id: "step5_5", txt: "없어요."}
+          ]
+        },
+        {
+          title: "심장",
+          chk: [
+            {id: "step6_1", txt: "저녁 시간대에 기침을 자주 해요."},
+            {id: "step6_2", txt: "안았을 때 심장이 크게 뛰는 것이 느껴져요."},
+            {id: "step6_3", txt: "운동을 하면 금방 지쳐요."},
+            {id: "step6_4", txt: "자거나 쉬고 있을 때 숨을 빠르게 쉬어요."},
+            {id: "step6_5", txt: "없어요."}
+          ]
+        },
+        {
+          title: "신장/방광",
+          chk: [
+            {id: "step7_1", txt: "물을 평소보다 많이 마시는 것 같아요."},
+            {id: "step7_2", txt: "소변을 보는 횟수가 늘었어요."},
+            {id: "step7_3", txt: "평소보다 소변을 보는데 시간이 오래 걸려요."},
+            {id: "step7_4", txt: "소변을 한방울씩 흘리면서 볼 때가 있어요."},
+            {id: "step7_5", txt: "없어요."}
+          ]
+        },
+        {
+          title: "위/장",
+          chk: [
+            {id: "step8_1", txt: "음식물이나 위액을 토하는 경우가 있어요."},
+            {id: "step8_2", txt: "동그랗고 딱딱한 변을 보는 경우가 있어요."},
+            {id: "step8_3", txt: "이유 없이 식사를 거를 때가 있어요."},
+            {id: "step8_4", txt: "묽은 변을 자주 보는 편이에요."},
+            {id: "step8_5", txt: "없어요."}
+          ]
+        },
+        {
+          title: "간",
+          chk: [
+            {id: "step9_1", txt: "소화되지 않은 음식을 토해내는 경우가 잦아요."},
+            {id: "step9_2", txt: "기운이 없고 활동량이 적어요,"},
+            {id: "step9_3", txt: "식사량이 적고 체중이 빠진 것 같아요."},
+            {id: "step9_4", txt: "눈, 피부, 잇몸이 누렇게 변했어요."},
+            {id: "step9_5", txt: "없어요."}
+          ]
+        },
+        {
+          title: "병력",
+          sub: [
+            {
+              txt: "(이)가 난 1년 동안 아파서 병원에 간 <br> 이유를 모두 골라주세요.",
+              type: "box",
+              column: 3,
+              chk: [
+                {id: "step10_1", txt: "간"},
+                {id: "step10_2", txt: "위/장"},
+                {id: "step10_3", txt: "신장/방광"},
+                {id: "step10_4", txt: "심장"},
+                {id: "step10_5", txt: "면역력"},
+                {id: "step10_6", txt: "치아"},
+                {id: "step10_7", txt: "뼈/관절"},
+                {id: "step10_8", txt: "귀/피부"},
+                {id: "step10_9", txt: "눈"},
+                {id: "step10_10", txt: "행동"},
+                {id: "step10_11", txt: "없어요."}
+              ],
+            },
+            {
+              txt: "(이)는 건강검진을 얼마나 자주 받나요?",
+              type: "box",
+              radio: [
+                {id: "step10_12", txt: "6개월에 1번 이상"},
+                {id: "step10_13", txt: "1년에 1번 이상"},
+                {id: "step10_14", txt: "2년에 1번 이상"},
+                {id: "step10_15", txt: "따로 받지 않아요"}
+              ]
+            }
+          ]
+        },
+        {
+          title: "체중/체형",
+          txt: "(이)와 비슷한 체형을 골라주세요.",
+          radio: [
+            {id: "step11_1", txt: "수척해요", desc: "갈비뼈, 허리뼈, 골반뼈를 포함한 모든 뼈의 돌출부가 뚜렷하게 보여요. 몸 어디에서도 체지방과 근육을 확인할 수 없어요."},
+            {id: "step11_2", txt: "말랐어요", desc: "갈비뼈를 만졌을 때 뼈 사이사이가 매우 잘 느껴져요, 허리가 잘 구분되고 복부가 잘록해요."},
+            {id: "step11_3", txt: "이상적이에요", desc: "갈비뼈 사이사이가 적당한 양의 지방으로 덮여 있어요. 허리가 구분되고 복부는 약간 들어가 있어요."},
+            {id: "step11_4", txt: "무거워요", desc: "갈비뼈가 많은 지방으로 덮여 사이사이의 굴곡이 거의 느껴지지 않아요. 허리와 복부에 지방이 많아 위에서 보았을 때 허리를 구분하기 힘들어요."},
+            {id: "step11_5", txt: "비만이에요", desc: "매우 많은 지방이 몸 전체에 축적되어 있어요. 목, 가슴, 허리의 구분이 어렵고 몸 어디에서도 뼈를 만지기가 힘들어요."}
+          ]
+        },
+        {
+          title: "라이프스타일",
+          sub: [
+            {
+              txt: "(이)는 주로 어디에서 생활하나요?",
+              type: "box",
+              radio: [
+                {id: "step12_1", txt: "실내"},
+                {id: "step12_2", txt: "실외"}
+              ],
+            },
+            {
+              txt: "(이)는 산책이나 야외 활동을 얼마나 자주 하나요?",
+              type: "box",
+              radio: [
+                {id: "step12_3", txt: "매일"},
+                {id: "step12_4", txt: "주 3회 이상"},
+                {id: "step12_5", txt: "주 3회 미만"},
+                {id: "step12_6", txt: "거의 하지 않아요"}
+              ],
+            },
+            {
+              txt: "(이)는 간식을 얼마나 자주 먹나요?",
+              type: "box",
+              radio: [
+                {id: "step12_7", txt: "매일"},
+                {id: "step12_8", txt: "주 3회 이상"},
+                {id: "step12_9", txt: "주 3회 미만"},
+                {id: "step12_10", txt: "거의 하지 않아요"}
+              ],
+            },
+            {
+              txt: "(이)는 간식을 얼마나 자주 먹나요?",
+              type: "box",
+              radio: [
+                {id: "step12_11", txt: "매일 2회 이상"},
+                {id: "step12_12", txt: "매일 1회"},
+                {id: "step12_13", txt: "주 3회 미만"},
+                {id: "step12_14", txt: "거의 먹지 않아요"}
+              ],
+            },
+            {
+              txt: "(이)는 목욕과 위생미용을 얼마나 자주 하나요?",
+              type: "box",
+              radio: [
+                {id: "step12_15", txt: "매주"},
+                {id: "step12_16", txt: "격주나 달마다"},
+                {id: "step12_17", txt: "분기마다"},
+                {id: "step12_18", txt: "거의 하지 않아요"}
+              ],
+            }
+          ]
+        }
+      ]
+    });
+    globalObjSetFunc('select');
+    globalSelectObj.myPetSelect.onConfirm((_this)=>{
+      healthAnalysis.start(_this.selStr);
+      healthAnalysis.onCancel(()=>{
+        layerMsg({
+          msg: '건강 분석을<br>종료하시겠습니까?',
+          type: 'confirm',
+          btn: {cancle: '취소'},
+          onConfirm: ()=>{
+            window.location.href = window.location.href;
+          }
+        })
+      });
+      healthAnalysis.onComplete(_this=>{
+        alert('완료');
+        console.log(_this.value) // 선택 값 확인
+      })
+    })
+  </script>
+
+</body>
+</html>

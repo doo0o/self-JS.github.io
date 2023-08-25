@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="page-title">기록</h1>
+        
+        <button class="btn-back" onclick="history.back()">뒤로가기</button>
+        
+        
+
+      </div>
+
+      
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+      
+      <div class="content-header type-header4">
+        <h2 class="content-header__title3">새로 기록하기</h2>
+      </div>
+
+      <div class="base-tab tab-type4" data-ref="writeNewRecordTabContents">
+        <ul class="tab__list" role="tablist">
+          <li class="tab__item">
+            <button
+              role="tab"
+              aria-selected="true"
+              aria-controls="writeNewRecordTabContentsCont1"
+            >식사</button>
+          </li>
+          <li class="tab__item">
+            <button
+              role="tab"
+              aria-selected="false"
+              aria-controls="writeNewRecordTabContentsCont2"
+            >산책</button>
+          </li>
+          <li class="tab__item">
+            <button
+              role="tab"
+              aria-selected="false"
+              aria-controls="writeNewRecordTabContentsCont3"
+            >배변</button>
+          </li>
+          <li class="tab__item">
+            <button
+              role="tab"
+              aria-selected="false"
+              aria-controls="writeNewRecordTabContentsCont4"
+            >기타</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 식사 탭 -->
+      <div id="writeNewRecordTabContentsCont1" class="tab__content">
+
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">식사 정보</p>
+          </div>
+          <div class="form-box__inner">
+            <label class="base-chk">
+              <input type="radio" name="writeFoodSel">
+              <span class="base-btn type2-l">
+                사료
+              </span>
+            </label>
+            <label class="base-chk">
+              <input type="radio" name="writeFoodSel">
+              <span class="base-btn type2-l">
+                간식
+              </span>
+            </label>
+          </div>
+          <div class="form-box__inner">
+            <label class="base-chk">
+              <input type="radio" name="writeFoodSel">
+              <span class="base-btn type2-l">
+                영양제
+              </span>
+            </label>
+            <label class="base-chk">
+              <input type="radio" name="writeFoodSel">
+              <span class="base-btn type2-l">
+                기타
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">메모<span class="form-box__title--opt">(선택)</span></p>
+          </div>
+          <div class="form-box__inner">
+            <div class="input-box">
+              <input type="text" class="input-txt" placeholder="메모를 입력해주세요.">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">식사 시간</p>
+          </div>
+          <div class="form-box__inner">
+            <div class="input-box">
+              <button type="button" class="input-time"
+                data-time='{
+                  "name" : "writeFoodTimePicker",
+                  "title" : "시간"
+                }'
+              >시간을 선택해주세요</button>
+            </div>
+          </div>
+          <div class="form-box__option">
+            <label class="input-chk">
+              <input type="checkbox">
+              <span>시간 모름</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+      <!-- //식사 탭 -->
+      
+      <!-- 산책 탭 -->
+      <div id="writeNewRecordTabContentsCont2" class="tab__content">
+
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">산책 장소<span class="form-box__title--opt">(선택)</span></p>
+          </div>
+          <div class="form-box__inner">
+            <div class="input-box">
+              <input type="text" class="input-txt" placeholder="산책 장소를 입력해주세요.">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">산책 시간</p>
+          </div>
+          <div class="form-box__inner">
+            <div class="input-box" style="width: 156px; flex: none;">
+              <button type="button" class="input-time"
+                data-time='{
+                  "name" : "writeWalkTimePicker",
+                  "title" : "시간"
+                }'
+              >시간 선택</button>
+            </div>
+            <div class="form-box--txt">부터</div>
+          </div>
+          <div class="form-box__inner">
+            <div class="input-box" style="width: 156px; flex: none;">
+              <input type="text" class="input-txt" placeholder="분">
+            </div>
+            <div class="form-box--txt">분 동안 산책했어요.</div>
+          </div>
+          <div class="form-box__option">
+            <label class="input-chk">
+              <input type="checkbox">
+              <span>시간 모름</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+      <!-- //산책 탭 -->
+
+      <!-- 배변 탭 -->
+      <div id="writeNewRecordTabContentsCont3" class="tab__content">
+        
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">식사 정보</p>
+          </div>
+          <div class="form-box__inner">
+            <label class="base-chk">
+              <input type="radio" name="writeToiletSel">
+              <span class="base-btn type2-l">
+                소변
+              </span>
+            </label>
+            <label class="base-chk">
+              <input type="radio" name="writeToiletSel">
+              <span class="base-btn type2-l">
+                대변
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">메모<span class="form-box__title--opt">(선택)</span></p>
+          </div>
+          <div class="form-box__inner">
+            <div class="input-box">
+              <input type="text" class="input-txt" placeholder="메모를 입력해주세요.">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">배변 시간</p>
+          </div>
+          <div class="form-box__inner">
+            <div class="input-box">
+              <button type="button" class="input-time"
+                data-time='{
+                  "name" : "writeToiletTimePicker",
+                  "title" : "시간"
+                }'
+              >시간을 선택해주세요</button>
+            </div>
+          </div>
+          <div class="form-box__option">
+            <label class="input-chk">
+              <input type="checkbox">
+              <span>시간 모름</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+      <!-- //배변 탭 -->
+
+      <!-- 기타 탭 -->
+      <div id="writeNewRecordTabContentsCont4" class="tab__content">
+
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">메모</p>
+          </div>
+          <div class="form-box__inner">
+            <div class="input-box">
+              <input type="text" class="input-txt" placeholder="메모를 입력해주세요.">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">시간</p>
+          </div>
+          <div class="form-box__inner">
+            <div class="input-box">
+              <button type="button" class="input-time"
+                data-time='{
+                  "name" : "writeEtcTimePicker",
+                  "title" : "시간"
+                }'
+              >시간을 선택해주세요</button>
+            </div>
+          </div>
+          <div class="form-box__option">
+            <label class="input-chk">
+              <input type="checkbox">
+              <span>시간 모름</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+      <!-- //기타 탭 -->
+
+      <script>
+        const writeNewRecordTabContents = new TabContents({target: 'writeNewRecordTabContents'});
+      </script>
+      
+    </div>
+    <!-- //container -->
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type1-xl" onclick="sample();">기록 저장하기</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
+<!-- 퍼블 검수 용 -->
+<script>
+  function sample() {
+    switch(writeNewRecordTabContents.current) {
+      case 'writeNewRecordTabContentsCont1': {
+        if(globalTimeObj.writeFoodTimePicker.value === null) {
+          layerMsg({
+            msg: "식사시간을 입력해주세요."
+          });
+        }
+        break;
+      }
+      case 'writeNewRecordTabContentsCont2': {
+        if(globalTimeObj.writeWalkTimePicker.value === null) {
+          layerMsg({
+            msg: "산책시간을 입력해주세요."
+          });
+        }
+        break;
+      }
+      case 'writeNewRecordTabContentsCont3': {
+        if(globalTimeObj.writeToiletTimePicker.value === null) {
+          layerMsg({
+            msg: "배변시간을 입력해주세요."
+          });
+        }
+        break;
+      }
+      case 'writeNewRecordTabContentsCont4': {
+        if(globalTimeObj.writeEtcTimePicker.value === null) {
+          layerMsg({
+            msg: "시간을 입력해주세요."
+          });
+        }
+        break;
+      }
+    }
+  }
+</script>
+<!-- //퍼블 검수 용 -->

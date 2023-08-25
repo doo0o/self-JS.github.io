@@ -1,0 +1,93 @@
+:root {
+	--black: #000;
+	--black2: #212121;
+	--gray: #808892;
+	--gray2: #BDBDC6;
+	--gray3: #D6DBE1;
+	--gray4: #EBEFF5;
+	--gray5: #E5E8EC;
+	--gray6: #F7F8FA;
+	--gray7: #ECF0F4;
+	--gray8: #CFD4D9;
+	--gray9: #F5FBF7;
+	--gray10: #F6FAF6;
+	--gray11: #F4F5FA;
+	--gray12: #F2F3F5;
+	--gray13: #3B3B3B;
+	--white: #fff;
+	--primary: #57CD78;
+	--primary_kt:#ff3a4a;
+	--green2: #E6F2C4;
+	--green3: #DFFFEA;
+	--red: #F54836;
+	--red2: #FF5754;
+	--violet: #8670C6;
+	--brown: #C69470;
+	--yellow: #ECC820;
+	--skyblue: #F2F6FC;
+	--color--kt: #424242;
+	--color-btn: var(--primary);
+	--color-btn-kt: var(--black2);
+	--color-btn-active: #48A061;
+	--color-btn1-active-font: #BBF5CB;
+	--color-btn2-active: #D1F2DA;
+	--color-font: var(--black);
+	--color-font-primary: var(--primary);
+	--color-font2: #565C63;
+	--color-font3: var(--gray);
+	--color-font4: var(--gray2);
+	--color-font5: var(--gray3);
+	--color-font6: #0471E9;
+	--color-font7: #D61111;
+	--color-font8: var(--red2);
+	--color-font9: var(--yellow);
+	--sat: env(safe-area-inset-top);
+	--sar: env(safe-area-inset-right);
+	--sab: env(safe-area-inset-bottom);
+	--sal: env(safe-area-inset-left);
+	--sab16: 16px;
+	--radius-layer: 16px;
+}
+
+.isSab {
+	--sab16: env(safe-area-inset-bottom);
+}
+
+.type-modal .popup__container {
+	width: 353px;
+	border-radius: 0;
+	padding: 46px 27px 17px;
+}
+.type-modal .popup__container .btn-wrap {
+	margin: 44px 0 0;
+}
+.type-modal .popup__container .txt-type {
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 23px;
+}
+.type-modal .popup__container .base-btn[class*=-m] {
+	height: 54px;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 23px;
+}
+
+.base-btn.type1-l, .base-btn.type1-xl, .base-btn.type2-l, .base-btn.type2-xl {
+	padding: 14.5px 32px;
+	font-size: 19.2px;
+	font-weight: 700;
+	line-height: 25.2px;
+	height: 55px;
+}
+.pet-type .base-btn {
+	height: auto;
+}
+
+.btn-wrap.type-column .base-btn ~ .base-btn {
+	margin: 13px 0 0;
+}
+.btn-wrap .base-btn ~ .base-btn {
+	margin: 0 0 0 13px;
+}
+/*# sourceMappingURL=ios.css.map */

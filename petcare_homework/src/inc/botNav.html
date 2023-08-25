@@ -1,0 +1,11 @@
+<!-- 네비게이션 -->
+    <nav class="bot-nav">
+      <ul class="bot-nav__list">
+        @@if(active === "1") {<li class="bot-nav__item bot-nav__item1 isActive">}@@if(active !== "1") {<li class="bot-nav__item bot-nav__item1">}<a href="#">홈</a></li>
+        @@if(active === "2") {<li class="bot-nav__item bot-nav__item2 isActive">}@@if(active !== "2") {<li class="bot-nav__item bot-nav__item2">}<a href="#">기록</a></li>
+        @@if(active === "3") {<li class="bot-nav__item bot-nav__item3 isActive">}@@if(active !== "3") {<li class="bot-nav__item bot-nav__item3">}<a href="#">건강분석</a></li>
+        @@if(active === "4") {<li class="bot-nav__item bot-nav__item4 isActive">}@@if(active !== "4") {<li class="bot-nav__item bot-nav__item4">}<a href="#">푸드</a></li>
+        @@if(active === "5") {<li class="bot-nav__item bot-nav__item5 isActive">}@@if(active !== "5") {<li class="bot-nav__item bot-nav__item5">}<a href="#">플레이스</a></li>
+      </ul>
+    </nav>
+    <!-- //네비게이션 -->

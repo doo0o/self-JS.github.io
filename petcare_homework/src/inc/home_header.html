@@ -1,0 +1,28 @@
+<header class="header">
+    <div class="logo"><a href="./web.html"><img src="../../assets/images/pc/pc_logo.png" alt="펫케어 소개페이지로 이동"></a></div>
+    <nav class="scroll-nav">
+        <ul class="scroll-nav__list">
+            <li class="nav__btn type--btn"><button role="button" data-target-class="section__01" onclick="">서비스 소개</button></li>
+            <li class="nav__btn type--btn"><button role="button" data-target-class="section__03" onclick="">서비스 가입</button></li>
+            <li class="nav__btn type--btn"><button role="button" data-target-class="section__04" onclick="">서비스 이용/해지</button></li>
+            <li class="nav__btn type--link"><a data-target-class="section__05" href="./web_notice.html?onNotice=true">공지사항</a></li>
+        </ul>
+    </nav>
+    <button class="btn-menu" onclick="document.querySelector('.header').classList.toggle('isMenuShow');"><span>메뉴보기</span></button>
+
+    <!-- menu -->
+    <div class="header-menu">
+        <nav class="header-menu__wrap">
+            <div class="header-menu__util">
+            </div>
+            <ul class="header-menu__list">
+                <li class="nav__btn type--btn"><button data-target-class="section__01" class="header-menu--item">서비스 소개</button></li>
+                <li class="nav__btn type--btn"><button data-target-class="section__03" class="header-menu--item">서비스 가입</button></li>
+                <li class="nav__btn type--btn"><button data-target-class="section__04" class="header-menu--item">서비스 이용/해지</button></li>
+                <li class="nav__btn type--link"><a href="./web_notice.html?onNotice=true" class="header-menu--item">공지사항</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- //menu -->
+</header>
+

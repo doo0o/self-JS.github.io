@@ -1,0 +1,50 @@
+@@include('./head.html', {
+  title: "펫케어",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    <!-- container -->
+    <div class="container">
+
+      <p class="join__title">보안숫자를 입력해주세요.</p>
+
+      <!-- 번호 입력 -->
+      <div class="join__form">
+        <div class="join__captcha-box">
+          <img src="../../assets/images/temp/captcha.png" alt="" height="40">
+        </div>
+
+        <p class="join__form__title">보안숫자</p>
+        <div class="form-box">
+          <div class="form-box__inner">
+            <div class="input-box">
+              <input type="number" class="input-txt" placeholder="보안숫자 입력.">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //번호 입력 -->
+
+    </div>
+    <!-- //container -->
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type1-xl" disabled>확인</button>
+    </div>
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    if(Util.getUrlParams().pop === 'msg') {
+      layerMsg({msg: '올바른 보안숫자를<br>입력해주세요.'});
+    }
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

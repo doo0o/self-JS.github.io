@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>푸드</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="page-title">푸드</h1>
+        
+        <button class="btn-back" onclick="history.back()">뒤로가기</button>
+        
+        
+
+      </div>
+
+      
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container container-nopd">
+
+      <div class="product-detail__picture">
+        <img src="../../assets/images/temp/picture360x360_2.jpg" alt="">
+      </div>
+      <div class="product-detail__content">
+        <div class="product-detail__header">
+
+          <div class="product-detail__title">
+            <div class="rank">육포/저키/소시지 1위</div>
+            <div class="brand">도그피드(DogFeed)</div>
+            <div class="name">DOG FEED 도그피드 치킨&칠면조 울트라 프리미엄 내추럴 밸런스</div>
+            <div class="price">
+              <span class="num">63,000</span>
+              <span class="str">원</span> 
+              <span class="divide">/</span>
+              <span class="kg">1kg</span>
+            </div>
+          </div>
+
+          <ul class="product-detail__content__type1">
+            <li class="item">
+              <div class="box">
+                <span class="key">카테고리</span>
+                <span class="val">건식사료</span>
+              </div>
+            </li>
+            <li class="item">
+              <div class="box">
+                <span class="key">주단백질</span>
+                <span class="val">돼지고기</span>
+              </div>
+            </li>
+            <li class="item">
+              <div class="box">
+                <span class="key">기능성</span>
+                <span class="val">11개</span>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="product-detail__content__type2">
+            <li class="item item1">
+              <div class="box">
+                <span class="key">급여연령</span>
+                <span class="val">초기 성장기(4주)부터 ~ 12주까지</span>
+              </div>
+            </li>
+            <li class="item item2">
+              <div class="box">
+                <span class="key">사료크기</span>
+                <span class="val">큰 알갱이(14mm)</span>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+
+        <section class="content-section type-line">
+          <div class="content-header">
+            <h3 class="content-header__title2">원재료 구성</h3>
+          </div>
+          <ul class="product-detail__content__type3">
+            <li class="item item1">
+              <div class="box">
+                <span class="key">안전</span>
+                <span class="val">13</span>
+              </div>
+            </li>
+            <li class="item item2">
+              <div class="box">
+                <span class="key">관심</span>
+                <span class="val">22</span>
+              </div>
+            </li>
+            <li class="item item3">
+              <div class="box">
+                <span class="key">유의</span>
+                <span class="val">22</span>
+              </div>
+            </li>
+            <li class="item item4">
+              <div class="box">
+                <span class="key">미정</span>
+                <span class="val">11</span>
+              </div>
+            </li>
+          </ul>
+          <div class="btn-wrap">
+            <button class="base-btn type2-m" onclick="ingredientsDetail.show();">성분 자세히보기</button>
+          </div>
+        </section>
+
+        <section class="content-section type-line">
+
+          <div class="content-header">
+            <h3 class="content-header__title2">영양 정보</h3>
+          </div>
+
+          <section class="product-detail__content__type4">
+            <h4 class="title">최소 영양 기준</h4>
+            <div class="sub-head">
+              <div class="sub-title">
+                <span class="str">미국기준</span>
+                <span class="state-box">충족</span>
+              </div>
+              <div class="opt">
+                <button class="btn-tooltip" onclick="standardInfo.show();">기준 정보</button>
+              </div>
+            </div>
+            <ul class="list">
+              <li class="item">
+                <div class="box">
+                  <span class="key">단백질</span>
+                  <strong class="val state1">충족</strong>
+                </div>
+              </li>
+              <li class="item">
+                <div class="box">
+                  <span class="key">지방</span>
+                  <strong class="val state1">충족</strong>
+                </div>
+              </li>
+              <li class="item">
+                <div class="box">
+                  <span class="key">칼슘</span>
+                  <strong class="val state2">부족</strong>
+                </div>
+              </li>
+              <li class="item">
+                <div class="box">
+                  <span class="key">인</span>
+                  <strong class="val state1">충족</strong>
+                </div>
+              </li>
+              <li class="item">
+                <div class="box">
+                  <span class="key">칼슘:인</span>
+                  <strong class="val state2">부족</strong>
+                </div>
+              </li>
+            </ul>
+            <p class="etc">*주단백질 : 돼지고기, 닭고기, 쌀</p>
+          </section>
+
+          <section class="product-detail__content__type4">
+            <h4 class="title">성분 정보</h4>
+            <div class="sub-head">
+              <div class="sub-title">
+                <span class="str">칼로리</span>
+                <span class="state-arw state-arw1">높음</span>
+              </div>
+            </div>
+            <ul class="list list-type2">
+              <li class="item">
+                <div class="box2">
+                  <span class="key">탄수화물</span>
+                  <span class="state-arw state-arw1">높음</span>
+                </div>
+              </li>
+              <li class="item2">
+                <div class="box2">
+                  <span class="key">단백질</span>
+                  <span class="state-arw state-arw2">중간</span>
+                </div>
+              </li>
+              <li class="item">
+                <div class="box2">
+                  <span class="key">지방</span>
+                  <span class="state-arw state-arw3">낮음</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section class="content-section type-line">
+
+          <div class="content-header">
+            <h3 class="content-header__title2">영양 정보</h3>
+          </div>
+
+          <section class="product-detail__content__type4">
+            <div class="box">
+              <span class="key">칼로리</span>
+              <strong class="val">
+                <span class="state1">1234</span> kcal / kg
+              </strong>
+            </div>
+            <p class="etc">*주단백질 : 돼지고기, 닭고기, 쌀</p>
+          </section>
+
+        </section>
+
+        <section class="content-section type-line">
+          <div class="content-header">
+            <h3 class="content-header__title2">건강상태별 추천</h3>
+          </div>
+          <ul class="product-detail__content__type5">
+            <li class="item">
+              <div class="box">
+                <span class="key">임신과 수유</span>
+                <span class="val state2">비추천</span>
+              </div>
+            </li>
+            <li class="item">
+              <div class="box">
+                <span class="key">비만</span>
+                <span class="val state1">추천</span>
+              </div>
+            </li>
+            <li class="item">
+              <div class="box">
+                <span class="key">노령</span>
+                <span class="val state1">추천</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="content-section type-line">
+          <div class="content-header">
+            <h3 class="content-header__title2">하루 권장량</h3>
+          </div>
+          <div class="product-detail__content__type6">
+            <div class="box box-icon1">
+              <span class="str">하루에</span>
+              <strong class="val">500g, 500kcal</strong>
+              <span class="str">섭취하면 돼요</span>
+            </div>
+            <div class="box box-icon2">
+              <span class="str">하루에</span>
+              <strong class="val">500g, 500kcal</strong>
+              <span class="str">섭취하면 돼요</span>
+            </div>
+          </div>
+          <div class="btn-wrap">
+            <button class="base-btn type2-m"
+              data-select='{
+                "name": "myPetSelect",
+                "title" : "다른 아이 선택",
+                "type" : "petSelect",
+                "option": [
+                  {
+                    "name" : "구름",
+                    "age" : "7",
+                    "gender" : "여아",
+                    "id" : "testid1",
+                    "className": "dog"
+                  },
+                  {
+                    "name" : "후추",
+                    "age" : "7",
+                    "gender" : "남아",
+                    "id" : "testid2",
+                    "className": "cat"
+                  },
+                  {
+                    "name" : "후추2",
+                    "age" : "7",
+                    "gender" : "남아",
+                    "id" : "testid3",
+                    "className": "cat"
+                  }
+                ],
+                "value" : ""
+              }'
+            >다른 아이로 권장량 확인하기</button>
+          </div>
+        </section>
+
+        <section class="content-section type-line">
+          <div class="content-header">
+            <h3 class="content-header__title2">기대효과</h3>
+          </div>
+          <div class="tag-box">
+            <span class="tag-item">지질장애</span>
+            <span class="tag-item">당뇨</span>
+            <span class="tag-item">위장</span>
+            <span class="tag-item">비만</span>
+            <span class="tag-item">항산화</span>
+            <span class="tag-item">노령</span>
+            <span class="tag-item">심장</span>
+          </div>
+          <p class="etc benefit">펫케어 사료, 간식 분석 기능은 (주)라이노박스와 제휴하여 제공합니다.</p>
+        </section>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    <!-- 네비게이션 -->
+    <nav class="bot-nav">
+      <ul class="bot-nav__list">
+        <li class="bot-nav__item bot-nav__item1"><a href="#">홈</a></li>
+        <li class="bot-nav__item bot-nav__item2"><a href="#">기록</a></li>
+        <li class="bot-nav__item bot-nav__item3"><a href="#">건강분석</a></li>
+        <li class="bot-nav__item bot-nav__item4 isActive"><a href="#">푸드</a></li>
+        <li class="bot-nav__item bot-nav__item5"><a href="#">플레이스</a></li>
+      </ul>
+    </nav>
+    <!-- //네비게이션 -->
+
+  </div>
+
+  <!-- 성분 자세히보기 -->
+<div class="layer-popup type-modal" data-ref="ingredientsDetail">
+  <section class="popup__container">
+    <button class="btn-close" onclick="ingredientsDetail.hide();">닫기</button>
+    <div class="popup__contents">
+      <h3 class="txt-type">성분 자세히보기</h3>
+      <p class="txt-type2">
+        <strong class="colorPrimary">원재료</strong> <strong class="colorPoint">원재료</strong> <strong class="colorPoint2">원재료</strong> 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료원재료 원재료 원재료 원재료 원재료 원재료 원재료원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료원재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료 재료 원재료 원재료 원재료 원재료 원재료 원재료 원재료
+      </p>
+    </div>
+  </section>
+</div>
+<script>
+  const ingredientsDetail = new LayerPopup({target: "ingredientsDetail"});
+</script>
+<!-- //성분 자세히보기 -->
+  <!-- 기준 -->
+<div class="layer-popup type-modal" data-ref="standardInfo">
+  <section class="popup__container">
+    <button class="btn-close" onclick="standardInfo.hide();">닫기</button>
+    <div class="popup__contents">
+      <h3 class="txt-type">미국기준</h3>
+      <p class="txt-type3">미국 사료 협회인 AAFCO 에서 제시한 영양소 기준으로 해당 기준은 완벽하게 균형 잡힌 영양소의 의미보다는 최소한 영양소를 갖추고 있다는 의미로 판단하는것이 바람직합니다 : )</p>
+    </div>
+  </section>
+</div>
+<script>
+  const standardInfo = new LayerPopup({target: "standardInfo"});
+</script>
+<!-- //기준 -->
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    const pop = {
+      "ingredientsDetail" : ()=>{
+        ingredientsDetail.show();
+      },
+      "standardInfo" : ()=>{
+        standardInfo.show();
+      },
+      "myPetSelect" : ()=>{
+        globalObjSetFunc('select');
+        globalSelectObj.myPetSelect.createLayer();
+      }
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

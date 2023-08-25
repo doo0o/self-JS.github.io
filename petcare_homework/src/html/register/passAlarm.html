@@ -1,0 +1,46 @@
+@@include('./head.html', {
+  title: "펫케어",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "동물 등록번호", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="certifying-content certifying-content1">
+        <h2 class="content-header__title3">
+          PASS 인증 완료 후​<br>확인을 클릭해주세요!
+        </h2>
+        <p class="content-header__desc">알림이 오지 않는다면 통신사 PASS앱에<br>알림 수신동의가 되어있는지 확인해주세요.</p>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type1-xl">확인</button>
+    </div>
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    const pop = {
+      "msg1" : ()=>{
+        layerMsg({msg: '인증이 완료되었습니다.<br>우리 아이 관리를 위해<br>추가 정보를 입력해주세요.'});
+      },
+      "msg2" : ()=>{
+        layerMsg({msg: '인증이 정상적으로 처리되지 않았습니다.<br>다시 진행해주세요.'});
+      }
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

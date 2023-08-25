@@ -1,0 +1,28 @@
+@@include('./head.html', {
+  title: "펫케어",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    @@include('./header.html', {title: "PASS U+ header", type: "backClose"})
+
+    <!-- container -->
+    <div class="container container-bg container-main">
+    </div>
+    <!-- //container -->
+
+    @@include('./botNav.html', {active: '1'})
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+    if(Util.getUrlParams().type) document.documentElement.classList.add(Util.getUrlParams().type);
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

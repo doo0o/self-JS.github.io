@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  
+  <link rel="stylesheet" href="../../assets/css/kt_pass_renew.css">
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="page-title">펫케어</h1>
+        
+        
+        
+        <button class="btn-setting">설정</button>
+
+      </div>
+
+      
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container container-bg container-main">
+
+      <!-- 등록 전 -->
+      <div class="main-top__before">
+        <h2 class="main-top__title"><strong>이지윤님</strong> 아이를 등록해주세요!</h2>
+
+        <div class="btn-wrap">
+          <button class="base-btn type1-xl" onclick="registerMyPet.show();">등록하기</button>
+        </div>
+      </div>
+      <!-- //등록 전 -->
+
+      <!-- 등록 후 -->
+      <div class="main-top__after">
+        <h2 class="main-top__title2"><strong>이지윤님</strong> 관리할 아이를 선택해주세요!</h2>
+        <div class="care-card" data-ref="careCardSlider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+              <!-- 슬라이드 -->
+              <div class="swiper-slide">
+                <div class="care-card__box">
+                  <div class="care-card__snippet">
+                    <div class="picture">
+                      <img src="../../assets/images/default_picture_80x80.jpg" alt="사진 없을 경우 기본 이미지">
+                    </div>
+                    <div class="cont">
+                      <p class="name">
+                        <span>쿠키</span>
+                        <!-- 선택 된 상태 isSelect -->
+                        <button
+                          class="btn-heart isSelect" 
+                          onclick="layerMsg({
+                            msg: '관리할 아이를 변경하시겠어요?',
+                            type: 'confirm',
+                            btn: {confirm: '변경하기', cancel: '아니오'},
+                            onConfirm: (_this)=>alert('변경'),
+                            onCancel: (_this)=>alert('아니오'),
+                          });"
+                        >선택</button>
+                      </p>
+                      <p class="age type-m">3살 남아</p>
+                      <p class="species">골든 리트리버</p>
+                      <p class="b-day">태어난 지 3년 1개월 32일</p>
+                    </div>
+                    <button class="btn-edit">정보수정</button>
+                  </div>
+                  <p class="registration-number">등록번호 <strong>410123456789012</strong></p>
+                </div>
+              </div>
+
+              <!-- 슬라이드 -->
+              <div class="swiper-slide">
+                <div class="care-card__box">
+                  <div class="care-card__snippet">
+                    <div class="picture">
+                      <img src="../../assets/images/default_picture_80x80.jpg" alt="사진 없을 경우 기본 이미지">
+                    </div>
+                    <div class="cont">
+                      <p class="name">
+                        <span>코코</span>
+                        <button
+                          class="btn-heart"
+                          onclick="layerMsg({
+                            msg: '관리할 아이를 변경하시겠어요?',
+                            type: 'confirm',
+                            btn: {confirm: '변경하기', cancel: '아니오'},
+                            onConfirm: (_this)=>alert('변경'),
+                            onCancel: (_this)=>alert('아니오'),
+                          });"
+                        >선택</button>
+                      </p>
+                      <p class="age type-f">3살 여아</p>
+                      <p class="species">골든 리트리버</p>
+                      <p class="b-day">태어난 지 3년 1개월 32일</p>
+                    </div>
+                    <button class="btn-edit">정보수정</button>
+                  </div>
+                  <p class="registration-number">등록번호 <strong>조회 안함</strong></p>
+                </div>
+              </div>
+
+              <!-- 슬라이드 추가 -->
+              <div class="swiper-slide">
+                <button class="care-card__box">
+                  <div class="add-picture">
+                    <div class="add-picture--dog">강아지</div>
+                    <div class="add-picture--cat">고양이</div>
+                  </div>
+                  <strong class="add-txt">추가하기</strong>
+                </button>
+              </div>
+
+            </div>
+          </div>
+          <div class="swiper-pagination type-page1"></div>
+        </div>
+        <script>
+          const careCardSlider = slider({target: 'careCardSlider'})
+        </script>
+      </div>
+      <!-- //등록 후 -->
+
+      <!-- 기록 -->
+      <section class="mypet-record__section">
+        <div class="content-header">
+          <h3 class="content-header__title">오늘 우리 아이는요!</h3>
+          <div class="content-header__btn">
+            <button class="base-btn type4-etc2">기록하기</button>
+          </div>
+        </div>
+        <ul class="mypet-record__list">
+          <li class="mypet-record__item mypet-record__item1">
+            <span class="txt1">스트레스 해소!</span>
+            <strong class="txt2">산책하기</strong>
+            <strong class="txt3"><span>160</span>분</strong>
+          </li>
+          <li class="mypet-record__item mypet-record__item2">
+            <span class="txt1">맛있게 냠냠!</span>
+            <strong class="txt2">식사하기</strong>
+            <strong class="txt3"><span>2</span>번</strong>
+          </li>
+          <li class="mypet-record__item mypet-record__item3">
+            <span class="txt1">간단 건강체크!</span>
+            <strong class="txt2">배변활동</strong>
+            <strong class="txt3"><span>1</span>번</strong>
+          </li>
+        </ul>
+      </section>
+      <!-- //기록 -->
+
+      <!-- 배너 -->
+      <div class="main-banner__box">
+        <div class="main-banner__row">
+          <button class="main-banner__btn main-banner__btn1"><strong>동물 등록번호 확인</strong>하고 실종 예방</button>
+        </div>
+        <div class="main-banner__row2">
+          <button class="main-banner__btn main-banner__btn2">
+            <strong class="txt1"><span class="colorPrimary">사료</span> 분석</strong>
+            <span class="txt2">섭취량은 물론<br>영양 정보까지</span>
+          </button>
+          <button class="main-banner__btn main-banner__btn3">
+            <strong class="txt1"><span class="colorPrimary">간식</span> 분석</strong>
+            <span class="txt2">건강하고 맛있는<br>간식을 모아</span>
+          </button>
+        </div>
+        <div class="main-banner__row">
+          <button class="main-banner__btn main-banner__btn4">
+            <strong class="txt1">비대면 <span class="colorPrimary">건강</span>분석</strong>
+            <span class="txt2">간단한 질문으로 건강 솔루션 확인</span>
+          </button>
+        </div>
+        <div class="main-banner__row">
+          <button class="main-banner__btn main-banner__btn5">
+            <strong class="txt1"><span class="colorPrimary">AI</span> 슬개골 탈구 검사</strong>
+            <span class="txt2">인공지능이 확인해 주는 우리아이의<br>슬개골 탈구와 건강 상태</span>
+          </button>
+        </div>
+      </div>
+      <!-- //배너 -->
+
+      <!-- 플레이스 -->
+      <section>
+        <div class="content-header">
+          <h3 class="content-header__title2">플레이스</h3>
+          <div class="content-header__btn">
+            <a href="#" class="btn-link">더보기</a>
+          </div>
+        </div>
+        <ul class="place-link__list care-info__list">
+          <li>
+            <a href="#" class="care-info__item care-info__item3">
+              <strong class="tit">병원</strong>
+              <span class="txt">내 주변 동물병원 정보 및 가격 정보</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="care-info__item care-info__item6">
+              <strong class="tit">미용샵</strong>
+              <span class="txt">우리 아이 가꿀때 필요한 정보들이 가득</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="care-info__item care-info__item7">
+              <strong class="tit">동반생활</strong>
+              <span class="txt">함께갈 수 있는 모든 곳</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- //플레이스 -->
+
+      <!-- 펫 매거진 -->
+      <section>
+        <div class="content-header">
+          <h3 class="content-header__title2">펫 매거진</h3>
+          <div class="content-header__btn">
+            <a href="#" class="btn-link">더보기</a>
+          </div>
+        </div>
+        <div class="magazine-list" data-ref="magazineSlider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class="magazine-list__item">
+                  <div class="thumb"><img src="../../assets/images/temp/thumb270x140.png" alt=""></div>
+                  <div class="txt">
+                    <p class="txt1">반려동물의 계절성 알레르기와 건강반려동물의 계절성 알레르기와 건강</p>
+                    <p class="txt2">강아지와 고양이도 인간과 같이 계절성 알레르기로 고생하는경우가 있다. 특히 환절기강아지와 고양이도 인간과 같이 계절성 알레르기로 고생하는경우가 있다. 특히 환절기</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="magazine-list__item">
+                  <div class="thumb"><img src="../../assets/images/temp/thumb270x140.png" alt=""></div>
+                  <div class="txt">
+                    <p class="txt1">반려동물의 계절성 알레르기와 건강반려동물의 계절성 알레르기와 건강</p>
+                    <p class="txt2">강아지와 고양이도 인간과 같이 계절성 알레르기로 고생하는경우가 있다. 특히 환절기강아지와 고양이도 인간과 같이 계절성 알레르기로 고생하는경우가 있다. 특히 환절기</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="magazine-list__item">
+                  <div class="thumb"><img src="../../assets/images/temp/thumb270x140.png" alt=""></div>
+                  <div class="txt">
+                    <p class="txt1">반려동물의 계절성 알레르기와 건강반려동물의 계절성 알레르기와 건강</p>
+                    <p class="txt2">강아지와 고양이도 인간과 같이 계절성 알레르기로 고생하는경우가 있다. 특히 환절기강아지와 고양이도 인간과 같이 계절성 알레르기로 고생하는경우가 있다. 특히 환절기</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <script>
+          const magazineSlider = slider({target: 'magazineSlider', option: {
+            slidesPerView: "auto",
+            spaceBetween: 16,
+          }})
+        </script>
+      </section>
+      <!-- //펫 매거진 -->
+      
+      <section>
+        <div class="content-header">
+          <h3 class="content-header__title2">알림 있어요!</h3>
+        </div>
+        <div class="main-banner__noti">
+          <div class="main-banner__noti__row">
+            <a href="#"><img src="../../assets/images/temp/banner328x112.png" alt="배너 이미지1"></a>
+          </div>
+          <div class="main-banner__noti__row">
+            <a href="#"><img src="../../assets/images/temp/banner328x70.png" alt="배너 이미지2"></a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <!-- //container -->
+
+    <!-- 네비게이션 -->
+    <nav class="bot-nav">
+      <ul class="bot-nav__list">
+        <li class="bot-nav__item bot-nav__item1 isActive"><a href="#">홈</a></li>
+        <li class="bot-nav__item bot-nav__item2"><a href="#">기록</a></li>
+        <li class="bot-nav__item bot-nav__item3"><a href="#">건강분석</a></li>
+        <li class="bot-nav__item bot-nav__item4"><a href="#">푸드</a></li>
+        <li class="bot-nav__item bot-nav__item5"><a href="#">플레이스</a></li>
+      </ul>
+    </nav>
+    <!-- //네비게이션 -->
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    const pop = {
+      "msg1" : ()=>{
+        layerMsg({
+          msg: '관리할 아이를 변경하시겠어요?',
+          type: 'confirm',
+          btn: {confirm: '변경하기', cancel: '아니오'},
+        });
+      },
+      "msg2" : ()=>{
+        layerMsg({
+          msg: '기능 이용을 위해<br>아이를 먼저 등록해주세요.',
+          btnClose: true
+        });
+      },
+      "msg3" : ()=>{
+        layerMsg({
+          msg: '등록 방법을 선택해주세요.',
+          btnClose: true,
+          customBtn: [
+            {
+              "name" : "동물 등록 번호로 등록",
+              "type" : "type1-m",
+              "func" : ()=>{
+                alert('동물 등록 번호로 등록');
+              }
+            },
+            {
+              "name" : "직접 정보 조회",
+              "type" : "type1-m",
+              "func" : ()=>{
+                alert('직접 정보 조회');
+              }
+            }
+          ]
+        });
+      },
+      "msg4" : ()=>{
+        layerMsg({
+          msg: '동물 등록 번호를 알고있나요?',
+          btnClose: true,
+          customBtn: [
+            {
+              "name" : "네, 알고있어요 입력하기",
+              "type" : "type1-m",
+              "func" : ()=>{
+                alert('동물 등록번호 입력');
+              }
+            },
+            {
+              "name" : "아니요, 몰라요 조회하기",
+              "type" : "type2-m",
+              "func" : ()=>{
+                alert('동물 등록번호 조회');
+              }
+            }
+          ]
+        });
+      },
+      "msg5" : ()=>{
+        layerMsg({
+          msg: '변경이 완료되었습니다.',
+        });
+      }
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

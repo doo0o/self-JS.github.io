@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>플레이스</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="page-title">플레이스</h1>
+        
+        <button class="btn-back" onclick="history.back()">뒤로가기</button>
+        
+        
+
+      </div>
+
+      
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="place-list__header">
+
+        <div class="input-box search__input-box">
+          <input
+            type="text"
+            class="input-txt"
+            placeholder="지역을 입력해주세요"
+            onfocus="event.target.closest('.place-list__header').classList.add('isSearch');"
+            onblur="
+              event.target.closest('.place-list__header').classList.remove('isSearch');
+              event.target.closest('.search__input-box').classList.remove('isValue');
+              event.target.closest('.search__input-box').querySelector('.input-txt').value = null;
+            "
+            oninput="
+              (event.target.value.length)
+              ? event.target.closest('.search__input-box').classList.add('isValue')
+              : event.target.closest('.search__input-box').classList.remove('isValue');
+            "
+            onkeydown="
+              if(event.keyCode == 13) {
+                event.target.blur();
+                layerMsg({
+                  msg: '검색하실 지역을<br>입력해주세요.',
+                  onConfirm: ()=>{
+                    event.target.focus();
+                  }
+                });
+              }
+            "
+          >
+          <button type="button" class="btn-del"
+            onmouseenter="
+              event.target.closest('.search__input-box').classList.remove('isValue');
+              event.target.closest('.search__input-box').querySelector('.input-txt').value = null;
+            "
+           >삭제</button>
+        </div>
+
+        <!-- 검색 결과 -->
+        <div class="search__result">
+          <ul>
+            <li>
+              <button class="search__result--btn2">
+                서울시 <span>송</span><span>파</span><span>구</span>
+              </button>
+            </li>
+            <li>
+              <button class="search__result--btn2">
+                서울시 <span>송</span><span>파</span><span>구</span>
+              </button>
+            </li>
+          </ul>
+
+          <!-- 검색 결과 없음 -->
+          <p class="no-data type-search">검색 결과가 없습니다.</p>
+          <!-- //검색 결과 없음 -->
+        </div>
+        <!-- //검색 결과 -->
+
+        <div class="base-tab tab-type4" data-ref="tab">
+          <ul class="tab__list" role="tablist">
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="true"
+              >동물병원</button>
+            </li>
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="false"
+              >미용</button>
+            </li>
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="false"
+              >카페</button>
+            </li>
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="false"
+              >숙소</button>
+            </li>
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="false"
+              >기타동반</button>
+            </li>
+          </ul>
+        </div>
+        <script>
+          const tab = new TabContents({target: 'tab'});
+          tab.onChange(() => {console.log(1)})
+        </script>
+
+      </div>
+
+      <div class="place-list__body">
+
+        <div class="banner-box">
+          <div class="banner-box__item">
+            <a href="#" class="banner-box__item1"><strong>병원별 진료비 / 평균가</strong> 보러가기</a>
+          </div>
+        </div>
+
+        <ul class="place-list__items">
+          <li class="place-list__box">
+            <a href="#" class="place-list__snippet">
+              <span class="name">헥토 동물병원</span>
+              <span class="location">서울시 강남구</span>
+              <span class="place__info">
+                <span class="place__info--item item1">주차가능</span>
+                <span class="place__info--item item2">24시</span>
+                <span class="place__info--item item3">1차병원</span>
+              </span>
+            </a>
+          </li>
+          <li class="place-list__box">
+            <a href="#" class="place-list__snippet">
+              <span class="name">헥토 동물병원</span>
+              <span class="location">서울시 강남구</span>
+              <div class="place__info">
+                <span class="place__info--item item2">24시</span>
+                <span class="place__info--item item3">1차병원</span>
+              </div>
+            </a>
+          </li>
+          <li class="place-list__box">
+            <a href="#" class="place-list__snippet">
+              <span class="name">헥토 동물병원헥토 동물병원헥토 동물병원헥토 동물병원</span>
+              <span class="location">서울시 강남구</span>
+            </a>
+          </li>
+          <li class="place-list__box">
+            <a href="#" class="place-list__snippet">
+              <span class="name">헥토 미용실</span>
+              <span class="location">서울시 강남구</span>
+              <span class="place__info">
+                <span class="place__info--item item1">주차가능</span>
+              </span>
+            </a>
+          </li>
+          <li class="place-list__box">
+            <a href="#" class="place-list__snippet">
+              <span class="name">헥토 미용실</span>
+              <span class="location">서울시 강남구</span>
+              <span class="place__info">
+                <span class="place__info--item item1">주차가능</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <div class="btn-wrap type-more">
+          <button class="base-btn btn_more"><span>더보기</span></button>
+        </div>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    <!-- 네비게이션 -->
+    <nav class="bot-nav">
+      <ul class="bot-nav__list">
+        <li class="bot-nav__item bot-nav__item1"><a href="#">홈</a></li>
+        <li class="bot-nav__item bot-nav__item2"><a href="#">기록</a></li>
+        <li class="bot-nav__item bot-nav__item3"><a href="#">건강분석</a></li>
+        <li class="bot-nav__item bot-nav__item4"><a href="#">푸드</a></li>
+        <li class="bot-nav__item bot-nav__item5 isActive"><a href="#">플레이스</a></li>
+      </ul>
+    </nav>
+    <!-- //네비게이션 -->
+
+  </div>
+  
+</body>
+</html>

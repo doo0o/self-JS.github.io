@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>구조 동물</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="page-title">구조 동물</h1>
+        
+        <button class="btn-back" onclick="history.back()">뒤로가기</button>
+        
+        
+
+      </div>
+
+      
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="missing-list__header">
+        <div class="base-tab tab-type1" data-ref="tab">
+          <ul class="tab__list" role="tablist">
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="true"
+              >공고중</button></li>
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="false"
+              >보호중</button></li>
+          </ul>
+        </div>
+        <script>
+          const tab = new TabContents({target: 'tab'});
+        </script>
+        <button class="btn-filter" onclick="missingFilter.show();">상세조회</button>
+      </div>
+
+      <div class="missing-list__body">
+        <ul>
+
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type dog">강아지</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type cat">고양이</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type dog">강아지</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type cat">고양이</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type dog">강아지</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type cat">고양이</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type dog">강아지</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type cat">고양이</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type dog">강아지</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="missing-list__box">
+            <div class="missing-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-type">
+                  <span class="type cat">고양이</span>
+                  <span class="gender">남</span>
+                </div>
+                <div class="cont-list">
+                  <div class="row">
+                    <strong class="key">품종 :</strong> <span class="val">믹스견</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">등록일 :</strong> <span class="val">23.01.01</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">지역 :</strong> <span class="val">서울시 강남구​</span>
+                  </div>
+                  <div class="row">
+                    <strong class="key">구조장소 :</strong> <span class="val">논현로 인근​</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    <!-- 네비게이션 -->
+    <nav class="bot-nav">
+      <ul class="bot-nav__list">
+        <li class="bot-nav__item bot-nav__item1 isActive"><a href="#">홈</a></li>
+        <li class="bot-nav__item bot-nav__item2"><a href="#">기록</a></li>
+        <li class="bot-nav__item bot-nav__item3"><a href="#">건강분석</a></li>
+        <li class="bot-nav__item bot-nav__item4"><a href="#">푸드</a></li>
+        <li class="bot-nav__item bot-nav__item5"><a href="#">플레이스</a></li>
+      </ul>
+    </nav>
+    <!-- //네비게이션 -->
+
+  </div>
+
+  <!-- 상세조회 -->
+<div class="layer-popup type-bot" data-ref="missingFilter">
+  <section class="popup__container">
+    <div class="popup__header">
+      <button class="btn-close" onclick="missingFilter.hide();">닫기</button>
+      <h3 class="popup__title">상세조회</h3>
+    </div>
+    <div class="popup__contents">
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">기간</p>
+        </div>
+        <div class="form-box__inner">
+          <div class="input-calendar-period">
+            <button type="button" class="input-calendar"
+              data-calendar='{
+                "name": "missingFilterCalendarPeriod1",
+                "end" : "missingFilterCalendarPeriod2",
+                "title" : "기간",
+                "minDate" : "beforeOneMonth",
+                "maxDate" : "todayDate",
+                "__coment" : "beforeOneMonth  = 현재 날짜에 1개월 전, todayDate = 현재날짜"
+              }'
+            >선택</button>
+            <span class="simbol">~</span>
+            <button type="button" class="input-calendar"
+              data-calendar='{
+                "name": "missingFilterCalendarPeriod2",
+                "start" : "missingFilterCalendarPeriod1",
+                "title" : "기간",
+                "minDate" : "beforeOneMonth",
+                "maxDate" : "todayDate",
+                "__coment" : "beforeOneMonth  = 현재 날짜에 1개월 전, todayDate = 현재날짜"
+              }'
+            >선택</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box__row">
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">시도</p>
+          </div>
+          <div class="form-box__inner">
+            <div class="select-box">
+              <button type="button" class="select"
+                data-select='{
+                  "name": "areaMainSelect",
+                  "title" : "시도 선택",
+                  "option": [
+                    {"전체": "all"},
+                    {"서울특별시": "val2"},
+                    {"인천광역시": "val3"}
+                  ],
+                  "value" : ""
+                }'
+              >전체</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-box">
+          <div class="form-box__header">
+            <p class="form-box__title">시군구</p>
+          </div>
+          <div class="form-box__inner">
+            <div class="select-box">
+              <button type="button" class="select"
+                data-select='{
+                  "name": "areaSubSelect",
+                  "title" : "시군구 선택",
+                  "option": [
+                    {"전체": "all"},
+                    {"종로구": "val2"},
+                    {"중구": "val3"}
+                  ],
+                  "value" : "all"
+                }'
+              >전체</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">펫 종류</p>
+        </div>
+        <div class="form-box__inner">
+          <label class="base-chk">
+            <input type="radio" name="typePet" checked>
+            <span class="base-btn type2-l">
+              강아지
+            </span>
+          </label>
+          <label class="base-chk">
+            <input type="radio" name="typePet">
+            <span class="base-btn type2-l">
+              고양이
+            </span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+    <div class="btn-wrap">
+      <button class="base-btn type1-xl">검색하기</button>
+    </div>
+  </section>
+</div>
+<script>
+  const missingFilter = new LayerPopup({target: "missingFilter"});
+
+  // ***샘플****
+  // 디자인 요청 사항으로 기간, 시도 선택 시 필터 레이어가 숨겨지게 처리 되어있음
+  // globalObjSetFunc 함수가 DOMContentLoaded 후 실행하게 처리 되어 있어 셋타임을 걸어놓은 상태
+  missingFilter.onShow((_this)=>{
+    setTimeout(()=>{
+      globalSelectObj.areaMainSelect.onShow(()=>_this.wrap.style.display = "none");
+      globalSelectObj.areaMainSelect.onHide(()=>_this.wrap.style.display = '');
+      globalSelectObj.areaSubSelect.onShow(()=>_this.wrap.style.display = "none");
+      globalSelectObj.areaSubSelect.onHide(()=>_this.wrap.style.display = '');
+      globalCalendarObj.missingFilterCalendarPeriod1.onShow(()=>_this.wrap.style.display = "none");
+      globalCalendarObj.missingFilterCalendarPeriod1.onHide(()=>_this.wrap.style.display = '');
+      globalCalendarObj.missingFilterCalendarPeriod2.onShow(()=>_this.wrap.style.display = "none");
+      globalCalendarObj.missingFilterCalendarPeriod2.onHide(()=>_this.wrap.style.display = '');
+    },1)
+  });
+</script>
+<!-- //상세조회 -->
+  <!-- 상세조회 -->
+<div class="layer-popup type-full" data-ref="missingDetail">
+  <section class="popup__container">
+    <div class="popup__header">
+      <button class="btn-back" onclick="missingDetail.hide();">메인으로 이동</button>
+      <h3 class="popup__title">구조 동물</h3>
+    </div>
+    <div class="popup__contents contents-nopd">
+      
+      <div class="missing-detail__picture">
+        <img src="../../assets/images/temp/picture360x360.jpg" alt="">
+      </div>
+      <div class="missing-detail__content">
+        <div class="state-type">
+          <span class="state">공고중</span>
+          <span class="type dog">믹스견</span>
+        </div>
+        <div class="tag-box">
+          <span class="tag-item">남</span>
+          <span class="tag-item">중성화 O</span>
+          <span class="tag-item">갈색</span>
+        </div>
+        <div class="list">
+          <p class="row">
+            <strong class="key">공고번호</strong>
+            <span class="val">서울-종로-2023-0015</span>
+          </p>
+          <p class="row">
+            <strong class="key">공고기간</strong>
+            <span class="val">23.01.01 ~ 23.01.31</span>
+          </p>
+          <p class="row">
+            <strong class="key">발견장소</strong>
+            <span class="val">서울시 강남구​</span>
+          </p>
+          <p class="row">
+            <strong class="key">보호센터</strong>
+            <span class="val">
+              한국동물구조관리협회<br>
+              031-123-4567
+            </span>
+          </p>
+          <p class="row">
+            <strong class="key">유기번호</strong>
+            <span class="val">000000000000000</span>
+          </p>
+          <p class="row">
+            <strong class="key">특징</strong>
+            <span class="val">특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.특징입니다. 특징입니다.</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+<script>
+  const missingDetail = new LayerPopup({target: "missingDetail"});
+</script>
+<!-- //상세조회 -->
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    const pop = {
+      "missingFilter" : ()=>{
+        missingFilter.show();
+      },
+      "missingDetail" : ()=>{
+        missingDetail.show();
+      }
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

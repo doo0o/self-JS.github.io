@@ -72,7 +72,7 @@ function calc_result(pr,e){ // pr = 콤마등 가공된 변수,  or = 순수 num
         input_item.forEach((el,index) => {
             let status = el.value ? true : false;
             input_arr.push(status);
-            STOCK_Data.push(Number(el.value.split(',').join('')));    
+            STOCK_Data.push(Number(el.value.split(',').join('')));
         })
         if(!STOCK_Data[3]){
             STOCK_Data[3] = 0.015;

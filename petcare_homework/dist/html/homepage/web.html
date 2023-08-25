@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/homeStyle.css">
+  <script>
+    if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+      window.location = 'microsoft-edge:' + window.location;
+      setTimeout(function() {
+        window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+      }, 1);
+    }
+
+    // main
+    let mainUrl = "./web.html";
+  </script>
+  <script src="../../assets/js/ui.js"></script>
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+    <div class="logo"><a href="./web.html"><img src="../../assets/images/pc/pc_logo.png" alt="펫케어 소개페이지로 이동"></a></div>
+    <nav class="scroll-nav">
+        <ul class="scroll-nav__list">
+            <li class="nav__btn type--btn"><button role="button" data-target-class="section__01" onclick="">서비스 소개</button></li>
+            <li class="nav__btn type--btn"><button role="button" data-target-class="section__03" onclick="">서비스 가입</button></li>
+            <li class="nav__btn type--btn"><button role="button" data-target-class="section__04" onclick="">서비스 이용/해지</button></li>
+            <li class="nav__btn type--link"><a data-target-class="section__05" href="./web_notice.html?onNotice=true">공지사항</a></li>
+        </ul>
+    </nav>
+    <button class="btn-menu" onclick="document.querySelector('.header').classList.toggle('isMenuShow');"><span>메뉴보기</span></button>
+
+    <!-- menu -->
+    <div class="header-menu">
+        <nav class="header-menu__wrap">
+            <div class="header-menu__util">
+            </div>
+            <ul class="header-menu__list">
+                <li class="nav__btn type--btn"><button data-target-class="section__01" class="header-menu--item">서비스 소개</button></li>
+                <li class="nav__btn type--btn"><button data-target-class="section__03" class="header-menu--item">서비스 가입</button></li>
+                <li class="nav__btn type--btn"><button data-target-class="section__04" class="header-menu--item">서비스 이용/해지</button></li>
+                <li class="nav__btn type--link"><a href="./web_notice.html?onNotice=true" class="header-menu--item">공지사항</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- //menu -->
+</header>
+
+
+        <div class="visual" id="visual">
+            <div class="visual--contents">
+                <div class="visual--wrap">
+                    <p class="visual--text bottom-to-top">반려동물<br>종합 케어 서비스</p>
+                    <p class="visual--title bottom-to-top">펫케어</p>
+                    <p class="visual--sub bottom-to-top">건강분석, 사료정보, 병원정보 제공은 물론 <br>쿠폰, 보험 혜택까지!​</p>
+                    <div class="app--button">
+                        <button class="app__aos bottom-to-top02">Google Play</button>
+                        <button class="app__ios bottom-to-top03">App Store</button><!--단독앱 오픈 후 visible-->
+                    </div>
+                </div>
+                <div class="visual--img">
+                    <img class="mobile_img" src="../../assets/images/homepage/img_mobile.png" alt="">
+                    <div class="visual--item_01"></div>
+                    <div class="visual--item_02"></div>
+                    <div class="visual--item_03"></div>
+                    <div class="visual--item_04"></div>
+                    <div class="visual--item_05"></div>
+                    <div class="visual--item_06"></div>
+                </div>
+            </div>
+        </div>
+        <section class="section section__01">
+            <div class="section__inner">
+                <div class="section__head">
+                    <h2 class="section__title" data-io="true">반려동물을 <span class="section__icon-01"></span> 위한</h2>
+                    <ul class="hashtag" data-io="true">
+                        <li>비대면 건강 분석</li>
+                        <li>병원, 진료 정보</li>
+                        <li>AI 슬개골 탈구 검사</li>
+                        <li>사료, 간식 정보</li>
+                        <li>동물등록번호 확인</li>
+                    </ul>
+                </div>
+                <div class="section__swiper01" data-io="true" data-ref="sectionSlider01">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <img src="../../assets/images/homepage/swiper/img_petservice01.png" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="../../assets/images/homepage/swiper/img_petservice02.png" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="../../assets/images/homepage/swiper/img_petservice03.png" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="../../assets/images/homepage/swiper/img_petservice04.png" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="../../assets/images/homepage/swiper/img_petservice05.png" alt="">
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="swiper-button-next sw-btn01"></div>
+            <div class="swiper-button-prev sw-btn01"></div>
+        </section>
+        <section class="section section__02">
+            <div class="section__inner">
+                <div class="section__head">
+                    <h2 class="section__title" data-io="true">반려인을 <span class="section__icon-02"></span> 위한</h2>
+                    <ul class="hashtag" data-io="true">
+                        <li>동반장소 정보</li>
+                        <li>쇼핑 쿠폰</li>
+                        <li>반려동물 보험</li>
+                        <li>펫 매거진</li>
+                        <li>우리아이 기록</li>
+                    </ul>
+                </div>
+                <div class="section__swiper01" data-io="true" data-ref="sectionSlider02">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <img src="../../assets/images/homepage/swiper/img_mservice01.png" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="../../assets/images/homepage/swiper/img_mservice02.png" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="../../assets/images/homepage/swiper/img_mservice03.png" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="../../assets/images/homepage/swiper/img_mservice04.png" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="../../assets/images/homepage/swiper/img_mservice05.png" alt="">
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="swiper-button-next sw-btn02"></div>
+            <div class="swiper-button-prev sw-btn02"></div>
+        </section>
+        <div class="bg_wrap_01">
+            <section class="section section__03">
+                <div class="section__inner">
+                    <div class="section__head">
+                        <h2 class="section__title" data-io="true">서비스가입 <span class="section__icon-03"></span></h2>
+                        <p class="section__sub" data-io="true">반려동물과 반려인에게 다양한 혜택을 제공하는 종합 펫케어 서비스​</p>
+                    </div>
+                    <div class="form style_box01" data-io="true">
+                        <div class="form__box">
+                            <p class="form__title">통신사선택</p>
+                            <div class="inner">
+                                <label class="base-chk">
+                                <input type="radio" name="telSel">
+                                <span class="base-btn type1-l">SKT</span>
+                                </label>
+                                <label class="base-chk">
+                                <input type="radio" name="telSel">
+                                <span class="base-btn type1-l">KT</span>
+                                </label>
+                                <label class="base-chk">
+                                <input type="radio" name="telSel">
+                                <span class="base-btn type1-l">U+</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__box">
+                            <p class="form__title">휴대폰번호</p>
+                            <!-- 휴대폰 인증 -->
+                            <div class="inner">
+                                <div class="input-box type-phone">
+                                    <span class="mobile_number">010</span>
+                                    <input type="number" class="input-txt" placeholder="휴대폰 번호 입력">
+                                </div>
+                                <button class="base-btn type1-l complete static-size_200" onclick="btn_disable()">인증요청</button>
+                                <!-- <button class="base-btn type1-l complete static-size_200" disabled>인증요청</button> -->
+                            </div>
+                        </div>
+                        <div class="form__box">
+                            <div class="inner">
+                                <div class="agree_box">
+                                    <div class="agree_all">
+                                        <label class="input-chk">
+                                            <input type="checkbox">
+                                            <span>전체동의</span>
+                                        </label>
+                                    </div>
+                                    <div class="agree_chk">
+                                        <label class="input-chk">
+                                            <input type="checkbox">
+                                            <span>서비스 약관</span>
+                                        </label>
+                                        <label class="input-chk">
+                                            <input type="checkbox">
+                                            <span>KT 제3자제공</span>
+                                        </label>
+                                        <label class="input-chk">
+                                            <input type="checkbox">
+                                            <span>무료이용약관</span>
+                                        </label>
+                                        <label class="input-chk">
+                                            <input type="checkbox">
+                                            <span>제3자제공​</span>
+                                        </label>
+                                        <label class="input-chk">
+                                            <input type="checkbox">
+                                            <span>개인정보수집 및 이용</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 휴대폰 번호 인증 요청 후 -->
+                        <div class="form__box">
+                            <p class="form__title">인증번호</p>
+                            <!-- 인증번호 -->
+                            <div class="inner">
+                                <div class="input-box">
+                                    <input type="number" class="input-txt" placeholder="인증번호 6자리">
+                                </div>
+                                <button class="base-btn type1-l complete static-size_200" onclick="btn_disable()">재전송</button>
+                                <!-- <button class="base-btn type1-l complete static-size_200" disabled>재전송</button> -->
+                            </div>
+                        </div>
+
+                        <!-- 인증번호 입력 후 -->
+                        <div class="form__box">
+                            <p class="form__title">보안문자</p>
+                            <!-- 인증번호 -->
+                            <div class="inner">
+                                <div class="capcha">
+                                    <div class="capcha-str">
+                                        <img src="../../assets/images/homepage/capcha.png" alt="">
+                                    </div>
+                                    <button class="btn--refresh">
+                                        <img src="../../assets/images/homepage/refresh.png" alt="">
+                                    </button>
+                                </div>
+                                <div class="input-box">
+                                    <input type="number" class="input-txt" placeholder="보안문자 입력">
+                                </div>
+                                <button class="base-btn type1-l static-size_200 complete" onclick="btn_disable()">다음</button>
+                                <!-- <button class="base-btn type1-l complete static-size_200" disabled>다음</button> -->
+                            </div>
+                        </div>
+        
+
+                        <div class="form__box">
+                            <div class="inner">
+                                <div class="btn-wrap">
+                                    <button class="base-btn type2-l static-size_200">취소</button>
+                                    <button class="base-btn type3-l">펫케어유료가입</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="caution--text">
+                            <p class="point_red">매월 부가세 포함 3,300원 본 서비스는 이통사 통신요금에 부가세 포함 매월 3,300원 부과됩니다.</p>
+                            <p>
+                                본 서비스는 가입 즉시 서비스가 개시되는 상품으로 청약철회가 불가능 합니다.<br>
+                                (전자상거래 등에서의 소비자 보호에 관한 법률 제17조 2항 5호에 따라 디지털 콘텐츠의 제공이 개시된 경우 청약철회를 제공하지 않습니다.)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section__04">
+                <div class="section__inner">
+                    <div class="section__head center">
+                        <h2 class="section__title" data-io="true">펫케어는 아래 앱에서 이용할 수 있어요! <span class="section__icon-04"></span></h2>
+                        <p class="section__sub" data-io="true">반려동물과 반려인들을 위한 종합 펫케어 서비스를 앱에서 이용해보세요!</p>
+                    </div>
+                    <div class="section__body app_join">
+                        <div class="pass__list pass_swiper" data-ref="passSwiper" data-io="true">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="style_box02 pass__box">
+                                        <p class="pass_title">PASS by KT</p>
+                                        <div class="pass_ico kt"></div>
+        
+                                        <div class="app--button type-colums">
+                                            <button class="app__aos type02">Google Play</button>
+                                            <button class="app__ios type02">App Store</button><!--단독앱 오픈 후 visible-->
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="pass_inquiry" data-io="true">
+                            <div class="pass_cs">
+                                <p class="pass_service">서비스 문의/해지 <span>1522-0636</span></p>
+                                <p class="sub_text">평일 9시 ~ 18시 / 주말, 휴일 휴무</p>
+                            </div>
+                            <a href="./web_cancle.html?onCancle=true" class="base-btn type3-l">홈페이지에서 해지하기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="notice-view">
+                    <a href="javascript:void(0);" title="공지사항 페이지로 이동" data-io="true">
+                        <p class="notice-view--symbol"><span>공지사항</span></p>
+                        <p class="notice-view--title">
+                            반려견, 반려인을 위한 펫케어 서비스를 드디어 오픈했습니다!!말줄임테스트말줄임테스트말줄임테스트말줄임테스트말줄임테스트말줄임테스트말줄임테스트말줄임테스트말줄임테스트말줄임테스트말줄임테스트말줄임테스트말줄임테스트말줄임테스트말줄임테스트말줄임테스트
+                        </p>
+                        <p class="notice-view--date">2023.07.03</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-line">
+            <p class="footer-corp">(주)헥토이노베이션</p>
+            <nav class="footer-nav">
+                <a href="#" class="footer-nav--link">이용약관</a>
+                <a href="#" class="footer-nav--link">개인정보처리방침</a>
+            </nav>
+        </div>  
+        <div class="footer-info">
+            <p class="footer-info--txt">주소 <span>서울특별시 강남구 테헤란로 34길 6 태광타워 12, 13층</span></p>
+            <p class="footer-info--txt">사업자등록번호 <span>214-88-39117</span></p>
+        </div>
+        <small class="footer-copy">Copyright ⓒ Hecto Innovation Co.,Ltd. All rights reserved.</small>
+        </div>
+  </footer>
+  <!-- //footer -->
+</body>
+
+<script type="text/javascript" src="../../assets/js/homepage.js"></script>
+<script>
+    // 버튼 비활성화 시 사용함수
+    function btn_disable(){
+        event.target.setAttribute('disabled','');
+    }
+
+    // swiper
+    let section_swiper_option = {
+        slidesPerView : 'auto',
+        spaceBetween : 20,
+        pagination : {
+            el : '.swiper-pagination',
+        },
+        breakpoints: {
+            1024 : {
+                pagination: false,
+                navigation : {
+                    nextEl : '.swiper-button-next.sw-btn01',
+                    prevEl : '.swiper-button-prev.sw-btn01'
+                },
+            }
+        },
+    }
+    let section_swiper = slider({
+        target: 'sectionSlider01',
+        option: {
+            slidesPerView : 'auto',
+            spaceBetween : 20,
+            pagination : {
+                el : '.swiper-pagination',
+            },
+            breakpoints: {
+                1024 : {
+                    pagination: false,
+                    navigation : {
+                        nextEl : '.swiper-button-next.sw-btn01',
+                        prevEl : '.swiper-button-prev.sw-btn01'
+                    },
+                }
+            },
+        }
+    })
+    let section_swiper02 = slider({
+        target: 'sectionSlider02',
+        option: {
+            slidesPerView : 'auto',
+            spaceBetween : 20,
+            pagination : {
+                el : '.swiper-pagination',
+            },
+            breakpoints: {
+                1024 : {
+                    pagination: false,
+                    navigation : {
+                        nextEl : '.swiper-button-next.sw-btn02',
+                        prevEl : '.swiper-button-prev.sw-btn02'
+                    },
+                }
+            },
+        }
+    })
+
+    let pass_leng = document.querySelectorAll('.pass__list .swiper-slide').length;
+    let pass_swiper = slider({
+        target: 'passSwiper',
+        option: {
+            slidesPerView: 1,
+            pagination : {
+                el : '.swiper-pagination'
+            },
+            spaceBetween : 20,
+            breakpoints:{
+                1024 : {
+                    slidesPerView: pass_leng,
+                    spaceBetween : 23,
+                    grabCursor: false,
+                    updateOnWindowResize: true,
+                    pagination: false,
+                }
+            },
+        }
+    })
+
+    window.addEventListener('scroll',scrollSensor);
+
+    function scrollSensor(e){
+        let ww = window.innerWidth;
+        if(ww > 1024){
+            let btnArr = document.querySelectorAll('.scroll-nav__list .type--btn > button');
+            if(btnArr){
+                btnArr.forEach((el,index) => {
+                    let getData = el.dataset.targetClass;
+                    let dataEl = document.querySelector(`.${getData}`);
+                    let targetY = window.scrollY + dataEl.getBoundingClientRect().top;
+                    
+                    if(parseInt(window.scrollY) >= parseInt(targetY - header_h)){
+                        activeOn(el);
+                    }else if(window.scrollY == 0){
+                        el.closest('li').classList.remove('on');
+                    }
+                });
+            }
+        }
+    }
+</script>
+</html>

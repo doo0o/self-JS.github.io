@@ -1,0 +1,109 @@
+@mixin svgfill($c: null, $img: null, $pos: null) {
+  background-color: $c;
+  -webkit-mask-image: url($img);
+  mask-image: url($img);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  $position: 50% 50%;
+  @if $pos {$position: $pos}
+  -webkit-mask-position: $position;
+  mask-position: $position;
+}
+
+@mixin font($s: null, $w: null, $c: null, $a: null, $f: null, $l: null) {
+  font-size: $s;
+  font-weight: $w;
+  font-family: $f;
+  color: $c;
+  text-align: $a;
+  @if($l) { 
+    line-height: $l;
+  } @else if($s > 14px) {
+    line-height: calc($s + 6px);
+  } @else if($s <= 14px) {
+    line-height: calc($s + 4px);
+  } @else if($s < 11px) {
+    line-height: calc($s + 3px);
+  }
+}
+
+@mixin ellipsis($l: null) {
+  @if $l == null {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $l;
+  }
+}
+
+@mixin pos($p: null, $t: null, $l: null, $r: null, $b: null, $a: null, $z: null) {
+  position: $p;
+  z-index: $z;
+  @if($a) {
+    top: $a;
+    right: $a;
+    bottom: $a;
+    left: $a;
+  } @else {
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+  }
+}
+
+@mixin arrow($dir: null, $w: null, $h: null, $c: null) {
+  border: calc($w/2) solid transparent;
+  @if $dir == down {
+    border-top: $h solid $c;
+    border-bottom: 0;
+  } @else if $dir == up {
+    border-bottom: $h solid $c;
+    border-top: 0;
+  } @else if $dir == left {
+    border-right: $h solid $c;
+    border-left: 0;
+  } @else if $dir == right {
+    border-left: $h solid $c;
+    border-right: 0;
+  }
+}
+
+@function svgArrow($w, $h, $s, $c: null){
+  $w: $w + ($s * 2);
+  $h: $h + ($s * 2);
+  $color: '000000';
+  @if $c {$color: $c}
+  @return "data:image/svg+xml,%3Csvg width='#{$w}' height='#{$h}' viewBox='0 0 #{$w} #{$h}' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M#{$s} #{$s}L#{$w - $s} #{$h * .5}L#{$s} #{$h - $s}' stroke='%23#{$color}' stroke-width='#{$s}' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A";
+}
+
+@function svgChk($w, $s, $c: null){
+  $view: 24;
+  $path: 'M6.76331 12L10.7633 16L17.9999 9';
+  $color: 'ffffff';
+  @if $c {$color: $c}
+  @return "data:image/svg+xml,%3Csvg width='#{$view}' height='#{$view}' viewBox='0 0 #{$view} #{$view}' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='#{$path}' stroke='%23#{$color}' stroke-width='#{$s}' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A";
+}
+
+@function svgClose($w, $s, $c: null){
+  $view: 24;
+  $e1: ($view - $w) * .5;
+  $e2: $view - $e1;
+  $color: '000000';
+  @if $c {$color: $c}
+  @return "data:image/svg+xml,%3Csvg width='#{$view}' height='#{$view}' viewBox='0 0 #{$view} #{$view}' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M#{$e2} #{$e1}L#{$e1} #{$e2}' stroke='%23#{$color}' stroke-width='#{$s}' stroke-linecap='round'%3E%3C/path%3E%3Cpath d='M#{$e1} #{$e1}L#{$e2} #{$e2}' stroke='%23#{$color}' stroke-width='#{$s}' stroke-linecap='round'%3E%3C/path%3EE%3C/svg%3E%0A";
+}
+
+@function svgPlus($w, $s, $c: null){
+  $view: 24;
+  $e1: ($view - $w) * .5;
+  $e2: $view - $e1;
+  $color: '000000';
+  @if $c {$color: $c}
+  @return "data:image/svg+xml,%3Csvg width='#{$view}' height='#{$view}' viewBox='0 0 #{$view} #{$view}' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M#{$e1} #{$view * .5}H#{$e2}' stroke='%23#{$color}' stroke-width='#{$s}' stroke-linecap='round'%3E%3C/path%3E%3Cpath d='M#{$view * .5} #{$e1}V#{$e2}' stroke='%23#{$color}' stroke-width='#{$s}' stroke-linecap='round'%3E%3C/path%3EE%3C/svg%3E%0A";
+}

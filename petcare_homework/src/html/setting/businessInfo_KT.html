@@ -1,0 +1,45 @@
+<!-- 성분 자세히보기 -->
+<div class="layer-popup type-modal" data-ref="businessInfo_KT">
+  <section class="popup__container">    
+    <div class="popup__contents">
+      <p class="business-info-tit">사업자 정보</p>
+      <ul class="business-info">
+        <li>
+          <p class="business-info-sub">대표이사</p>
+          <p class="business-info-txt">이현철</p>
+        </li>
+        <li>
+          <p class="business-info-sub">주소</p>
+          <p class="business-info-txt">서울특별시 강남구 테헤란로 34길 6 태광타워 12, 13층</p>
+        </li>
+        <li>
+          <p class="business-info-sub">통신판매업신고번호</p>
+          <p class="business-info-txt">제2015-서울강남-00012호</p>
+        </li>
+        <li>
+          <p class="business-info-sub">사업자등록번호</p>
+          <p class="business-info-txt">214-88-39117</p>
+        </li>
+        <li>
+          <p class="business-info-sub">고객센터</p>
+          <p class="business-info-txt">1522-0636(평일 09:00-18:00)</p>
+        </li>
+        <li>
+          <p class="business-info-sub">호스팅서비스사업자</p>
+          <p class="business-info-txt">(주)헥토이노베이션</p>
+        </li>
+        <li>
+          <p class="business-info-sub">이메일</p>
+          <p class="business-info-txt">in.help@hecto.co.kr</p>
+        </li>
+      </ul>
+    </div>
+    <div class="btn-wrap">
+      <button class="base-btn type1-m" onclick="businessInfo_KT.hide();">확인</button>
+    </div>
+  </section>
+</div>
+<script>
+  const businessInfo_KT = new LayerPopup({target: "businessInfo_KT"});
+</script>
+<!-- //성분 자세히보기 -->

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="page-title">PASS U+ header</h1>
+        
+        <button class="btn-back" onclick="history.back()">뒤로가기</button>
+        <button class="btn-close">닫기</button>
+        
+
+      </div>
+
+      
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container container-bg container-main">
+    </div>
+    <!-- //container -->
+
+    <!-- 네비게이션 -->
+    <nav class="bot-nav">
+      <ul class="bot-nav__list">
+        <li class="bot-nav__item bot-nav__item1 isActive"><a href="#">홈</a></li>
+        <li class="bot-nav__item bot-nav__item2"><a href="#">기록</a></li>
+        <li class="bot-nav__item bot-nav__item3"><a href="#">건강분석</a></li>
+        <li class="bot-nav__item bot-nav__item4"><a href="#">푸드</a></li>
+        <li class="bot-nav__item bot-nav__item5"><a href="#">플레이스</a></li>
+      </ul>
+    </nav>
+    <!-- //네비게이션 -->
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+    if(Util.getUrlParams().type) document.documentElement.classList.add(Util.getUrlParams().type);
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

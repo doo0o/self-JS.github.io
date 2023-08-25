@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="page-title">동물 등록번호</h1>
+        
+        <button class="btn-back" onclick="history.back()">뒤로가기</button>
+        
+        
+
+      </div>
+
+      
+
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="certifying-content certifying-content2">
+        <h2 class="content-header__title3">
+          우리아이의 등록번호 조회를 위해​<br>인증을 진행해주세요!
+        </h2>
+        <p class="content-header__desc">등록번호를 확인하려먼 PASS 인증이 필요해요.</p>
+        <p class="content-etc2">* 동물등록대행기관(동물병원 등)에 방문하여 신청하신 정보만 조회 가능해요.</p>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type1-xl">PASS 인증 요청</button>
+    </div>
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    const pop = {
+      "msg1" : ()=>{
+        layerMsg({msg: '조회가 완료되었습니다.<br>우리 아이 관리를 위해<br>추가 정보를 입력해주세요.'});
+      },
+      "msg2" : ()=>{
+        layerMsg({msg: '인증이 정상적으로 처리되지 않았습니다.<br>다시 진행해주세요.'});
+      }
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+@@include('./head.html', {
+  title: "푸드",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "푸드", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="food-list__header">
+
+        <div class="base-tab tab-type1" data-ref="tab">
+          <ul class="tab__list" role="tablist">
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="true"
+              >사료</button></li>
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="false"
+              >간식</button></li>
+          </ul>
+        </div>
+        <script>
+          const tab = new TabContents({target: 'tab'});
+        </script>
+
+        <div class="input-box search__input-box">
+          <input
+            type="text"
+            class="input-txt"
+            placeholder="사료명을 입력해주세요"
+            onfocus="event.target.closest('.food-list__header').classList.add('isSearch');"
+            onblur="
+              event.target.closest('.food-list__header').classList.remove('isSearch');
+              event.target.closest('.search__input-box').classList.remove('isValue');
+              event.target.closest('.search__input-box').querySelector('.input-txt').value = null;
+            "
+            oninput="
+              (event.target.value.length)
+              ? event.target.closest('.search__input-box').classList.add('isValue')
+              : event.target.closest('.search__input-box').classList.remove('isValue');
+            "
+            onkeydown="
+              if(event.keyCode == 13) {
+                event.target.blur();
+                layerMsg({
+                  msg: '검색하실 사료를<br>입력해주세요.',
+                  onConfirm: ()=>{
+                    event.target.focus();
+                  }
+                });
+              }
+            "
+          >
+          <button type="button" class="btn-del"
+            onmouseenter="
+              event.target.closest('.search__input-box').classList.remove('isValue');
+              event.target.closest('.search__input-box').querySelector('.input-txt').value = null;
+            "
+           >삭제</button>
+        </div>
+
+        <!-- 검색 결과 -->
+        <div class="search__result">
+          <ul>
+            <li>
+              <button class="search__result--btn">
+                라이트 사료
+              </button>
+            </li>
+            <li>
+              <button class="search__result--btn">
+                헥토 라이트 사료
+              </button>
+            </li>
+            <li>
+              <button class="search__result--btn">
+                헥토 라이트 사료
+              </button>
+            </li>
+          </ul>
+
+          <!-- 검색 결과 없음 -->
+          <p class="no-data type-search">검색 결과가 없습니다.</p>
+          <!-- //검색 결과 없음 -->
+        </div>
+        <!-- //검색 결과 -->
+
+        <div class="base-tab tab-type2" data-ref="tab2">
+          <ul class="tab__list" role="tablist">
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="true"
+              >전체</button>
+            </li>
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="false"
+              >건식사료</button>
+            </li>
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="false"
+              >습식사료</button>
+            </li>
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="false"
+              >소프트사료</button>
+            </li>
+          </ul>
+        </div>
+        <script>
+          const tab2 = new TabContents({target: 'tab2', type: 'slider'});
+        </script>
+
+      </div>
+      
+      <div class="food-list__body">
+        <ul>
+
+          <li class="food-list__box">
+            <a href="#" class="food-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360_2.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-name">DOG FEED 도그피드 치킨&amp;칠면조 울트라 프리미엄 내추럴 밸런스</div>
+                <div class="cont-price">
+                  <span class="num">63,000</span>
+                  <span class="str">원</span>
+                  <span class="divide">/</span>
+                  <span class="kg">1kg</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="food-list__box">
+            <a href="#" class="food-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360_2.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-name">DOG FEED 도그피드 치킨&amp;칠면조 울트라 프리미엄 내추럴 밸런스</div>
+                <div class="cont-price">
+                  <span class="num">63,000</span>
+                  <span class="str">원</span>
+                  <span class="divide">/</span>
+                  <span class="kg">1kg</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="food-list__box">
+            <a href="#" class="food-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360_2.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-name">DOG FEED 도그피드 치킨&amp;칠면조 울트라 프리미엄 내추럴 밸런스</div>
+                <div class="cont-price">
+                  <span class="num">63,000</span>
+                  <span class="str">원</span>
+                  <span class="divide">/</span>
+                  <span class="kg">1kg</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="food-list__box">
+            <a href="#" class="food-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360_2.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-name">DOG FEED 도그피드 치킨&amp;칠면조 울트라 프리미엄 내추럴 밸런스</div>
+                <div class="cont-price">
+                  <span class="num">63,000</span>
+                  <span class="str">원</span>
+                  <span class="divide">/</span>
+                  <span class="kg">1kg</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="food-list__box">
+            <a href="#" class="food-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360_2.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-name">DOG FEED 도그피드 치킨&amp;칠면조 울트라 프리미엄 내추럴 밸런스</div>
+                <div class="cont-price">
+                  <span class="num">63,000</span>
+                  <span class="str">원</span>
+                  <span class="divide">/</span>
+                  <span class="kg">1kg</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="food-list__box">
+            <a href="#" class="food-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360_2.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-name">DOG FEED 도그피드 치킨&amp;칠면조 울트라 프리미엄 내추럴 밸런스</div>
+                <div class="cont-price">
+                  <span class="num">63,000</span>
+                  <span class="str">원</span>
+                  <span class="divide">/</span>
+                  <span class="kg">1kg</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="food-list__box">
+            <a href="#" class="food-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360_2.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-name">DOG FEED 도그피드 치킨&amp;칠면조 울트라 프리미엄 내추럴 밸런스</div>
+                <div class="cont-price">
+                  <span class="num">63,000</span>
+                  <span class="str">원</span>
+                  <span class="divide">/</span>
+                  <span class="kg">1kg</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="food-list__box">
+            <a href="#" class="food-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360_2.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-name">DOG FEED 도그피드 치킨&amp;칠면조 울트라 프리미엄 내추럴 밸런스</div>
+                <div class="cont-price">
+                  <span class="num">63,000</span>
+                  <span class="str">원</span>
+                  <span class="divide">/</span>
+                  <span class="kg">1kg</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="food-list__box">
+            <a href="#" class="food-list__snippet">
+              <div class="picture">
+                <img src="../../assets/images/temp/picture360x360_2.jpg" alt="">
+              </div>
+              <div class="txt-cont">
+                <div class="cont-name">DOG FEED 도그피드 치킨&amp;칠면조 울트라 프리미엄 내추럴 밸런스</div>
+                <div class="cont-price">
+                  <span class="num">63,000</span>
+                  <span class="str">원</span>
+                  <span class="divide">/</span>
+                  <span class="kg">1kg</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    @@include('./botNav.html', {active: '4'})
+
+  </div>
+
+  @@include('../html/missingList/filter.html')
+  @@include('../html/missingList/detail.html')
+
+</body>
+</html>

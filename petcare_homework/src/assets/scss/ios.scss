@@ -1,0 +1,36 @@
+@import 'var';
+@import 'mixin';
+.type-modal{
+    .popup__container {
+        width: 353px;
+        border-radius: 0;
+        padding:46px 27px 17px;
+        .btn-wrap{
+            margin: 44px 0 0;
+        }
+        .txt-type{
+            @include font(17px,400)
+        }
+        .base-btn[class*=-m]{
+            height: 54px;
+            @include font(17px, 700)
+        }
+    }
+}
+.base-btn{
+    &.type1-l,&.type1-xl,&.type2-l,&.type2-xl{
+        padding: 14.5px 32px;
+        @include font(19.2px, 700);
+        height: 55px;
+    }
+
+    .pet-type &{
+        height: auto;
+    }
+}
+.btn-wrap{
+    &.type-column {
+        .base-btn ~ .base-btn {margin: 13px 0 0;}
+    }
+    .base-btn ~ .base-btn {margin: 0 0 0 13px;}
+}

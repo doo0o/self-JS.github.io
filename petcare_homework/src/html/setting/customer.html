@@ -1,0 +1,40 @@
+@@include('./head.html', {
+  title: "펫케어",
+  pass_name: "",
+  device_type: ""})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "고객센터", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <p class="customer-list__box">
+        <button onclick="layerMsg({
+          msg: '서비스 해지를 하시겠습니까?',
+          type: 'confirm',
+          onConfirm: ()=>{
+            alert('확인')
+          },
+          onCancel: ()=>{
+            alert('취소')
+          }
+        })">서비스 해지</button>
+      </p>
+    </div>
+    <!-- //container -->
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    if(Util.getUrlParams().pop === 'msg') {
+      layerMsg({msg: '서비스 해지가 완료되었습니다.'});
+    }
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

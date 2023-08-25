@@ -1,0 +1,374 @@
+@@include('./head.html', {
+  title: "건강 분석",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "건강 분석", type: "menuBack"})
+
+    <!-- container -->
+    <div class="container container-nopd">
+      <section class="result-detail__header">
+
+        <h2 class="content-header__title3">건강 레포트</h2>
+
+        <div class="pet-snippet__item type-dog">
+          <strong class="name">김수한무거북이와두루미삼천갑자동방삭치치카포사리사리센타워리워리세브리깡무두셀라구름이허리케인에담벼락담벼락에서생원서생원에고양이고양이엔바둑이바둑이는돌돌이</strong>
+          <span class="type">
+            <span class="age">7살</span>
+            <span class="divide">/</span>
+            <span class="gender">여아</span>
+          </span>
+        </div>
+
+        <div class="btn-wrap">
+          <button class="base-btn type2-m">다시 분석하기</button>
+        </div>
+
+        <div class="result-detail__content__type1">
+          <div class="item">
+            <span class="key">건강점수</span>
+            <span class="val">
+              <strong class="num">90</strong><span class="unit">점</span>
+            </span>
+          </div>
+          <div class="item">
+            <span class="key">건강체중</span>
+            <span class="val2">
+              <strong class="num">12.5</strong><span class="unit">kg</span>
+            </span>
+            <span class="txt">0.5kg 감량 필요</span>
+          </div>
+        </div>
+
+        <section>
+          <h3 class="content-header__title2">관리필요</h3>
+          <p class="content-header__desc">점수가 가장 낮은 세가지 항목이에요</p>
+          <div class="health-info type-col">
+            <ul class="health-info__list">
+              <li class="health-info__item health-info__item1"><span class="key">피부</span></li>
+              <li class="health-info__item health-info__item2"><span class="key">치아</span></li>
+              <li class="health-info__item health-info__item3"><span class="key">관절</span></li>
+            </ul>
+          </div>
+        </section>
+
+      </section>
+
+      <section class="content-section type-line">
+        <div class="content-header">
+          <h3 class="content-header__title2">부위별 위험도에요</h3>
+        </div>
+        <div class="health-info type-row">
+          <ul class="health-info__list">
+            <li class="health-info__item health-info__item1">
+              <a href="#" class="health-info__link">
+                <span>
+                  <span class="key">피부</span>
+                  <strong class="state state1">위험</strong>
+                </span>
+                <span class="val">40점</span>
+              </a>
+            </li>
+            <li class="health-info__item health-info__item2">
+              <a href="#" class="health-info__link">
+                <span>
+                  <span class="key">치아</span>
+                  <strong class="state state2">경고</strong>
+                </span>
+                <span class="val">60점</span>
+              </a>
+            </li>
+            <li class="health-info__item health-info__item3">
+              <a href="#" class="health-info__link">
+                <span>
+                  <span class="key">관절</span>
+                  <strong class="state state3">양호</strong>
+                </span>
+                <span class="val">80점</span>
+              </a>
+            </li>
+            <li class="health-info__item health-info__item4">
+              <a href="#" class="health-info__link">
+                <span>
+                  <span class="key">행동</span>
+                  <strong class="state state1">위험</strong>
+                </span>
+                <span class="val">40점</span>
+              </a>
+            </li>
+            <li class="health-info__item health-info__item5">
+              <a href="#" class="health-info__link">
+                <span>
+                  <span class="key">눈</span>
+                  <strong class="state state2">경고</strong>
+                </span>
+                <span class="val">60점</span>
+              </a>
+            </li>
+            <li class="health-info__item health-info__item6">
+              <a href="#" class="health-info__link">
+                <span>
+                  <span class="key">면역력</span>
+                  <strong class="state state3">양호</strong>
+                </span>
+                <span class="val">80점</span>
+              </a>
+            </li>
+            <li class="health-info__item health-info__item7">
+              <a href="#" class="health-info__link">
+                <span>
+                  <span class="key">심장</span>
+                  <strong class="state state1">위험</strong>
+                </span>
+                <span class="val">40점</span>
+              </a>
+            </li>
+            <li class="health-info__item health-info__item8">
+              <a href="#" class="health-info__link">
+                <span>
+                  <span class="key">신장</span>
+                  <strong class="state state2">경고</strong>
+                </span>
+                <span class="val">60점</span>
+              </a>
+            </li>
+            <li class="health-info__item health-info__item9">
+              <a href="#" class="health-info__link">
+                <span>
+                  <span class="key">위장</span>
+                  <strong class="state state3">양호</strong>
+                </span>
+                <span class="val">80점</span>
+              </a>
+            </li>
+            <li class="health-info__item health-info__item10">
+              <a href="#" class="health-info__link">
+                <span>
+                  <span class="key">간</span>
+                  <strong class="state state3">양호</strong>
+                </span>
+                <span class="val">80점</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-section type-line">
+
+        <div class="chart-content__header">
+          <div class="title">
+            <span class="txt">건강점수는</span>
+            <div class="select-box">
+              <button type="button" class="select"
+                data-select='{
+                  "name": "selectSortPoint",
+                  "title" : "타이틀 선택",
+                  "option": [
+                    {"전체 강아지 중": "val1"},
+                    {"동일 나이 강아지 중": "val2"},
+                    {"동일 품종 강아지 중": "val3"}
+                  ],
+                  "btnNo": "true",
+                  "value": "val1"
+                }'
+              >전체 강아지 중</button>
+            </div>
+          </div>
+          <p class="value"><strong class="per">상위 50%</strong>에요.</p>
+        </div>
+
+        <div class="chart-content type-bar" data-ref="chartContent1">
+          <div class="box">
+            <p class="item item1" data-ref="item">
+              <span class="name" data-ref="name">쿠키</span>
+              <span class="val" data-ref="target">
+                <strong class="num" data-ref="valNumber">80</strong><span class="unit">점</span>
+              </span>
+            </p>
+            <p class="item" data-ref="item">
+              <span class="name" data-ref="name">전체 강아지 평균</span>
+              <span class="val" data-ref="target">
+                <strong class="num" data-ref="valNumber">70</strong><span class="unit">점</span>
+              </span>
+            </p>
+          </div>
+        </div>
+        <script>
+          const chartContent1 = new ChartContents({
+            target: 'chartContent1',
+            max: 100,
+            unit: 50,
+            unitType: '점',
+          });
+        </script>
+
+        <div class="btn-wrap">
+          <button class="base-btn type2-m">품종 건강 정보 보기</button>
+        </div>
+
+      </section>
+
+      <section class="content-section type-line">
+        <div class="content-header">
+          <h3 class="content-header__title2">건강점수 변화를 확인해보세요.</h3>
+        </div>
+
+        <section class="chart-content__section">
+          <h4 class="chart-content__title">이전 건강점수 대비</h4>
+
+          <div class="chart-content type-bar" data-ref="chartContent2">
+            <div class="box">
+              <p class="item item1" data-ref="item">
+                <strong class="name" data-ref="name">12월 23일</strong>
+                <span class="val" data-ref="target">
+                  <strong class="num" data-ref="valNumber">80</strong><span class="unit">점</span>
+                </span>
+              </p>
+              <p class="item" data-ref="item">
+                <span class="name" data-ref="name">9월 23일</span>
+                <span class="val" data-ref="target">
+                  <strong class="num" data-ref="valNumber">70</strong><span class="unit">점</span>
+                </span>
+              </p>
+            </div>
+          </div>
+          <script>
+            const chartContent2 = new ChartContents({
+              target: 'chartContent2',
+              max: 100,
+              unit: 50,
+              unitType: '점',
+            });
+          </script>
+        </section>
+        
+        <section class="chart-content__section">
+          <h4 class="chart-content__title">평균 건강점수 대비</h4>
+          
+          <div class="chart-content type-bar" data-ref="chartContent3">
+            <div class="box">
+              <p class="item item1" data-ref="item">
+                <span class="name" data-ref="name">12월 23일</span>
+                <span class="val" data-ref="target">
+                  <strong class="num" data-ref="valNumber">80</strong><span class="unit">점</span>
+                </span>
+              </p>
+              <p class="item" data-ref="item">
+                <span class="name" data-ref="name">9월 23일</span>
+                <span class="val" data-ref="target">
+                  <strong class="num" data-ref="valNumber">70</strong><span class="unit">점</span>
+                </span>
+              </p>
+            </div>
+          </div>
+          <script>
+            const chartContent3 = new ChartContents({
+              target: 'chartContent3',
+              max: 100,
+              unit: 50,
+              unitType: '점',
+            });
+          </script>
+          
+        </section>
+
+      </section>
+
+      <section class="content-section type-line">
+        <div class="content-header">
+          <h3 class="content-header__title2">1.2kg 증량이 필요해요.</h3>
+        </div>
+
+        <div class="result-detail__content__type2">
+          <ul class="list">
+            <li class="item">
+              <div>
+                <span class="key">BCS</span>
+                <span class="desc">Body Condition Score</span>
+              </div>
+              <div>
+                <strong class="val">2단계 마름</strong>
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <span class="key">건강체중</span>
+              </div>
+              <div>
+                <strong class="val">12kg</strong>
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <span class="key">하루 급여량</span>
+              </div>
+              <div>
+                <strong class="val">500g</strong>
+                <span class="desc">(100kcal)</span>
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <span class="key">권장 음수량</span>
+              </div>
+              <div>
+                <strong class="val">500ml</strong>
+              </div>
+            </li>
+          </ul>
+
+          <!-- 에러케이스 -->
+          <div class="error__wrap type2">
+            <p class="error--txt">
+              다시 시도해주세요
+            </p>
+          </div>
+          <!-- //에러케이스 -->
+          
+          <p class="content-etc">
+            체중 유지 방법이 궁금해요.
+            <button class="btn-tooltip2" onclick="weightMng.show()">상세보기</button>
+          </p>
+        </div>
+
+        <div class="info-ref">
+          펫케어 비대면 건강검진 결과는 참고용으로만 사용하시기 바랍니다.<br>
+          실제 건강 상태에 이상이 있다고 판단되는 경우 동물병원에 방문하여 정확한 진단 및 치료를 받아주세요.<br>
+          비대면 건강검진 기능은 (주)십일리터와 제휴하여 제공합니다.
+        </div>
+
+      </section>
+
+    </div>
+    <!-- //container -->
+
+    @@include('./botNav.html', {active: '3'})
+
+  </div>
+
+  <!-- 체중 유지 방법 -->
+  <div class="layer-popup type-modal" data-ref="weightMng">
+    <section class="popup__container">
+      <button class="btn-close" onclick="weightMng.hide();">닫기</button>
+      <div class="popup__contents">
+        <h3 class="txt-type colorPrimary">체중 유지 방법</h3>
+        <p class="txt-type2">
+          현재 사료 및 급여량 유지​<br>
+          간식은 동물 전용 제품으로 하루 3회 이내로 급여​<br>
+          주기적인 운동을 통한 근육량 유지​
+        </p>
+      </div>
+    </section>
+  </div>
+  <script>
+    const weightMng = new LayerPopup({target: "weightMng"});
+  </script>
+  <!-- //체중 유지 방법 -->
+
+</body>
+</html>

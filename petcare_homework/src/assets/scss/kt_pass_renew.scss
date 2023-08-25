@@ -1,0 +1,223 @@
+@import 'var_kt_renew';
+@import 'mixin';
+// PASS KT => Android & IOS
+// Android : default
+
+
+.container-main{
+    & ~ .btn-wrap.type-sticky{
+        bottom: 70px;
+        background: none;
+        margin-top: -22%;
+    }
+    .main-top__before{
+        .base-btn.type1-xl{
+            background: var(--color-btn);
+            border-color: var(--color-btn);
+            color: var(--white);
+            padding: 15px 32px;
+            @include font(18px, 700);
+            height: auto;
+        }
+    }
+}
+
+// 유료가입 in KT
+.join{
+    &-info{
+        &__list{
+            border: 1px solid  var(--gray5);
+            border-radius: 16px;
+            padding: 33px 0;
+        }
+        &__visual{
+            display: none;
+        }
+        &__title_sec{
+            color: var(--black);
+            margin-top: 19px;
+            text-align: center;
+            font-weight: 500;
+        }
+        &__caution{
+            margin-top: 16px;
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+    .input-chk{
+        input ~ span{
+            &::before{
+                border-radius: 2px;
+                vertical-align: -7px;
+            }
+        }
+        input{
+            &:checked ~ span::before{
+                background-color: var(--primary_kt);
+            }
+        }
+    }
+}
+.care-info{
+    &__item{
+        .join-info__list &{
+            border: none;
+            height: 28px;
+            margin-top: 51px;
+            padding: 0 0 0 65px;
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+        &2::before{
+            background-position: -28px 0;
+        }
+        &3::before{
+            background-position: -56px 0;
+        }
+        &5::before{
+            background-position: -112px 0;
+        }
+
+        &::before{
+            left: 18px;
+            width: 28px; height: 28px;
+            margin-top: -14px;
+            background: {
+                image: url('../../assets/images/icon/info_item.png');
+                size: auto 28px;
+            };
+            border-radius: 10px;
+        }
+        .txt{
+            @include font(16px, 400);
+            color: var(--black);
+            &:only-child{
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+// 등록번호조회
+.certifying-content{
+    .content{
+        &-header{
+            &__desc{
+                margin-top: 6px;
+                color: var(--black);
+            }
+        }
+        &-etc2{
+            margin-top: 6px;
+        }
+    }
+    .form-box{
+        margin-top: 24px;
+    }
+}
+
+// 사업자 등록 정보 팝업 in KT 
+.business-info{
+    &-tit{
+    text-align: center;
+    }
+}
+
+
+// kt popup
+.type-modal{
+    .popup__container {
+    width: 307px;
+    border-radius: 0;
+    padding:40px 24px 15px;
+        .btn-wrap{
+            margin: 38px 0 0;
+        }
+        .txt-type{
+            @include font(15px,400);
+        }
+    }
+    .modal__title{
+        text-align: center;
+        margin-bottom: 16px;
+        @include font(17px,700);
+    }
+    .base-btn[class*=m]{
+        height: 47px;
+        @include font(15.33px, 700);
+        &:not(:disabled, .disabled):active {
+            background: var(--color-btn-kt);
+            border-color: var(--color-btn-kt);
+            color: var(--white);
+        }
+    }
+    .base-btn.type1-m{
+        background: var(--color-btn-kt);
+        border-color: var(--color-btn-kt);
+        color: var(--white); 
+    }
+    .base-btn.type2-m{
+        background: var(--white);
+        border-color: var(--color-btn-kt);
+        color: var(--color-btn-kt);
+    }
+}
+
+  
+// kt button
+.base-btn{
+    border-radius: 10px;
+    &[class*=l],&[class*=xl]{
+        height: 48px;
+        @include font(16.6px,700);
+        padding: 12px 32px;   
+        &:not(:disabled, .disabled):active {
+            background: var(--color-btn-kt);
+            border-color: var(--color-btn-kt);
+            color: var(--white);
+        }
+    }
+    &[class*=type1]{
+        background: var(--color-btn-kt);
+        border-color: var(--color-btn-kt);
+        color: var(--white);
+    }
+    &[class*=type2]{
+        background: var(--white);
+        border-color: var(--color-btn-kt);
+        color: var(--black);
+        &:not(:disabled, .disabled):active {
+            background: var(--white);
+            border-color: var(--color-btn-kt);
+            color: var(--white);
+        }
+    }
+}
+.btn-wrap{
+    &.type-column {
+        .base-btn ~ .base-btn {margin: 11px 0 0;}
+    }
+    .base-btn ~ .base-btn {margin: 0 0 0 11px;}
+}
+
+// footer
+
+.footer{
+    padding-bottom: 100px;
+    &-info{
+        margin-top: 16px;
+        &--txt ~ &--txt{
+            margin-top: 8px;
+        }
+    }
+}
+
+.link_deco{
+    text-decoration: underline;
+}
+
+.insurance__top_title{
+    text-align: center;
+}

@@ -1,0 +1,577 @@
+
+//  mobile
+@media (max-width: 1024px) {
+    /* z각 item x,y 값 (x : right, y : top, width & height) */
+    $--item_01 : (
+       x : 100px,
+       y : 0,
+       width : 41px,
+       height : 56px
+   );
+   $--item_02 : (
+       x : 80px,
+       y : -50px,
+       width : 47px,
+       height : 44px
+   );
+   $--item_03 : (
+       x : 120px,
+       y : -70px,
+       width : 61px,
+       height : 61px
+   );
+   $--item_04 : (
+       x : 50px,
+       y : -110px,
+       width : 63px,
+       height : 44px
+   );
+   $--item_05 : (
+       x : 135px,
+       y : -140px,
+       width : 52px,
+       height : 52px
+   );
+   $--item_06 : (
+       x : 128px,
+       y : -220px,
+       width : 78px,
+       height : 84px
+   );
+   @keyframes move01{
+       0% {
+           top : map-get($--item_01, y) - 80px;
+           right: map-get($--item_01, x) - 100px;
+           transform: scale(1.4);
+       }
+       100%{
+           top : map-get($--item_01, y);
+           right: map-get($--item_01, x);
+           transform: scale(1);
+       }
+   }
+   @keyframes move02{
+       0% {
+           top : map-get($--item_02, y) - 80px;
+           right: map-get($--item_02, x) - 100px;
+           transform: scale(1.4);
+       }
+       100%{
+           top : map-get($--item_02, y);
+           right: map-get($--item_02, x);
+           transform: scale(1);
+       }
+   }
+   @keyframes move03{
+       0% {
+           top : map-get($--item_03, y) - 80px;
+           right: map-get($--item_03, x) + 60px;
+           transform: scale(1.4);
+       }
+       100%{
+           top : map-get($--item_03, y);
+           right: map-get($--item_03, x);
+           transform: scale(1);
+       }
+   }
+   @keyframes move04{
+       0% {
+           top : map-get($--item_04, y) - 80px;
+           transform: scale(1.4);
+       }
+       100%{
+           top : map-get($--item_04, y);
+           transform: scale(1);
+       }
+   }
+   @keyframes move05{
+       0% {
+           top : map-get($--item_05, y) - 80px;
+           transform: scale(1.4)
+       }
+       100%{
+           top : map-get($--item_05, y);
+           transform: scale(1)
+       }
+   }
+   @keyframes move06{
+       0% {
+           top : map-get($--item_06, y) - 80px;
+           transform: scale(1.4)
+       }
+       100%{
+           top : map-get($--item_06, y);
+           transform: scale(1)
+       }
+   }
+   
+
+   .btn-menu {
+       display: block;
+       @include pos(absolute, 50%, $r: 14px, $z: 2);
+       width: 32px; height: 32px;
+       margin-top: -16px;
+       font-size: 0;
+       background: url('../images/icon/layout.svg') no-repeat 0 -26px;
+   }
+   .container{
+       width: 100%;
+       min-width: auto;
+   }
+   .logo{
+       width: 90px;
+       height: 21px;
+   }
+
+   .header{
+       padding: 0 10px;
+       height: 48px;
+       .scroll-nav{
+           display: none;
+       }
+   }
+   .visual{
+       background-image: url(../images/homepage/bg_visual_mo.svg);
+       padding-top: 80px;
+       background-size: 1024px;
+       background-position: center -190px;
+       &::after{
+           display: none;
+       }
+       &--wrap{
+           position: relative;
+           top: auto;
+           left: auto;
+           transform: initial;
+           padding: 0;
+           z-index: 3;
+       }
+       &--img{
+           bottom: 10%;
+       }
+       &--contents{
+           width: var(--Mobile-contents);
+       }
+       &--text{
+           @include font(30px,700)
+       }
+       &--title{
+           @include font(40px,700)
+       }
+       &--sub{
+           @include font(16px, 500)
+       }
+       .app{
+           &--button{
+               flex-direction: column;
+               button{
+                   background-color: rgba(255, 255, 255, 0.7);
+                   backdrop-filter: blur(10px);
+                   border:none;
+                   & ~ button{
+                       margin:10px 0 0 0;
+                   }
+               }
+           }
+       }
+
+
+       &--item{
+           &_01{
+               width: map-get($--item_01, width );
+               height: map-get($--item_01, height );
+               right: map-get($--item_01, x);
+               top: map-get($--item_01, y);
+               animation-name: move01, show; 
+           }
+           &_02{
+               width: map-get($--item_02, width );
+               height: map-get($--item_02, height );
+               right: map-get($--item_02, x);
+               top: map-get($--item_02, y);
+               animation-name: move02, show; 
+           }
+           &_03{
+               width: map-get($--item_03, width );
+               height: map-get($--item_03, height );
+               right: map-get($--item_03, x);
+               top: map-get($--item_03, y);
+               animation-name: move03, show; 
+           }
+           &_04{
+               width: map-get($--item_04, width );
+               height: map-get($--item_04, height );
+               right: map-get($--item_04, x);
+               top: map-get($--item_04, y);
+               animation-name: move04, show; 
+           }
+           &_05{
+               width: map-get($--item_05, width );
+               height: map-get($--item_05, height );
+               right: map-get($--item_05, x);
+               top: map-get($--item_05, y);
+               animation-name: move05, show; 
+           }
+           &_06{
+               width: map-get($--item_06, width );
+               height: map-get($--item_06, height );
+               right: map-get($--item_06, x);
+               top: map-get($--item_06, y);
+               animation-name: move06, show; 
+           }
+       }
+   }
+   .section{
+       padding: 98px 0;
+       &__head{
+        & ~ *{
+            margin-top: 36px;
+          }
+       }
+       &__inner{
+           width: var(--Mobile-contents);
+           padding: 0 10px;
+           .section__04 &{
+               padding: 0 20px;
+           }
+       }
+       &__title{
+           @include font(30px, 700)
+       }
+       [class^="section__icon-"]{
+           width: 36px;
+           height: 36px;
+           background-size: 273px;
+           padding-bottom: 0;
+           &.section__icon-04{
+               height: 45px;
+           }
+       }
+       &__icon{
+           &-02{
+               background-position: -36px 0;
+           }
+           &-03{
+               background-position: -72px 0;
+           }
+           &-04{
+               background-position: -108px 0;
+           }
+           &-05{
+               background-position: -147px 0;
+           }
+           &-notice{
+               background-position: -185px 0 ;
+           }
+       }
+
+       &__body{
+           &.app_join{
+               margin: 36px auto 24px;
+           }
+       }
+       [class^="swiper-button-"]{
+           display: none;
+       }
+       &__swiper01{
+           width: 100%;
+       }        
+   }
+   .swiper-pagination{
+       margin-top: 24px;
+       &-bullet{
+           width: 8px;
+           height: 8px;
+           border-radius: 10px;
+           background-color: #D3D7DE;
+
+           & ~ .swiper-pagination-bullet{
+               margin-left: 12px;
+           }
+           &-active{
+               background-color: #000000;
+           }
+       }
+   }
+   .hashtag{
+       width: 300px;
+       column-gap: 12px;
+       row-gap: 4px;
+       flex-wrap: wrap;
+       margin-top: 20px;
+       & > li{
+           @include font(14px,700);
+           & ~ li{
+               margin: 0;
+           }
+       }
+   }
+   .pass{
+       &_swiper{   
+           width: 300px;
+           overflow: hidden;
+           margin: 0 auto;
+           .swiper-wrapper{
+            justify-content: initial;
+           }
+       }
+       &__box{
+           .app--button.type-colums{
+               button{
+                   height: 56px;
+                   &::before{
+                       width: 40px;
+                       height: 40px;
+                   }
+               }
+           }
+       }
+   }
+   
+   .form{
+       padding: 40px 30px 30px;
+       &__box{
+           & ~ .form__box{
+               margin-top: 30px;
+           }
+       }
+       &__title{
+           position: inherit;
+           top: auto;
+           transform: initial;
+           @include font(14px, 500);
+       }
+       .inner{
+           padding: 0;
+           margin-top: 12px;
+           flex-wrap: wrap;
+           justify-content: space-evenly;
+           & > * ~ * {
+               margin-left: 4px;
+           }
+       }
+       .type-colums{
+           margin: 0;
+       }
+   }
+
+
+   .input-box{
+    &.type-phone {
+        .input-txt{
+            padding: 0 20px 0 49px;
+        }
+    }
+   }
+   .capcha{
+       .capcha-str{
+           width: 130px
+       }
+   }
+   .caution--text{
+       @include font(12px, 400)
+   }
+   .input-box{
+       @include font(14px, 500);
+       .input-txt{
+           height: 56px;
+       }
+   }
+ 
+   .base-btn{
+    .btn-wrap &{
+        & ~ .base-btn{
+            margin-left: 4px;
+       }
+    }
+       &[class*=l]{
+           @include font(14px,500);
+           padding: 19px 7px;
+           height: 56px;
+       }
+       &.static-size{
+           &_200{
+               width: 91px;
+           }
+       }
+   }
+   .agree{
+       &_box{
+           display: block;
+       }
+       &_all{
+           width: 100%;
+       }
+       &_chk{
+           width: 100%;
+           margin: 18px 0 0;
+           grid-template-columns: 1fr 1fr;
+           row-gap: 12px;
+       }
+       
+   }
+   .capcha{
+       width: 100%;
+       margin-bottom: 16px;
+   }
+   .bg_wrap_01 {
+       background: {
+           image: url(../images/homepage/bg_section_mo.svg);
+           size: 1300px;
+           position: center -330px;
+           repeat: no-repeat;
+       }
+   }
+
+   .style_box02{
+       width: 300px;
+   }
+   .footer{
+       padding: 32px 0 ;
+       @include font(12px, 400);
+       &--corp{
+           font-size: 14px;
+       }
+       &-inner{
+           padding: 0 10px;
+           width: var(--Mobile-contents);
+       }
+       &-line{
+           display: block;
+       }
+       &-nav{
+           margin-top: 12px;
+           & > a:first-child{
+               padding-left: 0;
+           }
+       }
+       &-info{
+           margin-top: 12px;
+       }
+   }
+
+   // 공지사항
+   .notice{
+        margin-top: 36px;
+        &-view{
+            position: relative;
+            padding: 0 10px;
+            box-sizing: border-box;
+            bottom: auto;
+            margin-top: 100px;
+            a{
+                display: block;
+                width: var(--Mobile-contents);
+            }
+            &--title{
+                display: block;
+                padding: 0;
+                white-space: initial;
+                margin-top: 20px;
+                @include font(14px, 500)
+            }
+            &--date{
+                margin-top: 12px;
+                @include font(14px, 500)
+            }
+        }
+        &__head{
+            padding: 16px 10px;
+            @include font(16px,500);
+            align-items: center;
+            &::after{
+                display: none;
+            }
+            .title{
+                margin-left: 0;
+            }
+            .date{
+                display: inline-block;
+                margin-top: 6px;
+                padding: 0;
+            }
+            .num{
+                width:28px;
+            }
+        }
+        &__body{
+            @include font(14px,400);
+            padding: 40px 30px;
+        }
+        .respon_area{
+            display: block;
+            text-align: left;
+            padding-left: 22px;
+        }
+   }
+   .addview{
+       margin-top: 20px;
+   }
+   .txt-btn{
+       @include font(16px,500)
+   }
+
+
+.header {
+    &.isMenuShow .btn-menu {
+      background: url(svgClose(16, 2px)) no-repeat 50% 50%;
+    }
+    .btn-menu {
+      @include pos(absolute, 50%, $r: 14px, $z: 2);
+      width: 32px; height: 32px;
+      margin-top: -16px;
+      font-size: 0;
+      background: url('../images/icon/layout.svg') no-repeat 0 -26px;
+    }
+    .btn-close {
+      @include pos(absolute, 50%, $r: 14px);
+      width: 32px; height: 32px;
+      margin-top: -16px;
+      font-size: 0;
+      background: url(svgClose(16, 2px)) no-repeat 50% 50%;
+    }
+    &.isMenuShow &-menu {
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity .5s;
+      &__wrap {transform: translateX(0);}
+    }
+    &-menu {
+      @include pos(fixed, $a: 0);
+      display: flex;
+      justify-content: flex-end;
+      background: rgba(0, 0, 0, 0.6);
+      padding-left: 40px;
+      transform: translateX(100%);
+      opacity: 0;
+      transition: opacity .5s, transform .1s .5s;
+      &__wrap {
+        width: 100%;
+        max-width: 320px;
+        background: var(--white);
+        transform: translateX(100%);
+        transition: transform .5s;
+      }
+      &__util {
+        display: flex;
+        align-items: center;
+        padding: 0 32px;
+        height: 44px;
+      }
+      &__list {
+        margin-top: 10px;
+      }
+      &--item {
+        display: block;
+        padding: 14px 32px;
+        @include font(18px);
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+   .visual{
+       padding: 80px 10px 0;
+   }
+}

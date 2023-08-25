@@ -1,0 +1,178 @@
+@@include('./head.html', {
+  title: "펫케어",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "펫케어", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <h3 class="content-header__title3">우리 아이 등록하기</h3>
+
+      <div class="form-box form-box__type1">
+        <div class="form-box__header">
+          <p class="form-box__title">동물등록번호</p>
+        </div>
+        <div class="form-box__inner">
+          <div class="select-box">
+            <button type="button" class="select"
+              data-select='{
+                "name": "petTypeSelectMod",
+                "title" : "동물등록번호 선택",
+                "option": [
+                  {"쿠키 / 남아 / 000000000000000000000000000000 ": "val1"},
+                  {"쿠키 / 남아 / 200000000000000 ": "val2"},
+                  {"쿠키 / 남아 / 300000000000000 ": "val3"},
+                  {"쿠키 / 남아 / 400000000000000 ": "val4"}
+                ]
+              }'
+            >동물등록번호를 선택해주세요</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">우리 아이는</p>
+        </div>
+        <div class="form-box__inner">
+          <label class="base-chk pet-type">
+            <input type="radio" name="typePet" checked>
+            <span class="base-btn type2-l type-dog">
+              강아지
+            </span>
+          </label>
+          <label class="base-chk pet-type">
+            <input type="radio" name="typePet">
+            <span class="base-btn type2-l type-cat">
+              고양이
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">이름</p>
+        </div>
+        <div class="form-box__inner">
+          <div class="input-box">
+            <input type="text" class="input-txt" placeholder="이름을 입력해주세요.">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">생년월일</p>
+        </div>
+        <div class="form-box__inner">
+          <div class="input-box">
+            <input type="text" class="input-txt" placeholder="년(4자)">
+          </div>
+          <div class="input-box">
+            <input type="text" class="input-txt" placeholder="월">
+          </div>
+          <div class="input-box">
+            <input type="text" class="input-txt" placeholder="일">
+          </div>
+        </div>
+        <p class="form-box--msg">*정확한 생일을 모르시면 월까지만 입력해주세요</p>
+      </div>
+      
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">성별</p>
+        </div>
+        <div class="form-box__inner">
+          <label class="base-chk">
+            <input type="radio" name="typeGender">
+            <span class="base-btn type2-l">
+              남자아이
+            </span>
+          </label>
+          <label class="base-chk">
+            <input type="radio" name="typeGender">
+            <span class="base-btn type2-l">
+              여자아이
+            </span>
+          </label>
+        </div>
+        <div class="form-box__option">
+          <label class="input-chk">
+            <input type="checkbox">
+            <span>중성화했어요</span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">품종</p>
+        </div>
+        <div class="form-box__inner">
+          <div class="select-box">
+            <button type="button" class="select"
+              data-select='{
+                "name": "petTypeSelect",
+                "title" : "품종 선택",
+                "option": [
+                  {"푸들": "val1"},
+                  {"웰시코기": "val2"},
+                  {"리트리버1": "val3"},
+                  {"리트리버2": "val4"},
+                  {"리트리버3": "val5"},
+                  {"리트리버4": "val6"},
+                  {"리트리버5": "val7"},
+                  {"리트리버6": "val8"},
+                  {"리트리버7": "val9"},
+                  {"리트리버8": "val10"},
+                  {"리트리버9": "val11"}
+                ]
+              }'
+            >품종을 선택해주세요</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">체중</p>
+        </div>
+        <div class="form-box__inner">
+          <div class="input-box" style="width: 156px;">
+            <input type="number" class="input-txt" placeholder="체중">
+          </div>
+          <span class="input-unit">kg</span>
+        </div>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type1-xl">등록하기</button>
+    </div>
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    const pop = {
+      "msg1" : ()=>{
+        layerMsg({
+          msg: '생년월일을 다시 확인해주세요.'
+        });
+      }
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+@@include('./head.html', {
+  title: "플레이스",
+  pass_name: "kt",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "플레이스", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="place-list__header">
+
+        <div class="base-tab tab-type1" data-ref="tab">
+          <ul class="tab__list" role="tablist">
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="true"
+              >병원별</button></li>
+            <li class="tab__item">
+              <button
+                role="tab"
+                aria-selected="false"
+              >진료별</button></li>
+          </ul>
+        </div>
+        <script>
+          const tab = new TabContents({target: 'tab'});
+        </script>
+
+        <div class="input-box search__input-box">
+          <input
+            type="text"
+            class="input-txt"
+            placeholder="지역을 입력해주세요"
+            onfocus="event.target.closest('.place-list__header').classList.add('isSearch');"
+            oninput="
+              (event.target.value.length)
+              ? event.target.closest('.search__input-box').classList.add('isValue')
+              : event.target.closest('.search__input-box').classList.remove('isValue');
+            "
+            onkeydown="
+              if(event.keyCode == 13) {
+                event.target.blur();
+                layerMsg({
+                  msg: '검색하실 지역을<br>입력해주세요.',
+                  onConfirm: ()=>{
+                    event.target.focus();
+                  }
+                });
+              }
+            "
+          >
+          <button type="button" class="btn-del"
+            onmouseenter="
+              event.target.closest('.search__input-box').classList.remove('isValue');
+              event.target.closest('.search__input-box').querySelector('.input-txt').value = null;
+            "
+           >삭제</button>
+        </div>
+
+        <!-- 검색 결과 -->
+        <div class="search__result">
+          <ul>
+            <li>
+              <button class="search__result--btn2">
+                서울시 <span>송</span><span>파</span><span>구</span>
+              </button>
+            </li>
+            <li>
+              <button class="search__result--btn2">
+                서울시 <span>송</span><span>파</span><span>구</span>
+              </button>
+            </li>
+          </ul>
+
+          <!-- 검색 결과 없음 -->
+          <p class="no-data type-search">검색 결과가 없습니다.</p>
+          <!-- //검색 결과 없음 -->
+
+        </div>
+        <!-- //검색 결과 -->
+
+      </div>
+
+      <div class="place-list__body">
+
+        <ul class="place-list__items">
+          <li class="place-list__box">
+            <button class="place-list__snippet" onclick="medicalExpenses.show();">
+              <span class="name">헥토 동물병원</span>
+              <span class="location">서울시 강남구</span>
+            </button>
+          </li>
+          <li class="place-list__box">
+            <button class="place-list__snippet" onclick="medicalExpenses.show();">
+              <span class="name">헥토 동물병원헥토 동물병원헥토 동물병원헥토 동물병원</span>
+              <span class="location">서울시 강남구</span>
+            </button>
+          </li>
+          <li class="place-list__box">
+            <button class="place-list__snippet" onclick="medicalExpenses.show();">
+              <span class="name">헥토 동물병원</span>
+              <span class="location">서울시 강남구</span>
+            </button>
+          </li>
+          <li class="place-list__box">
+            <button class="place-list__snippet" onclick="medicalExpenses.show();">
+              <span class="name">헥토 동물병원헥토 동물병원헥토 동물병원헥토 동물병원</span>
+              <span class="location">서울시 강남구</span>
+            </button>
+          </li>
+          <li class="place-list__box">
+            <button class="place-list__snippet" onclick="medicalExpenses.show();">
+              <span class="name">헥토 동물병원</span>
+              <span class="location">서울시 강남구</span>
+            </button>
+          </li>
+          <li class="place-list__box">
+            <button class="place-list__snippet" onclick="medicalExpenses.show();">
+              <span class="name">헥토 동물병원헥토 동물병원헥토 동물병원헥토 동물병원</span>
+              <span class="location">서울시 강남구</span>
+            </button>
+          </li>
+        </ul>
+        <div class="btn-wrap type-more">
+          <button class="base-btn btn_more"><span>더보기</span></button>
+        </div>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    @@include('./botNav.html', {active: '5'})
+    @@include('./floating.html')
+
+  </div>
+
+  <!-- 진료비 보기 -->
+  <div class="layer-popup type-modal" data-ref="medicalExpenses">
+    <section class="popup__container">
+      <button class="btn-close" onclick="medicalExpenses.hide();">닫기</button>
+      <div class="popup__contents">
+        <h3 class="txt-type colorPrimary">헥토 동물병원</h3>
+        <p class="txt-type4">진료비</p>
+        <ul class="medical-expenses__list">
+          <li class="medical-expenses__item">
+            <span class="key">진료항목</span>
+            <strong class="val"><span class="num">3,120,000</span> <span class="unit">원</span></strong>
+          </li>
+          <li class="medical-expenses__item">
+            <span class="key">진료항목진료항목진료항목진료항목 진료항목진료</span>
+            <strong class="val"><span class="num">20,000</span> <span class="unit">원</span></strong>
+          </li>
+          <li class="medical-expenses__item">
+            <span class="key">진료항목</span>
+            <strong class="val"><span class="num">120,000</span> <span class="unit">원</span></strong>
+          </li>
+          <li class="medical-expenses__item">
+            <span class="key">진료항목진료항목진료항목진료항목 진료항목진료</span>
+            <strong class="val"><span class="num">20,000</span> <span class="unit">원</span></strong>
+          </li>
+          <li class="medical-expenses__item">
+            <span class="key">진료항목</span>
+            <strong class="val"><span class="num">120,000</span> <span class="unit">원</span></strong>
+          </li>
+          <li class="medical-expenses__item">
+            <span class="key">진료항목진료항목진료항목진료항목 진료항목진료</span>
+            <strong class="val"><span class="num">20,000</span> <span class="unit">원</span></strong>
+          </li>
+          <li class="medical-expenses__item">
+            <span class="key">진료항목</span>
+            <strong class="val"><span class="num">120,000</span> <span class="unit">원</span></strong>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <script>
+    const medicalExpenses = new LayerPopup({target: "medicalExpenses"});
+  </script>
+  <!-- //진료비 보기 -->
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+@@include('./head.html', {
+  title: "슬개골 탈구 검사",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "슬개골 탈구 검사", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="health-checkup__entry">
+        <h2 class="content-header__title3">뒷모습 사진 하나로​<br>AI가 분석해주는 슬개골 탈구</h2>
+        <p class="content-header__desc">슬개골 탈구 유무와 진행도를 파악하고​<br>맞춤 솔루션을 제공해요.</p>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type1-xl"
+        data-select='{
+        "name": "myPetSelect",
+        "title" : "검사할 아이를 선택해주세요.",
+        "type" : "petSelect",
+        "desc" : "탈구 진단은 강아지만 가능해요",
+        "option": [
+          {
+            "name" : "구름",
+            "age" : "7",
+            "gender" : "여아",
+            "className": "dog"
+          },
+          {
+            "name" : "구름2",
+            "age" : "7",
+            "gender" : "여아",
+            "className": "dog"
+          }
+        ],
+        "value" : "구름"
+      }'>탈구 검사하기</button>
+    </div>
+
+  </div>
+  
+
+</body>
+</html>

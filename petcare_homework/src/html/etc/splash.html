@@ -1,0 +1,37 @@
+@@include('./head.html', {
+  title: "플레이스",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="splash__wrap">
+        <p class="splash--title">
+          <span class="txt1">반려동물 종합 서비스</span>
+          <span class="txt2">펫케어</span>
+        </p>
+      </div>
+      
+    </div>
+    <!-- //container -->
+
+  </div>
+
+  <!-- 로딩 -->
+  <script>
+    if(Util.getUrlParams().loading === 'true') {
+      funcLoading('start');
+      setTimeout(()=>{
+        funcLoading('end');
+      },2000)
+    }
+  </script>
+  <!-- //로딩 -->
+
+</body>
+</html>

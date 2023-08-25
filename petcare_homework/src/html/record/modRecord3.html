@@ -1,0 +1,82 @@
+@@include('./head.html', {
+  title: "펫케어",
+  pass_name: "",
+  device_type: ""})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "기록", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <div class="content-header type-header4">
+        <h2 class="content-header__title3">기록 수정하기</h2>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">식사 정보</p>
+        </div>
+        <div class="form-box__inner">
+          <label class="base-chk">
+            <input type="radio" name="modToiletSel" checked>
+            <span class="base-btn type2-l">
+              소변
+            </span>
+          </label>
+          <label class="base-chk">
+            <input type="radio" name="modToiletSel">
+            <span class="base-btn type2-l">
+              대변
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">메모<span class="form-box__title--opt">(선택)</span></p>
+        </div>
+        <div class="form-box__inner">
+          <div class="input-box">
+            <input type="text" class="input-txt" placeholder="메모를 입력해주세요." value="소변소변">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">배변 시간</p>
+        </div>
+        <div class="form-box__inner">
+          <div class="input-box">
+            <button type="button" class="input-time"
+              data-time='{
+                "name" : "modToiletTimePicker",
+                "title" : "시간",
+                "value" : "오전 11:00"
+              }'
+            >시간을 선택해주세요</button>
+          </div>
+        </div>
+        <div class="form-box__option">
+          <label class="input-chk">
+            <input type="checkbox">
+            <span>시간 모름</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type2-xl">삭제하기</button>
+      <button class="base-btn type1-xl">수정하기</button>
+    </div>
+
+  </div>
+</body>
+</html>

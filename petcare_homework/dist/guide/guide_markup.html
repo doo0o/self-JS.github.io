@@ -1,0 +1,1169 @@
+<p><strong>* 가이드 외에 모든 사이즈, 마진, 패딩은 별도 css 작성</strong></p>
+
+<section class="guide__section">
+  <h2 class="guide__subTit">LATOUT <button type="button" class="btnFold">접기</button></h2>
+  <pre><code class="hljs language-html">
+    <div class="wrap">
+    
+      <!-- header sticty z-index: 60  -->
+      <header class="header">
+        <div class="header-inner">
+          <h2 class="page-title">헤더</h2>
+        </div>
+        <div class="header-menu"></div>
+      </header>
+      <!-- //header -->
+  
+      <!-- container -->
+      <div class="container"> // container-bg, container-nopd
+        컨테이너
+      </div>
+      <!-- //container -->
+  
+      <!-- bot sticky z-index: 50 -->
+      <div class="btn-wrap type-sticky">
+        <button class="base-btn type1-xl">버튼</button>
+      </div>
+      <!-- //bot sticky -->
+
+      <!-- 네비게이션 z-index: 50 -->
+      <nav class="bot-nav">
+        <ul class="bot-nav__list">
+          <li class="bot-nav__item bot-nav__item1 isActive"><a href="#">홈</a></li>
+          <li class="bot-nav__item bot-nav__item2"><a href="#">기록</a></li>
+          <li class="bot-nav__item bot-nav__item3"><a href="#">건강분석</a></li>
+          <li class="bot-nav__item bot-nav__item4"><a href="#">푸드</a></li>
+          <li class="bot-nav__item bot-nav__item5"><a href="#">플레이스</a></li>
+        </ul>
+      </nav>
+      <!-- //네비게이션 -->
+  
+    </div>
+
+    <!-- 레이어 z-index: 100 -->
+    <div class="layer-popup">레이어</div>
+    <div class="layer-popup">레이어1</div>
+    <div class="layer-popup">레이어2</div>
+  </code></pre>
+</section>
+
+<section class="guide__section">
+  <h2 class="guide__subTit">LAYER POPUP <button type="button" class="btnFold">접기</button></h2>
+  <div class="guide__code-view">
+    <button 
+      class="base-btn type1-s"
+      onclick="layerMsg({
+        msg: '올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.',
+        type: 'confirm',
+        btn: {confirm: '선택', cancle: '취소'},
+        onConfirm: (_this)=>alert('confirm'),
+        onCancel: (_this)=>alert('cancel'),
+        onShow: (_this)=>alert('show'),
+        onHide: (_this)=>alert('hide'),
+      })"
+    >레이어 메시지</button>
+    <button 
+      class="base-btn type2-s" onclick="
+      dialog({
+        msg: '올바른 휴대폰 번호 또는 통신사를 입력해주세요.',
+        timer: 2,
+        onShow: (_this)=>alert('show'),
+        onHide: (_this)=>alert('hide'),
+      })"
+      >다이얼로그</button>
+    <button class="base-btn type2-s" onclick="layerModal.show((_this)=>{console.log(_this)});">레이어 모달</button>
+    <button class="base-btn type3-s" onclick="layerBotSheet.show((_this)=>{console.log(_this)});">레이어 바텀시트</button>
+    <button class="base-btn type4-etc" onclick="layerFull.show((_this)=>{console.log(_this)});">레이어 전체</button>
+
+    <div class="layer-popup type-modal" data-ref="layerModal">
+      <section class="popup__container">
+
+        <div class="popup__contents">
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+        </div>
+
+        <div class="btn-wrap type-column">
+          <button class="base-btn type2-m">동물 등록 번호 조회</button>
+          <button class="base-btn type2-m">직접 정보 조회</button>
+        </div>
+
+      </section>
+    </div>
+    <script>
+      layerModal = new LayerPopup({target: "layerModal"});
+    </script>
+    <div class="layer-popup type-bot" data-ref="layerBotSheet">
+      <section class="popup__container">
+        <div class="popup__header">
+          <button class="btn-close" onclick="layerBotSheet.hide((_this)=>{console.log(_this)});">닫기</button>
+          <h3 class="popup__title">서비스 이용을 위해 약관에 동의해주세요.</h3>
+        </div>
+        <div class="popup__contents">
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+        </div>
+        <div class="btn-wrap">
+          <button class="base-btn type1-m">확인</button>
+        </div>
+      </section>
+    </div>
+    <script>
+      layerBotSheet = new LayerPopup({target: "layerBotSheet"});
+    </script>
+    <div class="layer-popup type-full" data-ref="layerFull">
+      <section class="popup__container">
+        <div class="popup__header">
+          <button class="btn-close" onclick="layerFull.hide((_this)=>{console.log(_this)});">닫기</button>
+          <h3 class="popup__title">서비스 이용을 위해 약관에 동의해주세요.</h3>
+        </div>
+        <div class="popup__contents">
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+          <p class="txt-type">올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.</p>
+        </div>
+        <div class="btn-wrap">
+          <button class="base-btn type1-m">확인</button>
+        </div>
+      </section>
+    </div>
+    <script>
+      layerFull = new LayerPopup({target: "layerFull"});
+    </script>
+
+  </div>
+  <pre><code class="hljs language-html">
+    // layer z-index: 100; 컨텐츠 z-index 는 100 미만
+    // layer 중첩일 경우 마크업 순서대로 처리 or layer-popup 내부에 layer-popup 넣어서 처리
+    // data-ref="팝업 네임" 필수
+    <div class="layer-popup type-modal" data-ref="layerSample"> // type-modal 모달, type-bot 바텀시트, type-full 전체
+      <section class="layer-popup__container">
+        <div class="layer-popup__header">
+          <button class="btn-close" onclick="layerSample.hide()">닫기</button> // 닫기가 없을 경우 상단 여백 없어짐
+          <h3 class="layer-popup__title">타이틀</h3>
+        </div>
+        <div class="layer-popup__contents">
+          <p class="txt-type">16px 500 center</p>
+          <p class="txt-type2">--gray1 400</p>
+          <p class="txt-type3">--gray1 16px 400</p>
+        </div>
+        <div class="btn-wrap">// 버튼
+          <button class="base-btn type1-m">확인</button>
+        </div>
+      </section>
+    </div>
+    <script>
+      const layerSample = new LayerPopup({target: "layerSample"});
+    </script>
+    <script>
+      //  상수, target === data-ref 필수
+      layerSample.show(); //show
+      layerSample.hide(); //hide 반드시 hide()로 처리해야만 바디 스크롤 기능 풀림
+
+      // show, hide 실행 후 콜백 기본 옵션은 this 반환
+      layerSample.show((_this)=>{console.log(_this)});
+      layerSample.hide((_this)=>{console.log(_this)});
+
+      layerSample.onShow((_this)=>{console.log(_this)}) // show 이벤트 후
+      layerSample.onHide((_this)=>{console.log(_this)}) // hide 이벤트 후
+
+      layerSample.onRemove((_this)=>{console.log(_this)}) // remove 이벤트 후
+      // layer.remove 는 셀렉트 캘린더 메시지 등의 쓰임
+      
+      new LayerPopup({target: "layerSample"}); 
+      //메시지 팝업
+      layerMsg({
+        msg: '올바른 휴대폰 번호 또는<br>통신사를 입력해주세요.',
+        type: 'confirm',
+        btnClose: true,
+        btn: {confirm: '선택', cancel: '삭제'},
+        onConfirm: (_this)=>alert('confirm'),
+        onCancel: (_this)=>alert('cancel'),
+        onShow: (_this)=>alert('show'),
+        onHide: (_this)=>alert('hide'),
+        customBtn: [
+          {
+            "name" : "동물 등록 번호 조회",
+            "type" : "type1-m",
+            "func" : ()=>{
+              alert('동물 등록 번호 조회');
+            }
+          },
+          {
+            "name" : "직접 정보 조회",
+            "type" : "type1-m",
+            "func" : ()=>{
+              alert('직접 정보 조회');
+            }
+          }
+        ]
+      });
+
+      //다이얼로그
+      dialog({
+        msg: '올바른 휴대폰 번호 또는 통신사를 입력해주세요.',
+        timer: 2,
+        onShow: (_this)=>alert('show'),
+        onHide: (_this)=>alert('hide'),
+      })
+    </script>
+  </code></pre>
+</section>
+
+
+<section class="guide__section">
+  <h2 class="guide__subTit">SWIPER <button type="button" class="btnFold">접기</button></h2>
+  <div class="guide__code-view" style="overflow: hidden;">
+
+    <div data-ref="sliderSample" data-option='{"auto": "5000"}'>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <img src="./assets/images/temp/thumb270x140.png" alt="">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./assets/images/temp/thumb270x140.png" alt="">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./assets/images/temp/thumb270x140.png" alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script>
+      sliderSample = slider({target: 'sliderSample', option: {loop: true}});
+    </script>
+
+  </div>
+  <pre><code class="hljs language-html">
+    //data-ref 슬라이더 네임, 오토 플레이 설정 data-option='{"auto": "5000"}'
+    <div data-ref="sliderSample">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./assets/images/temp/thumb270x140.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/temp/thumb270x140.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/temp/thumb270x140.png" alt="">
+          </div>
+        </div>
+        //슬라이더 실행 시 아이템이 1개 이하면 페이징 좌우 슬라이드 버튼 삭제 됨
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button">
+          <button class="swiper-button-prev">이전</button>
+          <button class="swiper-button-next">다음</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      //data-ref 슬라이더 네임
+      sliderSample = slider({target: 'sliderSample'});
+      // 기본 설정 
+      // observer: true,
+      // observeParents: true,
+      // slidesPerView: 1,
+      // speed: 500,
+
+      // 옵션 추가 설정 시
+      sliderSample = slider({
+        target: 'sliderSample',
+        option: {
+          loop: true,
+          on: {
+            init() {init}
+          }
+        }
+      });
+    </script>
+  </code></pre>
+</section>
+
+<section class="guide__section">
+  <h2 class="guide__subTit">BUTTON <button type="button" class="btnFold">접기</button></h2>
+  <div class="guide__code-view">
+    <button class="base-btn type1-etc">버튼</button>
+    <button class="base-btn type1-etc2">버튼</button>
+    <button class="base-btn type1-xs">버튼</button>
+    <button class="base-btn type1-s">버튼</button>
+    <a href="#" class="base-btn type1-m">링크</a>
+    <a href="#" class="base-btn type1-m disabled">링크</a>
+    <a href="#" class="base-btn type1-l">링크</a>
+    <button class="base-btn type1-l" disabled>버튼</button>
+    <button class="base-btn type1-xl">버튼</button>
+    <br>
+    <button class="base-btn type2-etc">버튼</button>
+    <button class="base-btn type2-etc2">버튼</button>
+    <button class="base-btn type2-xs">버튼</button>
+    <button class="base-btn type2-s">버튼</button>
+    <a href="#" class="base-btn type2-m">링크</a>
+    <a href="#" class="base-btn type2-m disabled">링크</a>
+    <a href="#" class="base-btn type2-l">링크</a>
+    <button class="base-btn type2-l" disabled>버튼</button>
+    <label class="base-chk">
+      <input type="checkbox">
+      <span class="base-btn type2-l">input</span>
+    </label>
+    <button class="base-btn type2-xl">버튼</button>
+    <br>
+    <button class="base-btn type3-etc">버튼</button>
+    <button class="base-btn type3-etc2">버튼</button>
+    <button class="base-btn type3-xs">버튼</button>
+    <button class="base-btn type3-s">버튼</button>
+    <a href="#" class="base-btn type3-m">링크</a>
+    <a href="#" class="base-btn type3-m disabled">링크</a>
+    <a href="#" class="base-btn type3-l">링크</a>
+    <button class="base-btn type3-l" disabled>버튼</button>
+    <label class="base-chk">
+      <input type="checkbox">
+      <span class="base-btn type3-l">input</span>
+    </label>
+    <button class="base-btn type3-xl">버튼</button>
+    <br>
+    <button class="base-btn type4-etc2">버튼</button>
+  </div>
+  <pre><code class="hljs language-html">
+    //type1-l 컬러1 높이 56 
+    //type1-xl 컬러1 높이 56 type1-l + 굵기 700
+    //type2-m 컬러2 높이 48
+    //type3-s 컬러3 높이 40
+    //type3-xs 컬러3 높이 24
+    //type3-etc 컬러3 높이 32 라운드 16
+    //type4-etc2 컬러4 높이 24 라운드 24
+    <button class="base-btn type1-m">버튼</button> // disabled 비활성
+    <a href="#" class="base-btn type1-m">링크</a> // class disabled
+    
+    //인풋 타입
+    <label class="base-chk">
+      <input type="checkbox">
+      <span class="base-btn type3-l">input</span>
+    </label>
+
+    <div class="btn-wrap"> // 버튼 flex: 1, type-sticky type-fiexd 고정 형태, type-column 버튼 배치 column
+      <button class="base-btn type1-l">버튼</button>
+    </div>
+  </code></pre>
+</section>
+
+<section class="guide__section">
+  <h2 class="guide__subTit">TAB <button type="button" class="btnFold">접기</button></h2>
+  <div class="guide__code-view">
+
+    <div class="base-tab tab-type1" data-ref="tab">
+      <ul class="tab__list" role="tablist">
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="true"
+          >사료</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+          >간식</button>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const tab = new TabContents({target: 'tab'});
+      tab.onChange((_this)=>{console.log(_this)});
+    </script>
+    
+    <div class="base-tab tab-type2" data-ref="tab2">
+      <ul class="tab__list" role="tablist">
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="true"
+          >전체</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+          >건식사료</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+          >습식사료</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+          >소프트사료</button>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const tab2 = new TabContents({target: 'tab2', type: 'slider'});
+    </script>
+
+    <div class="base-tab tab-type3" data-ref="tab3">
+      <ul class="tab__list" role="tablist">
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="true"
+            aria-controls="tab3Cont1"
+          >공고중</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="tab3Cont2"
+          >보호중</button>
+        </li>
+      </ul>
+    </div>
+    <div id="tab3Cont1" class="tab__content">cont1</div>
+    <div id="tab3Cont2" class="tab__content">cont2</div>
+    <script>
+      const tab3 = new TabContents({target: 'tab3'});
+    </script>
+
+    <div class="base-tab tab-type4" data-ref="tab4">
+      <ul class="tab__list" role="tablist">
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="true"
+          >동물병원</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+          >미용</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+          >카페</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+          >숙소</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+          >기타동반</button>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const tab4 = new TabContents({target: 'tab4'});
+    </script>
+
+  </div>
+  <pre><code class="hljs language-html">
+    // tab-type1 ~ 4
+    // role="tablist" 탭 리스트
+    // role="tab" 탭 버튼
+    // aria-selected="true" 활성/비활성 여부 true로 되어잇는 버튼은 클래스로 활성화 됨
+    // tabContents1.current 는 "공고중"
+    <div class="base-tab tab-type1" data-ref="tabContents1">
+      <ul class="tab__list" role="tablist">
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="true"
+          >공고중</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+          >보호중</button>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const tabContents1 = new TabContents({target: 'tabContents1'});
+      tabContents1.onChange((_this)=>{console.log(_this)});
+    </script>
+    
+    <div class="base-tab tab-type2" data-ref="tabContents2">
+      <ul class="tab__list" role="tablist">
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="true"
+          >전체</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+          >건식사료</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+          >습식사료</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+          >소프트사료</button>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const tabContents2 = new TabContents({target: 'tabContents2', type: 'slider'});
+    </script>
+
+    // 탭 컨텐츠가 있을 경우
+    // aria-controls="tabCont01" 해당하는 탭 컨텐츠에 동일 한 id 작성
+    // tabContents3.current 는 "tabContents3Cont1"
+    <div class="base-tab tab-type3" data-ref="tabContents3">
+      <ul class="tab__list" role="tablist">
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="true"
+            aria-controls="tabContents3Cont1"
+          >공고중</button>
+        </li>
+        <li class="tab__item">
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="tabContents3Cont2"
+          >보호중</button>
+        </li>
+      </ul>
+    </div>
+    <div id="tabContents3Cont1" class="tab__content"></div>
+    <div id="tabContents3Cont2" class="tab__content"></div>
+    <script>
+      const tabContents3 = new TabContents({target: 'tabContents3'});
+    </script>
+  </code></pre>
+</section>
+
+<section class="guide__section">
+  <h2 class="guide__subTit">FORM <button type="button" class="btnFold">접기</button></h2>
+  <div class="guide__code-view">
+    <label class="input-chk">
+      <input type="checkbox">
+      <span>체크박스</span>
+    </label>
+    <label class="input-chk">
+      <input type="radio">
+      <span>라디오</span>
+    </label>
+    <br>
+    <div class="form-box">
+      <div class="form-box__inner">
+        <div class="input-box">
+          <input type="text" class="input-txt" placeholder="입력해주세요.">
+        </div>
+      </div>
+      <p class="form-box--msg">폼 안내</p>
+    </div>
+    <div class="form-box isError">
+      <div class="form-box__header">
+        <p class="form-box__title">폼 타이틀</p>
+      </div>
+      <div class="form-box__inner">
+        <div class="input-box">
+          <input type="text" class="input-txt" placeholder="입력해주세요.">
+        </div>
+      </div>
+      <p class="form-box--validate">오류</p>
+    </div>
+    <div class="input-box">
+      <input type="text" class="input-txt" value="입력" placeholder="입력해주세요." disabled>
+    </div>
+
+    <div class="form-box">
+      <div class="form-box__header">
+        <p class="form-box__title">우리 아이는</p>
+      </div>
+      <div class="form-box__inner">
+        <label class="base-chk pet-type">
+          <input type="radio" name="typePet" checked>
+          <span class="base-btn type2-l type-dog">
+            강아지
+          </span>
+        </label>
+        <label class="base-chk pet-type">
+          <input type="radio" name="typePet">
+          <span class="base-btn type2-l type-cat">
+            고양이
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <div class="form-box__header">
+        <p class="form-box__title">생년월일</p>
+      </div>
+      <div class="form-box__inner">
+        <div class="input-box">
+          <input type="text" class="input-txt" placeholder="년(4자)">
+        </div>
+        <div class="input-box">
+          <input type="text" class="input-txt" placeholder="월">
+        </div>
+        <div class="input-box">
+          <input type="text" class="input-txt" placeholder="일">
+        </div>
+      </div>
+      <p class="form-box--msg">*정확한 생일을 모르시면 월까지만 입력해주세요</p>
+    </div>
+
+    <div class="form-box">
+      <div class="form-box__header">
+        <p class="form-box__title">성별</p>
+      </div>
+      <div class="form-box__inner">
+        <label class="base-chk">
+          <input type="radio" name="typeGender">
+          <span class="base-btn type3-l">
+            남자아이
+          </span>
+        </label>
+        <label class="base-chk">
+          <input type="radio" name="typeGender">
+          <span class="base-btn type3-l">
+            여자아이
+          </span>
+        </label>
+      </div>
+      <div class="form-box__option">
+        <label class="input-chk">
+          <input type="checkbox">
+          <span>중성화했어요</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-box__row">
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">시도</p>
+        </div>
+        <div class="form-box__inner">
+          <div class="select-box">
+            <button type="button" class="select"
+              data-select='{
+                "name": "areaMainSelect",
+                "title" : "시도 선택",
+                "option": [
+                  {"전체": "val1"},
+                  {"서울특별시": "val2"},
+                  {"인천광역시": "val3"}
+                ]
+              }'
+            >전체</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-box">
+        <div class="form-box__header">
+          <p class="form-box__title">시군구</p>
+        </div>
+        <div class="form-box__inner">
+          <div class="select-box">
+            <button type="button" class="select"
+              data-select='{
+                "name": "areaSubSelect",
+                "title" : "시군구 선택",
+                "option": [
+                  {"전체": "val1"},
+                  {"종로구": "val2"},
+                  {"중구": "val3"}
+                ]
+              }'
+            >전체</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <pre><code class="hljs language-html">
+    <label class="input-chk">
+      <input type="checkbox">
+      <span>체크박스</span>
+    </label>
+    <label class="input-chk">
+      <input type="radio" name="radio">
+      <span>라디오</span>
+    </label>
+
+    // 기본 형
+    <div class="input-box">
+      <input type="text" class="input-txt" placeholder="입력해주세요.">  // disabled 비활성
+    </div>
+
+    // 폼 박스 너비 100%
+    <div class="form-box"> // 에러 isError, //form-box__type1 margin-top: 24px;
+      <div class="form-box__header">
+        <p class="form-box__title">폼 타이틀</p>
+      </div>
+      <div class="form-box__inner">
+        <div class="input-box">
+          <span class="timer">3:00</span>
+          <input type="text" class="input-txt" placeholder="입력해주세요.">
+        </div>
+        <button class="base-btn type2-m">재전송</button>
+      </div>
+      <div class="form-box__option"> //옵션
+        <label class="input-chk">
+          <input type="checkbox">
+          <span>중성화했어요</span>
+        </label>
+      </div>
+      <p class="form-box--msg">폼 메시지</p>
+      <p class="form-box--validate">올바른 휴대폰 번호를 입력해주세요</p>
+    </div>
+
+    // 폼 박스 row
+    <div class="form-box__row">
+      <div class="form_box">...</div>
+      <div class="form_box">...</div>
+    </div>
+  </code></pre>
+</section>
+
+<section class="guide__section">
+  <h2 class="guide__subTit">FORM - Select<button type="button" class="btnFold">접기</button></h2>
+  <div class="guide__code-view">
+    <div class="form-box">
+      <div class="form-box__inner">
+        <button type="button" class="select"
+          data-select='{
+            "name": "selectName1",
+            "title" : "선택하세요.",
+            "option": [
+              {"선택1": "val1"},
+              {"선택2": "val2"},
+              {"선택3": "val3"},
+              {"선택4": "val4"}
+            ],
+            "value": "val3"
+          }'
+        >선택해주세요</button>
+      </div>
+    </div>
+    <div class="form-box">
+      <div class="form-box__inner">
+        <button type="button" class="select" disabled
+          data-select='{
+            "name": "selectName2",
+            "title" : "선택하세요.",
+            "option": [
+              {"선택1": "val1"},
+              {"선택2": "val2"},
+              {"선택3": "val3"},
+              {"선택4": "val4"}
+            ],
+            "value": "val3"
+          }'
+        >선택해주세요</button>
+      </div>
+    </div>
+    <div class="select-box">
+      <button type="button" class="select"
+        data-select='{
+          "name": "selectName3",
+          "title" : "선택하세요.",
+          "option": [
+            {"선택1": "val1"},
+            {"선택2": "val2"},
+            {"선택3": "val3"},
+            {"선택4": "val4"}
+          ],
+          "btn": "선택"
+        }'
+      >선택해주세요</button>
+    </div>
+    <div class="select-box">
+      <button type="button" class="select" disabled
+        data-select='{
+          "name": "selectName4",
+          "title" : "선택하세요.",
+          "option": [
+            {"선택1": "val1"},
+            {"선택2": "val2"},
+            {"선택3": "val3"},
+            {"선택4": "val4"}
+          ]
+        }'
+      >선택해주세요</button>
+    </div>
+
+    <button class="base-btn type2-m"
+      data-select='{
+        "name": "myPetSelect",
+        "title" : "다른 아이 선택",
+        "type" : "petSelect",
+        "option": [
+          {
+            "id" : "petSelectId1",
+            "name" : "구름",
+            "age" : "7",
+            "gender" : "여아",
+            "className": "dog"
+          },
+          {
+            "id" : "petSelectId2",
+            "name" : "김수한무거북이와두루미삼천갑자동방삭치치카포사리사리센타워리워리세브리깡무두셀라구름이허리케인에담벼락담벼락에서생원서생원에고양이고양이엔바둑이바둑이는돌돌이",
+            "age" : "7",
+            "gender" : "남아",
+            "className": "cat"
+          },
+          {
+            "id" : "petSelectId3",
+            "name" : "후추2",
+            "age" : "7",
+            "gender" : "남아",
+            "className": "cat"
+          }
+        ],
+        "value" : "petSelectId3"
+      }'
+    >다른 아이로 권장량 확인하기</button>
+
+  </div>
+  <pre><code class="hljs language-html">
+    <div class="select-box">
+      <button type="button" class="select"
+      data-select='..'
+      >선택해주세요</button>
+      <!-- 
+        data-select 속성에 아래와 같이 정보를 넣어줘야함
+        선택된 값이 있을 경우 "value" : "선택되어 있는 값"
+        아래의 예제에서는 선택3이 선택되어 있는 상태로 렌더링 되고
+        버튼 명은 "선택" 으로 렌더링 됨
+        버튼 명 기본은 "확인"
+        data-select='{
+          "name": "selectName1",
+          "title" : "선택하세요.",
+          "option": [
+            {"선택1": "val1"},
+            {"선택2": "val2"},
+            {"선택3": "val3"},
+            {"선택4": "val4"}
+          ],
+          "value": "val3",
+          "btn": "선택"
+        }'
+       -->
+    </div>
+
+    <div class="form-box">
+      <div class="form-box__inner">
+        <div class="select-box">
+          <button type="button" class="select"
+            data-select='..'
+          >선택해주세요</button>
+          <!-- 
+            {
+              "name": "selectName2",
+              "title" : "선택하세요.",
+              "option": [
+                {"선택1": "val1"},
+                {"선택2": "val2"},
+                {"선택3": "val3"},
+                {"선택4": "val4"}
+              ]
+            }
+           -->
+        </div>
+      </div>
+      <p class="form-box--msg">선택하세요?</p>
+    </div>
+
+    //버튼 형 셀렉트 - 옵션 값이 다르므로 확인 바랍니다.
+    <button class="base-btn type2-m"
+      data-select='..'
+    >다른 아이로 권장량 확인하기</button>
+    <!-- 
+      {
+        "name": "myPetSelect",
+        "title" : "다른 아이 선택",
+        "type" : "petSelect",
+        "option": [
+          {
+            "id" : "petSelectId1",
+            "name" : "구름",
+            "age" : "7",
+            "gender" : "여아",
+            "className": "dog"
+          },
+          {
+            "id" : "petSelectId2",
+            "name" : "김수한무거북이와두루미삼천갑자동방삭치치카포사리사리센타워리워리세브리깡무두셀라구름이허리케인에담벼락담벼락에서생원서생원에고양이고양이엔바둑이바둑이는돌돌이",
+            "age" : "7",
+            "gender" : "남아",
+            "className": "cat"
+          },
+          {
+            "id" : "petSelectId3",
+            "name" : "후추2",
+            "age" : "7",
+            "gender" : "남아",
+            "className": "cat"
+          }
+        ],
+        "value" : "petSelectId3"
+      }
+     -->
+
+  </code></pre>
+</section>
+
+<section class="guide__section">
+  <h2 class="guide__subTit">FORM - Calendar<button type="button" class="btnFold">접기</button></h2>
+  <div class="guide__code-view">
+    <button type="button" class="input-calendar"
+      data-calendar='{
+        "name": "calendar2",
+        "title" : "날짜선택",
+        "value": "2023.05.05",
+        "minDate" : "2023.05.03",
+        "maxDate" : "2023.05.25"
+      }'
+    >선택</button>
+
+    <div class="form-box">
+      <div class="form-box__inner">
+        <div class="input-calendar-period">
+          <button type="button" class="input-calendar"
+            data-calendar='{
+              "name": "calendarPeriod1",
+              "end" : "calendarPeriod2",
+              "title" : "기간",
+              "minDate" : "2023.05.03",
+              "maxDate" : "2023.05.25"
+            }'
+          >선택</button>
+          <span class="simbol">~</span>
+          <button type="button" class="input-calendar"
+            data-calendar='{
+              "name": "calendarPeriod2",
+              "start": "calendarPeriod1",
+              "title" : "기간",
+              "minDate" : "2023.05.03",
+              "maxDate" : "2023.05.25"
+            }'
+          >선택</button>
+        </div>
+      </div>
+      <p class="form-box--msg">선택하세요?</p>
+    </div>
+  </div>
+  <pre><code class="hljs language-html">
+
+    <button type="button" class="input-calendar"
+      data-calendar='..'
+    >선택</button>
+    <!-- 
+      data-calendar 속성에 아래와 같이 정보를 넣어줘야함
+      선택된 값이 있을 경우 "value" : "선택되어 있는 값"
+      아래의 예제에서는 2023.01.01 선택되어 있는 상태로 렌더링
+      data-calendar='{
+        "name": "calendar2",
+        "title" : "날짜선택",
+        "value": "2023.01.01",
+        "minDate" : "2023.05.03",
+        "maxDate" : "2023.05.25"
+      }'
+    -->
+
+      <div class="input-calendar-period">
+        <button type="button" class="input-calendar"
+          data-calendar='..'
+        >선택</button>
+        <span class="simbol">~</span>
+        <button type="button" class="input-calendar"
+          data-calendar='..'
+        >선택</button>
+      </div>
+      <!-- 
+        기간 선택의 경우
+        시작에는 end 속성에 마지막 네임을 설정
+        마지막에는 start 속성으로 시작 네임을 설정
+        각각 value 날짜로 minDate와 maxDate가 설정됨
+        data-calendar='{
+          "name": "calendarPeriod1",
+          "end" : "calendarPeriod2",
+          "title" : "기간"
+          "minDate" : "2023.05.03",
+          "maxDate" : "2023.05.25"
+        }'
+        data-calendar='{
+          "name": "calendarPeriod2",
+          "start" : "calendarPeriod1",
+          "title" : "기간"
+          "minDate" : "2023.05.03",
+          "maxDate" : "2023.05.25"
+        }'
+      -->
+
+      <div class="form-box">
+        <div class="form-box__inner">
+          <div class="input-calendar-period">
+            <button type="button" class="input-calendar"
+              data-calendar='..'
+            >선택</button>
+            <span class="simbol">~</span>
+            <button type="button" class="input-calendar"
+              data-calendar='..'
+            >선택</button>
+          </div>
+        </div>
+        <p class="form-box--msg">선택하세요?</p>
+      </div>
+  </code></pre>
+</section>
+
+
+
+<section class="guide__section">
+  <h2 class="guide__subTit">FORM - Time<button type="button" class="btnFold">접기</button></h2>
+  <div class="guide__code-view">
+    
+    <button type="button" class="input-time"
+      data-time='{
+        "name" : "timePicker",
+        "title" : "시간"
+      }'
+    >시간을 선택해주세요</button>
+
+    <button type="button" class="input-time"
+      data-time='{
+        "name" : "timePicker2",
+        "title" : "시간",
+        "value" : "오전 12:30"
+      }'
+    >시간을 선택해주세요</button>
+
+    <div class="form-box">
+      <div class="form-box__inner">
+        <button type="button" class="input-time"
+          data-time='{
+            "name" : "timePicker3",
+            "title" : "시간",
+            "value" : "오전 12:30"
+          }'
+          disabled
+        >시간을 선택해주세요</button>
+      </div>
+      <p class="form-box--msg">선택하세요?</p>
+    </div>
+
+  </div>
+  <pre><code class="hljs language-html">
+    <button type="button" class="input-time"
+    data-time='..'
+    >선택</button>
+    <!-- 
+      data-time 속성에 아래와 같이 정보를 넣어줘야함
+      data-time='{
+        "name" : "timePicker",
+        "title" : "시간",
+        "value" : "오전 12:30"
+      }'
+    -->
+
+    <div class="form-box">
+      <div class="form-box__inner">
+        <button type="button" class="input-time"
+          data-time='..'
+        >시간을 선택해주세요</button>
+      </div>
+      <p class="form-box--msg">선택하세요?</p>
+    </div>
+  </code></pre>
+</section>

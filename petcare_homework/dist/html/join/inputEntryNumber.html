@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <!-- container -->
+    <div class="container">
+
+      <p class="join__title">휴대폰 번호를 입력해주세요.</p>
+
+      <!-- 통신사 선택 -->
+      <div class="tab__list type-radio">
+        <label class="tab__item base-chk">
+          <input type="radio" name="telSel" disabled>
+          <span class="base-btn type2-l">SKT</span>
+        </label>
+        <label class="tab__item base-chk">
+          <input type="radio" name="telSel">
+          <span class="base-btn type2-l">KT</span>
+        </label>
+        <label class="tab__item base-chk">
+          <input type="radio" name="telSel" checked>
+          <span class="base-btn type2-l">U+</span>
+        </label>
+      </div>
+      <!-- //통신사 선택 -->
+
+      <!-- 번호 입력 -->
+      <div class="join__form">
+        <p class="join__form__title">휴대폰 번호</p>
+        <div class="form-box"> <!-- 에러 일 경우 isError -->
+          <div class="form-box__inner">
+            <div class="input-box">
+              <input type="number" class="input-txt" placeholder="휴대폰 번호">
+            </div>
+          </div>
+          <p class="form-box--validate">올바른 휴대폰 번호를 입력해주세요.</p>
+        </div>
+      </div>
+      <!-- //번호 입력 -->
+
+    </div>
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type1-xl" disabled>인증 요청</button>
+    </div>
+
+  </div>
+  <!-- //container -->
+
+  <!-- 서비스 이용 동의 팝업 -->
+  <div class="layer-popup type-bot" data-ref="layerServiceAgree">
+    <section class="popup__container">
+      <div class="popup__header">
+        <h3 class="popup__title">서비스 이용을 위해 약관에 동의해주세요.</h3>
+      </div>
+      <div class="popup__contents">
+
+        <div class="agree-chk__box">
+          <div class="agree-chk__head">
+            <label class="input-chk">
+              <input type="checkbox">
+              <span>전체 동의하기</span>
+            </label>
+          </div>
+          <ul class="agree-chk__chk-list">
+            <li class="agree-chk__item">
+              <label class="input-chk">
+                <input type="checkbox">
+                <span>서비스 이용약관(필수)</span>
+              </label>
+              <button class="agree-chk--btn">상세보기</button>
+            </li>
+            <li class="agree-chk__item">
+              <label class="input-chk">
+                <input type="checkbox">
+                <span>개인정보 수집이용(필수)</span>
+              </label>
+              <button class="agree-chk--btn">상세보기</button>
+            </li>
+            <li class="agree-chk__item">
+              <label class="input-chk">
+                <input type="checkbox">
+                <span>개인정보 제3자 제공(필수)</span>
+              </label>
+              <button class="agree-chk--btn">상세보기</button>
+            </li>
+            <li class="agree-chk__item">
+              <label class="input-chk">
+                <input type="checkbox">
+                <span>LGU+ 개인정보 제3자 제공(필수)</span>
+              </label>
+              <button class="agree-chk--btn">상세보기</button>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="btn-wrap">
+        <button class="base-btn type1-l" disabled>다음</button>
+      </div>
+    </section>
+  </div>
+  <script>
+    const layerServiceAgree = new LayerPopup({target: "layerServiceAgree"});
+  </script>
+  <!-- //서비스 이용 동의 팝업 -->
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    if(Util.getUrlParams().pop === 'layerServiceAgree') {
+      layerServiceAgree.show();
+    }
+  </script>
+  <!-- //퍼블 검수 용 -->
+  
+</body>
+</html>

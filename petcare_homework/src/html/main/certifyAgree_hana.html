@@ -1,0 +1,81 @@
+@@include('./head.html', {
+  title: "펫케어",
+  pass_name: "",
+  device_type: ""
+})
+<body>
+
+  <div class="wrap">
+    
+    @@include('./header.html', {title: "펫케어", type: "back"})
+
+    <!-- container -->
+    <div class="container">
+
+      <h3 class="content-header__title">
+        서비스 이용을 위해<br>
+        휴대폰 본인인증을 진행해주세요
+      </h3>
+      
+      <div class="agree-chk__box agree-chk__box__type1">
+        <div class="agree-chk__head">
+          <label class="input-chk">
+            <input type="checkbox">
+            <span>전체 동의하기</span>
+          </label>
+        </div>
+        <ul class="agree-chk__chk-list">
+          <li class="agree-chk__item">
+            <label class="input-chk">
+              <input type="checkbox">
+              <span>서비스 이용약관 동의(필수)</span>
+            </label>
+            <button class="agree-chk--btn">상세보기</button>
+          </li>
+          <li class="agree-chk__item">
+            <label class="input-chk">
+              <input type="checkbox">
+              <span>개인정보 수집이용동의(필수)</span>
+            </label>
+            <button class="agree-chk--btn">상세보기</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="btn-wrap">
+        <button class="base-btn type1-m">본인인증하기</button>
+      </div>
+
+    </div>
+    <!-- //container -->
+    
+    @@include('./footer.html',{company_name:""})
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    const pop = {
+      "msg1" : ()=>{
+        layerMsg({
+          msg: '본인인증을 위해 약관에<br>동의해주세요.',
+        });
+      },
+      "msg2" : ()=>{
+        layerMsg({
+          msg: '서비스에 가입되지않은<br>회원입니다.',
+        });
+      },
+      "msg3" : ()=>{
+        layerMsg({
+          msg: '본인인증에 실패했습니다.<br>잠시후 다시 시도해주세요.',
+        });
+      }
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+    if(Util.getUrlParams().type) document.documentElement.classList.add(Util.getUrlParams().type);
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

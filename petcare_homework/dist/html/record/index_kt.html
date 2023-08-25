@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/kt_pass.css">
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    <!-- container -->
+    <div class="container">
+
+      <div class="main-top__after">
+        <h2 class="main-top__title2">기록할 아이를 선택해주세요!</h2>
+        <div class="care-card" data-ref="careCardSlider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+              <!-- 슬라이드 -->
+              <div class="swiper-slide">
+                <div class="care-card__box">
+                  <div class="care-card__snippet">
+                    <div class="picture">
+                      <img src="../../assets/images/default_picture_80x80.jpg" alt="사진 없을 경우 기본 이미지">
+                    </div>
+                    <div class="cont">
+                      <p class="name">
+                        <span>쿠키</span>
+                        <!-- 선택 된 상태 isSelect -->
+                        <button
+                          class="btn-heart isSelect" 
+                          onclick="layerMsg({
+                            msg: '기록할 아이를<br> 변경하시겠어요?',
+                            type: 'confirm',
+                            btn: {confirm: '변경하기', cancel: '아니오'},
+                            onConfirm: (_this)=>alert('변경'),
+                            onCancel: (_this)=>alert('아니오'),
+                          });"
+                        >선택</button>
+                      </p>
+                      <p class="age type-m">3살 남아</p>
+                      <p class="species">골든 리트리버</p>
+                      <p class="b-day">태어난 지 3년 1개월 32일</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 슬라이드 -->
+              <div class="swiper-slide">
+                <div class="care-card__box">
+                  <div class="care-card__snippet">
+                    <div class="picture">
+                      <img src="../../assets/images/default_picture_80x80.jpg" alt="사진 없을 경우 기본 이미지">
+                    </div>
+                    <div class="cont">
+                      <p class="name">
+                        <span>코코</span>
+                        <button
+                          class="btn-heart"
+                          onclick="layerMsg({
+                            msg: '기록할 아이를<br> 변경하시겠어요?',
+                            type: 'confirm',
+                            btn: {confirm: '변경하기', cancel: '아니오'},
+                            onConfirm: (_this)=>alert('변경'),
+                            onCancel: (_this)=>alert('아니오'),
+                          });"
+                        >선택</button>
+                      </p>
+                      <p class="age type-f">3살 여아</p>
+                      <p class="species">골든 리트리버</p>
+                      <p class="b-day">태어난 지 3년 1개월 32일</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="swiper-pagination type-page1"></div>
+        </div>
+        <script>
+          const careCardSlider = slider({target: 'careCardSlider'})
+        </script>
+      </div>
+
+      <div class="record-header">
+        <button 
+          class="input-calendar type2"
+          data-calendar='{
+            "name": "rescordSortCalendar",
+            "title" : "날짜",
+            "value": "2023.10.31"
+          }'
+        >2023.10.31</button>
+
+        <div class="record-header__quick-btn">
+          <p class="txt">간편기록</p>
+          <div class="btn-wrap">
+            <button class="base-btn type2-etc">산책 +</button>
+            <button class="base-btn type2-etc">식사 +</button>
+            <button class="base-btn type2-etc">배변 +</button>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="record-list">
+
+        <!-- 기록 없음 -->
+        <p class="no-data type-record">입력된 기록이 아직 없어요!</p>
+        <!-- //기록 없음 -->
+        
+        <ul>
+          <li class="record-item record-item1">
+            <button class="record-item__box type-link">
+              <span class="time">01:00~02:00</span>
+              <span class="cont">
+                <span class="sort">산책</span>
+                <span class="val">집 뒤 공원</span>
+              </span>
+              <span class="memo">
+                메모메모메모메모메모메모메모메모메모메모메모메모메모메모메모메모메모메모메모메모메모메모메모메모
+              </span>
+            </button>
+          </li>
+          <li class="record-item record-item2">
+            <button class="record-item__box type-link">
+              <span class="time">01:00~02:00</span>
+              <span class="cont">
+                <span class="sort">식사</span>
+                <span class="val">사료</span>
+              </span>
+              <span class="memo">
+                메모메모메모메모메모메모메모메모메모메모메모메모
+              </span>
+            </button>
+          </li>
+          <li class="record-item record-item3">
+            <button class="record-item__box type-link">
+              <span class="cont">
+                <span class="sort">배변</span>
+                <span class="val">대변</span>
+              </span>
+            </button>
+          </li>
+          <li class="record-item record-item3">
+            <button class="record-item__box type-link">
+              <span class="time">01:00~02:00</span>
+              <span class="cont">
+                <span class="sort">배변</span>
+                <span class="val">소변</span>
+              </span>
+              <span class="memo">
+                메모메모메모메모메모메모
+              </span>
+            </button>
+          </li>
+          <li class="record-item record-item4">
+            <button class="record-item__box type-link">
+              <span class="time">01:00</span>
+              <span class="cont">
+                <span class="val">토함</span>
+              </span>
+            </button>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="btn-wrap type-content">
+        <button class="base-btn type1-m ">기록하기</button>
+      </div>
+
+    </div>
+    <!-- //container -->
+
+    <!-- 네비게이션 -->
+    <nav class="bot-nav">
+      <ul class="bot-nav__list">
+        <li class="bot-nav__item bot-nav__item1"><a href="#">홈</a></li>
+        <li class="bot-nav__item bot-nav__item2 isActive"><a href="#">기록</a></li>
+        <li class="bot-nav__item bot-nav__item3"><a href="#">건강분석</a></li>
+        <li class="bot-nav__item bot-nav__item4"><a href="#">푸드</a></li>
+        <li class="bot-nav__item bot-nav__item5"><a href="#">플레이스</a></li>
+      </ul>
+    </nav>
+    <!-- //네비게이션 -->
+
+  </div>
+
+  <script>
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+    if(Util.getUrlParams().type) document.documentElement.classList.add(Util.getUrlParams().type);
+
+    const DEVICE_TYPE = Util.getUrlParams().device_type == "ios" ? "ios" : "android";
+    document.documentElement.classList.add(DEVICE_TYPE);
+  </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<section class="guide__section">
+	<h2 class="guide__subTit">JS</h2>
+  <pre><code class="hljs language-js">
+      /**
+       * ui.js 스크립트 가이드
+       */
+      Util {
+        //return "isMobile" or "isPC"
+        Util.deviceChk()
+        
+        //return [data-ref="name"];
+        Util.returnRef("name");
+
+        //숫자 증감
+        Util.numFunc({ 
+          start: 초기 값,
+          total: 목표 값,
+          time: sec,
+          onEnd: (num)=>{
+            console.log(num)
+          }
+        });
+
+        //엘리먼트가 화면에 노출 될 때
+        Util.createObserver(
+          Elements,
+          (_this)=>{
+            console.log(_this);
+          },
+          { //옵션
+            rootMargin: '0px 0px -50px',
+            threshold: 1.0
+          }
+        );
+
+        //return {key: val}
+        Util.getUrlParams();
+
+        // console.log 확인이 어려운 상황에서 디바이스 화면에 노출 용
+        Util.dpConsole('console 확인');
+        
+        /**
+        * 레이어 기본 템플릿 리턴
+        * @param {Object} obj {title: "레이어 타이틀", confirmStr: "확인 버튼 명칭"}
+        * @returns {popup, contents, btnClose, btnConfirm}
+        */
+        Util.returnLayerTemplate(obj)
+      }
+
+      /**
+      * swiper 공통 적용 함수
+      * @param {Object} params {target : 슬라이더 랩, option: 슬라이더 옵션}
+      * @returns swiper
+      */
+      slider(params)
+
+      /**
+      * 레이어팝업
+      * @param {Object} params {target: data-ref 네임, dimClose: 딤 클릭 시 숨김 처리 유무}
+      */
+      const layerSample = new LayerPopup({target: "layerSample", dimClose: false}); 
+
+      // show, hide 실행 후 콜백 기본 옵션은 this 반환
+      layerSample.show((_this)=>{console.log(_this)});
+      layerSample.hide((_this)=>{console.log(_this)});
+
+      layerSample.onShow((_this)=>{console.log(_this)}) // show 이벤트 후
+      layerSample.onHide((_this)=>{console.log(_this)}) // hide 이벤트 후
+
+      layerSample.onRemove((_this)=>{console.log(_this)}) // remove 이벤트 후
+      // layer.remove 는 셀렉트 캘린더 메시지 등의 쓰임
+
+      /**
+      * 메시지 팝업 알럿, 컨펌 등
+      * @param {Object} params {
+      *  msg: 줄바꿈 == &lt;br>,
+      *  type: 'confirm', //confirm 일 경우
+      *  btnClose: true, //닫기 버튼이 있을 경우
+      *  btn: {confirm: '선택', cancel: '삭제'}, // 기본 값은 확인, 취소
+      *  onConfirm: 확인 버튼 누름
+      *  onCancel: 취소 버튼 누름
+      *  onShow: 메시지가 보여질 때
+      *  onHide: 메시지가 사라질 때
+      * }
+      */
+      layerMsg(params)
+
+      /**
+      * 다이얼로그
+      * @param {Object} params {
+      *  msg: 줄바꿈 == &lt;br>,
+      *  timer: 2, 기본 2초 설정
+      *  onShow: 다이얼로그가 보여질 때,
+      *  onHide: 다이얼로그가 사라질 때,
+      * }
+      */
+      dialog(params)
+
+      /**
+      * 셀렉트
+      * @param {Object} params {target: button Element, data: button Element data-select}
+      */
+      button type="button" class="select"
+        data-select='{
+          "name": "selectName1", 
+          "title" : "선택하세요.",
+          "option": [
+            {"선택1": "val1"},
+            {"선택2": "val2"},
+            {"선택3": "val3"},
+            {"선택4": "val4"}
+          ],
+          "value": "val3",
+          "btnNo": true // 해당 옵션이 있을 경우 옵션 체크시 선택 됨
+        }'
+
+        //펫 선택 타입 셀렉트 옵션
+        data-select='{
+          "name": "myPetSelect",
+          "title" : "다른 아이 선택",
+          "type" : "petSelect",
+          "option": [
+            {
+              "id" : "petSelectId1",
+              "name" : "구름",
+              "age" : "7",
+              "gender" : "여아",
+              "className": "dog"
+            },
+            {
+              "id" : "petSelectId2",
+              "name" : "후추",
+              "age" : "7",
+              "gender" : "남아",
+              "className": "cat"
+            },
+            {
+              "id" : "petSelectId3",
+              "name" : "후추2",
+              "age" : "7",
+              "gender" : "남아",
+              "className": "cat"
+            }
+          ],
+          "value" : "petSelectId1"
+        }'
+
+      // 페이지 로드 후 실행
+      // 비동기로 셀렉트가 생성 될 경우에 실행 하면 globalSelectObj에 추가
+      globalObjSetFunc('select');
+      globalSelectObj.selectName1 // 글로벌셀렉트에 세팅
+      globalSelectObj.selectName1.sel("선택1"); // 셀렉트 함수로 실행 시 "선택1" 값 선택 됨
+      globalSelectObj.selectName1.cancel() // 셀렉트 취소
+      globalSelectObj.selectName1.value // 값 확인
+      globalSelectObj.selectName1.onShow((_this)=>{console.log(_this)}) // show 이벤트 후
+      globalSelectObj.selectName1.onHide((_this)=>{console.log(_this)}) // hide 이벤트 후
+      globalSelectObj.selectName1.update([
+        {"변경1": "val1"},
+        {"변경2": "val2"},
+        {"변경3": "val3"},
+        {"변경4": "val4"}
+      ]) // 옵션변경
+
+      /**
+      * 캘린더
+      * @param {Object} params {target: button Element, data: button Element data-calendar}
+      */
+      button type="button" class="input-calendar"
+        data-calendar='{
+          "name": "calendar1",
+          "title" : "날짜선택",
+          "value": "2023.01.01"
+        }'
+      // 페이지 로드 후 실행
+      // 비동기로 캘린더가 생성 될 경우에 실행 하면 globalCalendarObj에 추가
+      globalObjSetFunc('calendar');
+      globalCalendarObj.calendar1.value // 선택 날짜 확인
+      globalCalendarObj.calendar1.onShow((_this)=>{console.log(_this)}) // show 이벤트 후
+      globalCalendarObj.calendar1.onHide((_this)=>{console.log(_this)}) // hide 이벤트 후
+
+      /**
+      * 타임피커
+      * @param {Object} params {target: button Element, data: button Element data-time}
+      */
+      button type="button" class="input-time"
+      data-time='{
+        "name" : "timePicker3",
+        "title" : "시간",
+        "value" : "오전 12:30"
+      }'
+      
+      // 페이지 로드 후 실행
+      // 비동기로 캘린더가 생성 될 경우에 실행 하면 globalTimeObj에 추가
+      globalObjSetFunc('time');
+      globalTimeObj.timePicker3.value // 선택 시간 확인
+      globalTimeObj.timePicker3.onShow((_this)=>{console.log(_this)}) // show 이벤트 후
+      globalTimeObj.timePicker3.onHide((_this)=>{console.log(_this)}) // hide 이벤트 후
+
+      /**
+      * 차트
+      * @param {Object} params {target: '챠트 영역', max: 최대숫자, unit: 단위, unitType: 단위표현}
+      */
+      &lt;div data-ref="chartContent">
+        &lt;p data-ref="item">
+          &lt;span data-ref="name">&lt;/span>
+          &lt;span data-ref="target">
+            &lt;strong  data-ref="valNumber">&lt;/strong>
+          &lt;/span>
+        &lt;/p>
+      &lt;/div>
+      const chartContent = new ChartContents({
+        target: 'chartContent',
+        max: 100,
+        unit: 50,
+        unitType: '점',
+      });
+
+      /**
+      * 말줄임 토글 기능
+      * @param {Object} params {wrap: '전체 영역', line: '최대 노출 라인'}
+      */
+      &lt;div data-ref="toggleCont">
+        &lt;div data-ref="toggleTarget">
+          &lt;div data-ref="toggleTargetBox">
+        &lt;/div>
+        &lt;button class="btn-toggle" data-ref="toggleBtn">&lt;/button>
+      &lt;/div>
+      ellipsisToggle({wrap: 'toggleCont', line: 5});
+  </code></pre>
+</section>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/kt_pass.css">
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    <!-- container -->
+    <div class="container join">
+      <p class="join-info__title_sec">반려동물 관리는 물론 반려인의 양육시간과<br>비용까지 세이브할 수 있도록 혜택 제공!</p>
+      <p class="join-info__caution">
+        월 3,300원 (부가세 포함)<br>
+        휴대전화요금에 매월 합산청구 됩니다.
+      </p>
+      <div class="join-info__list">
+        <ul class="care-info__list">
+          <li class="care-info__item care-info__item2">
+            <span class="txt">반려동물 비대면 건강검진 제공</span>
+          </li>
+          <li class="care-info__item care-info__item3">
+            <span class="txt">병원별, 진료별 진료비 정보 제공</span>
+          </li>
+          <li class="care-info__item care-info__item5">
+            <span class="txt">매월 펫쇼핑몰 5천원 쿠폰 제공</span>
+          </li>
+        </ul>
+      </div>
+      <div class="agree-chk__box__type2">
+        <label class="input-chk">
+          <input type="checkbox">
+          <span>펫케어 유료 서비스 이용약관(필수)</span>
+        </label>
+        <button class="agree-chk--btn">상세보기</button>
+      </div>
+    </div>
+
+    <div class="btn-wrap type-sticky">
+      <button class="base-btn type1-l">펫케어 (유료) 가입</button>
+    </div>
+
+  </div>
+  <!-- //container -->
+  
+  <!-- 서비스 이용 동의 팝업 -->
+  <div class="layer-popup type-bot" data-ref="layerServiceAgree">
+    <section class="popup__container">
+      <div class="popup__header">
+        <h3 class="popup__title">서비스 이용을 위해 약관에 동의해주세요.</h3>
+      </div>
+      <div class="popup__contents">
+
+        <div class="agree-chk__box">
+          <div class="agree-chk__head">
+            <label class="input-chk">
+              <input type="checkbox">
+              <span>유료 서비스 가입 약관</span>
+            </label>
+          </div>
+          <ul class="agree-chk__chk-list">
+            <li class="agree-chk__item">
+              <label class="input-chk">
+                <input type="checkbox">
+                <span>서비스 이용약관(필수)</span>
+              </label>
+              <button class="agree-chk--btn">상세보기</button>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="btn-wrap">
+        <button class="base-btn type1-xl" disabled>확인</button>
+      </div>
+    </section>
+  </div>
+  <script>
+    const layerServiceAgree = new LayerPopup({target: "layerServiceAgree"});
+  </script>
+  <!-- //서비스 이용 동의 팝업 -->
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+
+    const pop = {
+      "msg1" : ()=>{
+        layerMsg({
+          msg: '법인, 19세 미만, 알들폰 고객은<br>사용이 제한됩니다.',
+        });
+      }
+    }
+
+    if(Util.getUrlParams().pop === 'layerServiceAgree') {
+      layerServiceAgree.show();
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

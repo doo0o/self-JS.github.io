@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>펫케어</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  
+  
+   <!-- default : android && device_type : ios --> 
+  <script src="../../assets/js/swiper-bundle.min.js"></script>
+  <script src="../../assets/js/datepicker.min.js"></script>
+  <script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="wrap">
+    
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="page-title">펫케어</h1>
+        <button class="btn-menu" onclick="document.querySelector('.header').classList.toggle('isMenuShow');"><span>메뉴보기</span></button>
+        <button class="btn-back" onclick="history.back()">뒤로가기</button>
+        
+        
+
+      </div>
+
+      <!-- menu -->
+      <div class="header-menu">
+        <nav class="header-menu__wrap">
+          <div class="header-menu__util">
+            <a href="#" class="header-menu--login">로그인</a>
+          </div>
+          <ul class="header-menu__list">
+            <li><a href="../main/" class="header-menu--item">홈</a></li>
+            <li><a href="../insurance/" class="header-menu--item">펫보험</a></li>
+            <li><a href="../analysis/" class="header-menu--item">비대면 건강분석</a></li>
+            <li><a href="../checkup/" class="header-menu--item">AI슬개골 탈구 검사</a></li>
+            <li><a href="../magazine/" class="header-menu--item">펫매거진</a></li>
+            <li><a href="../coupon/index_hana.html" class="header-menu--item">쿠폰</a></li>
+          </ul>
+        </nav>
+      </div>
+<!-- //menu -->
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+
+      <h2 class="content-header__title3">쿠폰 혜택</h2>
+      <p class="content-header__desc">펫케어 고객님들께 쿠폰을 드려요!</p>
+
+      <ul class="coupon__list">
+        <li>
+          <a href="#" class="coupon__item">
+            <span class="name">사료 기호성 검사 키트 쿠폰</span>
+            <strong class="point">30% 할인</strong>
+            <span class="state state-download"><span>다운로드</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="coupon__item">
+            <span class="name">온라인 펫 쇼핑몰 쿠폰</span>
+            <strong class="point">5,000원</strong>
+            <span class="state state-download"><span>다운로드</span></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="coupon__item">
+            <span class="name">대형마트 쿠폰</span>
+            <strong class="point">10,000원</strong>
+            <span class="state state-download"><span>다운로드</span></span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <!-- //container --> 
+
+  </div>
+
+  <!-- 퍼블 검수 용 -->
+  <script>
+    const pop = {
+      "msg1" : ()=>{
+        layerMsg({
+          msg: '쿠폰은 가입 이후 익월 1일에<br>발급 가능합니다.'
+        });
+      }
+    }
+    if(Util.getUrlParams().pop) pop[Util.getUrlParams().pop]();
+  </script>
+  <!-- //퍼블 검수 용 -->
+
+</body>
+</html>

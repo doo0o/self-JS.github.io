@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>HTML 가이드</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/swiper-bundle.min.js"></script>
+  <script src="./assets/js/datepicker.min.js"></script>
+  <script src="./assets/js/calendar.js"></script>
+  <script src="./assets/js/ui.js"></script>
+  <link rel="stylesheet" href="./guide/src/style.css">
+  <link rel="stylesheet" href="./guide/src/github-dark.css">
+  <script src="./guide/src/ui.js"></script>
+  <script src="./guide/src/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.1/dist/js/locales/fr.js"></script>
+</head>
+<body>
+  <header class="guide__header">
+    <h1 class="guide__header--logo"><a href="javascript:window.location.href = window.location.href.split('?')[0]">GUIDE</a></h1>
+    <nav class="guide__header__gnb">
+      <button type="button" data-page="guide_filelist">FILELIST</button>
+      <button type="button" data-page="guide_markup">MARKUP</button>
+      <button type="button" data-page="guide_js">JS</button>
+    </nav>
+  </header>
+  <div class="guide__container">
+
+    <div class="guide__table">
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row">Lang</th>
+            <td>HTML5, SCSS, JS</td>
+          </tr>
+          <tr>
+            <th scope="row">Ver (제작 일 기준)</th>
+            <td>
+              <pre>
+                &middot; ios16
+                &middot; android13
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Unit</th>
+            <td>
+              <pre>
+                px 
+                 &middot; 화면 사이즈에 크기 대응이 필요한 경우
+                 &middot; postcss - pxtorem 사용해서 rem으로 일괄 전환 후
+                 &middot; 디바이스 사이즈 별로 html 폰트 사이즈 설정
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Library</th>
+            <td>
+              <pre>
+                swiperjs 8.4.7 <u><a href="https://v8.swiperjs.com/swiper-api" target="_blank"><sup>출처</sup></a></u>
+                  &middot; swiperjs에서 제공하는 css 모두 가져오지 않고 필요한 부분만 추려서 _lib.scss 에 작성
+                vanillajs datepicker <u><a href="https://mymth.github.io/vanillajs-datepicker/" target="_blank"><sup>출처</sup></a></u>
+                  &middot; 바닐라 자바스크립트 데이트 피커
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Font</th>
+            <td>
+              <pre>
+                Pretendard <u><a href="https://github.com/orioncactus/pretendard" target="_blank"><sup>출처</sup></a></u>
+                 &middot; 700 - Bold
+                 &middot; 500 - Medium - default
+                 &middot; 400 - Regular
+                NotoSans - uplus 페이지 타이틀 용
+                 &middot; 700
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Color</th>
+            <td>
+              <p>컬러칩 클릭 시 컬러 변수 클립보드 복사</p>
+              <span class="colorChip">
+                <span style="background: #000;" data-var="var(--black)"></span>
+                #000
+              </span>
+              <span class="colorChip">
+                <span style="background: #808892;" data-var="var(--gray)"></span>
+                #808892
+              </span>
+              <span class="colorChip">
+                <span style="background: #BDBDC6;" data-var="var(--gray2)"></span>
+                #BDBDC6
+              </span>
+              <span class="colorChip">
+                <span style="background: #D6DBE1;" data-var="var(--gray3)"></span>
+                #D6DBE1
+              </span>
+              <span class="colorChip">
+                <span style="background: #EBEFF5;" data-var="var(--gray4)"></span>
+                #EBEFF5
+              </span>
+              <span class="colorChip">
+                <span style="background: #E5E8EC;" data-var="var(--gray5)"></span>
+                #E5E8EC
+              </span>
+              <span class="colorChip">
+                <span style="background: #F7F8FA;" data-var="var(--gray6)"></span>
+                #F7F8FA
+              </span>
+              <span class="colorChip">
+                <span style="background: #ECF0F4;" data-var="var(--gray7)"></span>
+                #ECF0F4
+              </span>
+              <span class="colorChip">
+                <span style="background: #CBD0DD;" data-var="var(--gray7)"></span>
+                #CBD0DD
+              </span>
+              <span class="colorChip">
+                <span style="background: #F5FBF7;" data-var="var(--gray9)"></span>
+                #F5FBF7
+              </span>
+              <span class="colorChip">
+                <span style="background: #F6FAF6;" data-var="var(--gray10)"></span>
+                #F6FAF6
+              </span>
+              <span class="colorChip">
+                <span style="background: #F4F5FA;" data-var="var(--gray11)"></span>
+                #F4F5FA
+              </span>
+              <span class="colorChip">
+                <span style="background: #F2F3F5;" data-var="var(--gray12)"></span>
+                #F2F3F5
+              </span>
+              <span class="colorChip">
+                <span style="background: #3B3B3B;" data-var="var(--gray13)"></span>
+                #3B3B3B
+              </span>
+              <span class="colorChip">
+                <span style="background: #fff;" data-var="var(--white)"></span>
+                #fff
+              </span>
+              <br>
+              <span class="colorChip">
+                <span style="background: #57CD78;" data-var="var(--primary)"></span>
+                #57CD78
+              </span>
+              <span class="colorChip">
+                <span style="background: #E6F2C4;" data-var="var(--green2)"></span>
+                #E6F2C4
+              </span>
+              <span class="colorChip">
+                <span style="background: #DFFFEA;" data-var="var(--green3)"></span>
+                #DFFFEA
+              </span>
+              <br>
+              <span class="colorChip">
+                <span style="background: #F54836;" data-var="var(--red)"></span>
+                #F54836
+              </span>
+              <span class="colorChip">
+                <span style="background: #FF5754;" data-var="var(--red2)"></span>
+                #FF5754
+              </span>
+              <span class="colorChip">
+                <span style="background: #8670C6;" data-var="var(--violet)"></span>
+                #8670C6
+              </span>
+              <span class="colorChip">
+                <span style="background: #C69470;" data-var="var(--brown)"></span>
+                #C69470
+              </span>
+              <span class="colorChip">
+                <span style="background: #ECC820;" data-var="var(--yellow)"></span>
+                #ECC820
+              </span>
+              <span class="colorChip">
+                <span style="background: #F2F6FC;" data-var="var(--skyblue)"></span>
+                #F2F6FC
+              </span>
+              <br><br>
+              <p>Button</p>
+              <span class="colorChip">
+                <span style="background: #57CD78;" data-var="var(--color-btn)"></span>
+                #57CD78
+              </span>
+              <span class="colorChip">
+                <span style="background: #48A061;" data-var="var(--color-btn-active)"></span>
+                #48A061
+              </span>
+              <span class="colorChip">
+                <span style="background: #BBF5CB;" data-var="var(--color-btn1-active-font)"></span>
+                #BBF5CB
+              </span>
+              <span class="colorChip">
+                <span style="background: #D1F2DA;" data-var="var(--color-btn2-active)"></span>
+                #D1F2DA
+              </span>
+              <br><br>
+              <p>Font</p>
+              <span class="colorChip">
+                <span style="background: #000;" data-var="var(--color-font)"></span>
+                #000
+              </span>
+              <span class="colorChip">
+                <span style="background: #565C63;" data-var="var(--color-font2)"></span>
+                #565C63
+              </span>
+              <span class="colorChip">
+                <span style="background: #808892;" data-var="var(--color-font3)"></span>
+                #808892
+              </span>
+              <span class="colorChip">
+                <span style="background: #BDBDC6;" data-var="var(--color-font4)"></span>
+                #BDBDC6
+              </span>
+              <span class="colorChip">
+                <span style="background: #D6DBE1;" data-var="var(--color-font5)"></span>
+                #D6DBE1
+              </span>
+              <br>
+              <span class="colorChip">
+                <span style="background: #57CD78;" data-var="var(--color-font-primary)"></span>
+                #57CD78
+              </span>
+              <span class="colorChip">
+                <span style="background: #0471E9;" data-var="var(--color-font6)"></span>
+                #0471E9
+              </span>
+              <span class="colorChip">
+                <span style="background: #D61111;" data-var="var(--color-font7)"></span>
+                #D61111
+              </span>
+              <span class="colorChip">
+                <span style="background: #FF5754;" data-var="var(--color-font8)"></span>
+                #FF5754
+              </span>
+              <span class="colorChip">
+                <span style="background: #ECC820;" data-var="var(--color-font9)"></span>
+                #ECC820
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Design</th>
+            <td><u><a href="https://www.figma.com/file/QgvcXyqEWvIyo9i2AEtfK1/%ED%8E%AB%EC%BC%80%EC%96%B4_%EB%8B%A8%EB%8F%85%EC%95%B1?node-id=185-108&t=lSr5tGZH8LW4sk3s-0" target="_blank">figma</a></u></td>
+          </tr>
+          <tr>
+            <th scope="row">Icon 모음</th>
+            <td><u><a href="https://www.figma.com/file/7SEwjEH99vKNLfNFqb9LJz/%ED%8E%AB%EC%BC%80%EC%96%B4-%EC%95%84%EC%9D%B4%EC%BD%98?node-id=0-1&t=yprt3Axqek91RcSf-0" target="_blank">figma pub</a></u></td>
+          </tr>
+          <tr>
+            <th scope="row">Mixin, Function</th>
+            <td>
+              <pre>
+                //svg 컬러 변경
+                @include svgfill($c: color, $img: img);
+                
+                //font
+                @include font($s: size, $w: weight, $c: color, $a: align, $f: famliy, $l: line-height);
+                size 별로 line-height 지정되어 있음
+
+                //ellipsis
+                @incude ellipsis;
+                @incude ellipsis(2);
+                두 줄 이상
+
+                //포지션
+                @include pos($p: 속성, $t: top, $l: left, $r: right, $b: bottom, $a: 전체, $z: z-index)
+
+                // 삼각형 화살표
+                @include arrow(방향, 너비, 높이, 컬러);
+
+                // 꺽쇠
+                background-image: url(svgArrow(5, 10, 1.5, '000000')) // (너비, 높이, 굵기, 컬러) 컬러 기본 000000
+                @include svgfill('#000', svgArrow(5, 10, 1.5))
+
+                // 닫기 - svg 외에 빈공간 포함 사이즈 24x24로 고정
+                background-image: url(svgClose(10, 1.5, '000000')) // (너비, 굵기, 컬러) 컬러 기본 000000
+                @include svgfill('#000', svgClose(10, 1.5))
+
+                // 더하기 - svg 외에 빈공간 포함 사이즈 24x24로 고정
+                // 디자인에서 닫기 아이콘을 45도 돌려서 표현한 경우 실제 사이즈와 다르므로 1.4배정도 너비를 더 키워서 적용
+                // 아래 예제는 가로 10px로 구현한 닫기 아이콘을 45도 돌려서 디자인 한 경우이므로 너비를 14로 적용함
+                background-image: url(svgClose(14, 1.5, '000000')) // (너비, 굵기, 컬러) 컬러 기본 000000
+                @include svgfill('#000', svgClose(14, 1.5))
+                // 더하기를 따로 만든 이유는 닫기를 로테이트 시키면 ios에서 배경색이 겹치는 부분에 구현되는 버그 때문에 별도 제작
+
+                // 체크 - 기본 svg 너비 11px, svg 외에 빈공간 포함 사이즈 24x24로 고정
+                background-image: url(svgChk(11, 2)) // (너비, 굵기) 너비에 따라 path는 분기 처리
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  <script>
+    fetch('./guide/filelist.json', {
+      method: 'GET',
+    })
+    .then(response => response.json())
+    .then(data => {
+      new GuideFunc(data.items);
+    });
+  </script>
+</body>
+</html>
